@@ -1,0 +1,240 @@
+###############################################################################
+#
+# IAR ELF Linker V8.30.1.114/W32 for ARM                  28/Aug/2018  19:56:55
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\Exe\portend.out
+#    Map file     =  
+#        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\List\portend.map
+#    Command line =  
+#        -f C:\Users\Sergey\AppData\Local\Temp\EWE4C.tmp
+#        (E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\Obj\irqcontroller.o
+#        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\Obj\main.o
+#        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\Obj\startupF411RE.o
+#        --no_out_extension -o
+#        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\Exe\portend.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\List\portend.map
+#        --config C:\Users\Sergey\CLionProjects\untitled\stm32f411xE.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor        = *
+__CPP_Exceptions = Disabled
+__CPP_Language   = C++14
+__SystemLibrary  = DLib
+__dlib_version   = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x807'ffff] { ro };
+define block CSTACK with size = 512, alignment = 8 { };
+define block HEAP with size = 0M, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2001'ffff] {
+          rw, block CSTACK, block HEAP };
+
+  Section          Kind         Address   Size  Object
+  -------          ----         -------   ----  ------
+"A0":                                    0x198
+  .intvec          const     0x800'0000  0x198  startupF411RE.o [1]
+                           - 0x800'0198  0x198
+
+"P1":                                    0x2a0
+  .text            ro code   0x800'0198   0x8c  main.o [1]
+  .text            ro code   0x800'0224   0x20  main.o [1]
+  .text            ro code   0x800'0244    0xe  main.o [1]
+  .text            ro code   0x800'0252    0xe  main.o [1]
+  .text            ro code   0x800'0260   0x30  main.o [1]
+  .text            ro code   0x800'0290    0x8  main.o [1]
+  .text            ro code   0x800'0298   0x24  ABIassert.o [5]
+  .text            ro code   0x800'02bc   0x14  main.o [1]
+  .text            ro code   0x800'02d0    0x6  abort.o [2]
+  .text            ro code   0x800'02d6    0x8  main.o [1]
+  .text            ro code   0x800'02de   0x3a  zero_init3.o [4]
+  .text            ro code   0x800'0318   0x14  exit.o [5]
+  .text            ro code   0x800'032c    0x4  main.o [1]
+  .rodata          const     0x800'0330   0x3c  main.o [1]
+  .text            ro code   0x800'036c   0x28  data_init.o [4]
+  .text            ro code   0x800'0394   0x22  fpinit_M.o [3]
+  .iar.init_table  const     0x800'03b8   0x10  - Linker created -
+  .text            ro code   0x800'03c8    0x2  startupF411RE.o [1]
+  .text            ro code   0x800'03cc   0x1e  cmain.o [4]
+  .text            ro code   0x800'03ea    0x4  exit.o [2]
+  .text            ro code   0x800'03ee    0x2  startupF411RE.o [1]
+  .text            ro code   0x800'03f0    0xa  cexit.o [4]
+  .rodata          const     0x800'03fa    0x1  unwind_debug.o [5]
+  .rodata          const     0x800'03fc   0x18  main.o [1]
+  .text            ro code   0x800'0414   0x14  startupF411RE.o [1]
+  .text            ro code   0x800'0428   0x10  irqcontroller.o [1]
+  .rodata          const     0x800'0438    0x0  zero_init3.o [4]
+                           - 0x800'0438  0x2a0
+
+"P2", part 1 of 2:                         0x8
+  .bss             zero     0x2000'0000    0x4  main.o [1]
+  .bss             zero     0x2000'0004    0x1  main.o [1]
+                          - 0x2000'0005    0x5
+
+"P2", part 2 of 2:                       0x200
+  CSTACK                    0x2000'0008  0x200  <Block>
+    CSTACK         uninit   0x2000'0008  0x200  <Block tail>
+                          - 0x2000'0208  0x200
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'0438   0x807'ffff  0x7'fbc8
+  0x2000'0208  0x2001'ffff  0x1'fdf8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x5:
+          0x2000'0000   0x5
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module           ro code  ro data  rw data
+    ------           -------  -------  -------
+command line/config:
+    ------------------------------------------
+    Total:
+
+E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\Obj: [1]
+    irqcontroller.o       16
+    main.o               288       84        5
+    startupF411RE.o       24      408
+    ------------------------------------------
+    Total:               328      492        5
+
+dl7M_tln.a: [2]
+    abort.o                6
+    exit.o                 4
+    ------------------------------------------
+    Total:                10
+
+m7M_tls.a: [3]
+    fpinit_M.o            34
+    ------------------------------------------
+    Total:                34
+
+rt7M_tl.a: [4]
+    cexit.o               10
+    cmain.o               30
+    data_init.o           40
+    zero_init3.o          58
+    ------------------------------------------
+    Total:               138
+
+shb_l.a: [5]
+    ABIassert.o           36
+    exit.o                20
+    unwind_debug.o                  1
+    ------------------------------------------
+    Total:                56        1
+
+    Gaps                   2        3
+    Linker created                 16      512
+----------------------------------------------
+    Grand Total:         568      512      517
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'03b8          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'03c8          --   Gb  - Linker created -
+?main                    0x800'03cd         Code  Gb  cmain.o [4]
+CSTACK$$Base            0x2000'0008          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0208          --   Gb  - Linker created -
+Delay(unsigned long)     0x800'01e7    0xc  Code  Gb  main.o [1]
+DummyModule::handler()   0x800'0415    0x2  Code  Gb  startupF411RE.o [1]
+GpioPort<GPIO_TypeDef, (unsigned long)5>::GpioPort(GPIO_TypeDef &)
+                         0x800'032d    0x4  Code  Gb  main.o [1]
+GpioPort<GPIO_TypeDef, (unsigned long)5>::GpioPort(GPIO_TypeDef &) [subobject]
+                         0x800'02d7    0x8  Code  Gb  main.o [1]
+GpioPort<GPIO_TypeDef, (unsigned long)5>::Toggle()
+                         0x800'0245    0xe  Code  Gb  main.o [1]
+GpioPortA<(unsigned long)5>::GpioPortA()
+                         0x800'02bd   0x14  Code  Gb  main.o [1]
+GpioPortA<(unsigned long)5>::GpioPortA() [subobject]
+                         0x800'0291    0x8  Code  Gb  main.o [1]
+Initialization guard variable for Singleton<Led1>::GetInstance()::instance
+                        0x2000'0004    0x1  Data  Gb  main.o [1]
+IrqController::HandleIrqExtiLine15_10()
+                         0x800'0429   0x10  Code  Gb  irqcontroller.o [1]
+Led1::Led1()             0x800'0253    0xe  Code  Gb  main.o [1]
+Region$$Table$$Base      0x800'03b8          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'03c8          --   Gb  - Linker created -
+Singleton<Led1>::GetInstance()
+                         0x800'0225   0x20  Code  Gb  main.o [1]
+Singleton<Led1>::GetInstance()::instance
+                        0x2000'0000    0x4  Data  Gb  main.o [1]
+__aeabi_assert           0x800'0299   0x24  Code  Gb  ABIassert.o [5]
+__cmain                  0x800'03cd         Code  Gb  cmain.o [4]
+__exit                   0x800'0319   0x14  Code  Gb  exit.o [5]
+__iar_data_init3         0x800'036d   0x28  Code  Gb  data_init.o [4]
+__iar_debug_exceptions   0x800'03fa    0x1  Data  Gb  unwind_debug.o [5]
+__iar_init_vfp           0x800'0395         Code  Gb  fpinit_M.o [3]
+__iar_program_start      0x800'0417   0x10  Code  Gb  startupF411RE.o [1]
+__iar_zero_init3         0x800'02df   0x3a  Code  Gb  zero_init3.o [4]
+__low_level_init         0x800'0199   0x4e  Code  Gb  main.o [1]
+__vector_table           0x800'0000  0x198  Data  Gb  startupF411RE.o [1]
+_call_main               0x800'03d9         Code  Gb  cmain.o [4]
+_exit                    0x800'03f1         Code  Gb  cexit.o [4]
+_main                    0x800'03e7         Code  Gb  cmain.o [4]
+abort                    0x800'02d1    0x6  Code  Gb  abort.o [2]
+exit                     0x800'03eb    0x4  Code  Gb  exit.o [2]
+main                     0x800'01f3   0x16  Code  Gb  main.o [1]
+void utils::toggleBit<unsigned int volatile, unsigned long>(unsigned int volatile &, unsigned long)
+                         0x800'0261   0x30  Code  Gb  main.o [1]
+void utils::toggleBit<unsigned int volatile, unsigned long>(unsigned int volatile &, unsigned long)::string
+                         0x800'03fc   0x18  Data  Gb  main.o [1]
+void utils::toggleBit<unsigned int volatile, unsigned long>(unsigned int volatile &, unsigned long)::string (instance 2)
+                         0x800'0330   0x3c  Data  Gb  main.o [1]
+
+
+[1] = E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\Obj
+[2] = dl7M_tln.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  568 bytes of readonly  code memory
+  512 bytes of readonly  data memory
+  517 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
