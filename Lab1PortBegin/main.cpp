@@ -7,8 +7,8 @@
 *  Author: Sergey Kolody
 *
 ******************************************************************************/
-#include <stm32f411xe.h>          //lint !e537 Регистры STM32 
-#include "susutypes.h"           //lint !e537 для типов проекта
+#include <stm32f411xe.h>        // Регистры STM32 
+#include "susudefs.hpp"           // для типов проекта
 
 
 //*************LEDS ports**********************
