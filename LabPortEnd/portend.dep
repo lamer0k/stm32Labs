@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>4</fileVersion>
-    <fileChecksum>2931786086</fileChecksum>
+    <fileChecksum>4048373440</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
@@ -233,6 +233,7 @@
             <file>$PROJ_DIR$\Debug\Exe\portend.out</file>
             <file>$PROJ_DIR$\Application\userbutton.hpp</file>
             <file>$PROJ_DIR$\Application\led1.hpp</file>
+            <file>$PROJ_DIR$\stm32f411xE.icf</file>
         </outputs>
         <file>
             <name>$PROJ_DIR$\AHardware\button.cpp</name>
@@ -710,7 +711,7 @@
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 171 11 27 130 54 81 16 188 190</file>
+                    <file> 228 11 27 130 54 81 16 188 190</file>
                 </tool>
             </inputs>
         </file>

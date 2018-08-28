@@ -1,28 +1,28 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM        28/Aug/2018  19:56:55
+// IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM        28/Aug/2018  20:09:49
 // Copyright 1999-2018 IAR Systems AB.
 //
 //    Cpu mode     =  thumb
 //    Endian       =  little
 //    Source file  =  E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\main.cpp
 //    Command line =  
-//        -f C:\Users\Sergey\AppData\Local\Temp\EWD03.tmp
+//        -f C:\Users\Sergey\AppData\Local\Temp\EWDEB5.tmp
 //        (E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\main.cpp -lcN
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\List -lb
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\List -o
-//        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\Obj --no_cse
-//        --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering
-//        --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e
-//        --fpu=VFPv4_sp --dlib_config "D:\Program Files (x86)\IAR
-//        Systems\Embedded Workbench 8.1\arm\inc\c\DLib_Config_Normal.h" -I
+//        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\Obj --no_unroll
+//        --no_inline --no_tbaa --no_scheduling --debug --endian=little
+//        --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D:\Program Files
+//        (x86)\IAR Systems\Embedded Workbench
+//        8.1\arm\inc\c\DLib_Config_Normal.h" -I
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\ -I
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Application\ -I
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Common\ -I
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\AHardware\ -I
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\AHardware\GpioPort\ -I
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\AHardware\IrqController\ -I
-//        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\CMSIS\ -Ol --c++
+//        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\CMSIS\ -Om --c++
 //        --no_exceptions --no_rtti)
 //    Locale       =  C
 //    List file    =  
@@ -58,8 +58,8 @@
 // __interwork __softfp void utils::toggleBit<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
 _ZN5utils9toggleBitIVjmEEvRT_T0_:
         PUSH     {R3-R5,LR}
-        MOVS     R4,R0
-        MOVS     R5,R1
+        MOV      R4,R0
+        MOV      R5,R1
         CMP      R5,#+32
         BCC.N    ??toggleBit_1
         MOVS     R2,#+21
@@ -70,7 +70,7 @@ _ZN5utils9toggleBitIVjmEEvRT_T0_:
 ??toggleBit_1:
         LDR      R0,[R4, #+0]
         MOVS     R1,#+1
-        LSLS     R5,R1,R5
+        LSL      R5,R1,R5
         EORS     R5,R5,R0
         STR      R5,[R4, #+0]
         POP      {R0,R4,R5,PC}    ;; return
@@ -85,9 +85,7 @@ _ZN5utils9toggleBitIVjmEEvRT_T0_:
         THUMB
 // __code __interwork __softfp GpioPort<GPIO_TypeDef, 5UL>::subobject GpioPort(GPIO_TypeDef &)
 _ZN8GpioPortI12GPIO_TypeDefLm5EEC2ERS0_:
-        PUSH     {R7,LR}
-        BL       _ZN8GpioPortI12GPIO_TypeDefLm5EEC1ERS0_
-        POP      {R1,PC}          ;; return
+        B.W      _ZN8GpioPortI12GPIO_TypeDefLm5EEC1ERS0_
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm5EEC1ERS0_
@@ -102,12 +100,10 @@ _ZN8GpioPortI12GPIO_TypeDefLm5EEC1ERS0_:
         THUMB
 // __interwork __softfp void GpioPort<GPIO_TypeDef, 5UL>::Toggle()
 _ZN8GpioPortI12GPIO_TypeDefLm5EE6ToggleEv:
-        PUSH     {R7,LR}
         MOVS     R1,#+5
         LDR      R0,[R0, #+0]
         ADDS     R0,R0,#+20
-        BL       _ZN5utils9toggleBitIVjmEEvRT_T0_
-        POP      {R0,PC}          ;; return
+        B.W      _ZN5utils9toggleBitIVjmEEvRT_T0_
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN9GpioPortAILm5EEC1Ev
@@ -115,12 +111,12 @@ _ZN8GpioPortI12GPIO_TypeDefLm5EE6ToggleEv:
 // __code __interwork __softfp GpioPortA<5UL>::GpioPortA()
 _ZN9GpioPortAILm5EEC1Ev:
         PUSH     {R4,LR}
-        MOVS     R4,R0
+        MOV      R4,R0
         LDR.N    R1,??GpioPortA_0  ;; 0x40020000
-        MOVS     R0,R4
         BL       _ZN8GpioPortI12GPIO_TypeDefLm5EEC2ERS0_
-        MOVS     R0,R4
+        MOV      R0,R4
         POP      {R4,PC}          ;; return
+        Nop      
         DATA
 ??GpioPortA_0:
         DC32     0x40020000
@@ -130,31 +126,31 @@ _ZN9GpioPortAILm5EEC1Ev:
         THUMB
 // __code __interwork __softfp GpioPortA<5UL>::subobject GpioPortA()
 _ZN9GpioPortAILm5EEC2Ev:
-        PUSH     {R7,LR}
-        BL       _ZN9GpioPortAILm5EEC1Ev
-        POP      {R1,PC}          ;; return
+        B.W      _ZN9GpioPortAILm5EEC1Ev
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN9SingletonI4Led1E11GetInstanceEv
         THUMB
 // __interwork __softfp Led1 &Singleton<Led1>::GetInstance()
 _ZN9SingletonI4Led1E11GetInstanceEv:
-        PUSH     {R7,LR}
-        LDR.N    R1,??GetInstance_0
+        PUSH     {R4,LR}
+        LDR.N    R4,??GetInstance_0
+        LDR.N    R1,??GetInstance_0+0x4
         LDRB     R0,[R1, #+0]
         CMP      R0,#+0
         BNE.N    ??GetInstance_1
         MOVS     R0,#+1
         STRB     R0,[R1, #+0]
-        LDR.N    R0,??GetInstance_0+0x4
+        MOV      R0,R4
         BL       _ZN4Led1C1Ev
 ??GetInstance_1:
-        LDR.N    R0,??GetInstance_0+0x4
-        POP      {R1,PC}          ;; return
+        MOV      R0,R4
+        POP      {R4,PC}          ;; return
+        Nop      
         DATA
 ??GetInstance_0:
-        DC32     _ZGVZN9SingletonI4Led1E11GetInstanceEvE8instance
         DC32     _ZZN9SingletonI4Led1E11GetInstanceEvE8instance
+        DC32     _ZGVZN9SingletonI4Led1E11GetInstanceEvE8instance
 
         SECTION `.bss`:DATA:REORDER:NOROOT(0)
         SECTION_GROUP _ZGVZN9SingletonI4Led1E11GetInstanceEvE8instance
@@ -176,10 +172,9 @@ _ZZN9SingletonI4Led1E11GetInstanceEvE8instance:
 // __code __interwork __softfp Led1::Led1()
 _ZN4Led1C1Ev:
         PUSH     {R4,LR}
-        MOVS     R4,R0
-        MOVS     R0,R4
+        MOV      R4,R0
         BL       _ZN9GpioPortAILm5EEC2Ev
-        MOVS     R0,R4
+        MOV      R0,R4
         POP      {R4,PC}          ;; return
 
         SECTION `.text`:CODE:NOROOT(1)
@@ -187,35 +182,32 @@ _ZN4Led1C1Ev:
 __low_level_init:
         LDR.N    R0,??DataTable1  ;; 0x40023800
         LDR      R1,[R0, #+0]
-        ORRS     R1,R1,#0x1
+        ORR      R1,R1,#0x1
         STR      R1,[R0, #+0]
 ??__low_level_init_0:
         LDR      R1,[R0, #+0]
         LSLS     R1,R1,#+30
         BPL.N    ??__low_level_init_0
-        LDR.N    R0,??DataTable1_1  ;; 0x40023808
-        LDR      R1,[R0, #+0]
-        STR      R1,[R0, #+0]
+        LDR      R1,[R0, #+8]
+        STR      R1,[R0, #+8]
 ??__low_level_init_1:
-        LDR      R1,[R0, #+0]
+        LDR      R1,[R0, #+8]
         TST      R1,#0xC
         BNE.N    ??__low_level_init_1
-        LDR.N    R0,??DataTable1_2  ;; 0x40023830
+        LDR      R1,[R0, #+48]
+        ORR      R1,R1,#0x5
+        STR      R1,[R0, #+48]
+        LDR      R1,[R0, #+68]
+        ORR      R1,R1,#0x4000
+        STR      R1,[R0, #+68]
+        LDR.N    R0,??DataTable1_1  ;; 0x40020000
         LDR      R1,[R0, #+0]
-        ORRS     R1,R1,#0x5
+        ORR      R1,R1,#0x400
         STR      R1,[R0, #+0]
-        LDR.N    R0,??DataTable1_3  ;; 0x40023844
-        LDR      R1,[R0, #+0]
-        ORRS     R1,R1,#0x4000
-        STR      R1,[R0, #+0]
-        LDR.N    R0,??DataTable1_4  ;; 0x40020000
-        LDR      R1,[R0, #+0]
-        ORRS     R1,R1,#0x400
-        STR      R1,[R0, #+0]
-        LDR.N    R0,??DataTable1_5  ;; 0x40020800
+        LDR.N    R0,??DataTable1_2  ;; 0x40020800
         LDR      R1,[R0, #+0]
         ORR      R1,R1,#0x40000
-        ORRS     R1,R1,#0x10400
+        ORR      R1,R1,#0x10400
         STR      R1,[R0, #+0]
         MOVS     R0,#+1
         BX       LR               ;; return
@@ -235,13 +227,11 @@ _Z5Delaym:
         SECTION `.text`:CODE:NOROOT(1)
         THUMB
 main:
-        PUSH     {R4,LR}
-        BL       _ZN9SingletonI4Led1E11GetInstanceEv
-        MOVS     R4,R0
+        PUSH     {R7,LR}
 ??main_0:
-        MOVS     R0,R4
+        BL       _ZN9SingletonI4Led1E11GetInstanceEv
         BL       _ZN8GpioPortI12GPIO_TypeDefLm5EE6ToggleEv
-        LDR.N    R0,??DataTable1_6  ;; 0x30d400
+        LDR.N    R0,??DataTable1_3  ;; 0x30d400
         BL       _Z5Delaym
         B.N      ??main_0
 
@@ -255,36 +245,18 @@ main:
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable1_1:
-        DC32     0x40023808
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable1_2:
-        DC32     0x40023830
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable1_3:
-        DC32     0x40023844
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable1_4:
         DC32     0x40020000
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable1_5:
+??DataTable1_2:
         DC32     0x40020800
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable1_6:
+??DataTable1_3:
         DC32     0x30d400
 
         SECTION `.iar_vfe_header`:DATA:NOALLOC:NOROOT(2)
@@ -319,9 +291,9 @@ _ZZN5utils9toggleBitIVjmEEvRT_T0_Es_0:
 // 
 //   5 bytes in section .bss
 //  84 bytes in section .rodata
-// 288 bytes in section .text
+// 256 bytes in section .text
 // 
-// 140 bytes of CODE  memory (+ 148 bytes shared)
+// 118 bytes of CODE  memory (+ 138 bytes shared)
 //   0 bytes of CONST memory (+  84 bytes shared)
 //   0 bytes of DATA  memory (+   5 bytes shared)
 //

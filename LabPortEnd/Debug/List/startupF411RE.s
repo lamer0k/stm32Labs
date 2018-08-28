@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM        28/Aug/2018  19:49:12
+// IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM        28/Aug/2018  20:09:00
 // Copyright 1999-2018 IAR Systems AB.
 //
 //    Cpu mode     =  thumb
@@ -8,22 +8,22 @@
 //    Source file  =  
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\startupF411RE.cpp
 //    Command line =  
-//        -f C:\Users\Sergey\AppData\Local\Temp\EWFB8E.tmp
+//        -f C:\Users\Sergey\AppData\Local\Temp\EW20B5.tmp
 //        (E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\startupF411RE.cpp -lcN
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\List -lb
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\List -o
-//        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\Obj --no_cse
-//        --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering
-//        --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e
-//        --fpu=VFPv4_sp --dlib_config "D:\Program Files (x86)\IAR
-//        Systems\Embedded Workbench 8.1\arm\inc\c\DLib_Config_Normal.h" -I
+//        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\Obj --no_unroll
+//        --no_inline --no_tbaa --no_scheduling --debug --endian=little
+//        --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D:\Program Files
+//        (x86)\IAR Systems\Embedded Workbench
+//        8.1\arm\inc\c\DLib_Config_Normal.h" -I
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\ -I
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Application\ -I
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Common\ -I
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\AHardware\ -I
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\AHardware\GpioPort\ -I
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\AHardware\IrqController\ -I
-//        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\CMSIS\ -Ol --c++
+//        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\CMSIS\ -Om --c++
 //        --no_exceptions --no_rtti)
 //    Locale       =  C
 //    List file    =  
@@ -103,8 +103,8 @@ __iar_program_start:
         PUSH     {R7,LR}
         BL       __iar_init_core
         BL       __iar_init_vfp
-        BL       __cmain
-        POP      {R0,PC}          ;; return
+        POP      {R0,LR}
+        B.W      __cmain
         REQUIRE __vector_table
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
@@ -136,9 +136,9 @@ _ZN9OsWrapper4Rtos22HandleSysTickInterruptEv:
         END
 // 
 // 408 bytes in section .intvec
-//  24 bytes in section .text
+//  26 bytes in section .text
 // 
-//  18 bytes of CODE  memory (+ 6 bytes shared)
+//  20 bytes of CODE  memory (+ 6 bytes shared)
 // 408 bytes of CONST memory
 //
 //Errors: none
