@@ -1,5 +1,6 @@
 #include "CMSIS/stm32f411xe.h"
 #include "led1.hpp"
+#include "userbutton.hpp"
 
 extern "C" 
 {
@@ -41,8 +42,11 @@ int main()
     
   for(;;)
   {
-    Led1::GetInstance().Toggle();   
-    Delay(1000msec);
+    if (UserButton::GetInstance().IsPressed())
+    {
+      Led1::GetInstance().Toggle();         
+    } 
+    Delay(250msec);
   }
   return 0;
 }

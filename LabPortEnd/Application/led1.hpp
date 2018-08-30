@@ -4,9 +4,9 @@
 #include "GpioPort/gpioports.hpp"
 #include "../Common/singleton.hpp"
 
-constexpr tU32 buttonPin = 5U;
+constexpr tU32 led1Pin = 5U;
 
-class Led1 : public GpioPortA<buttonPin>, public Singleton<Led1>
+class Led1 : public GpioPortA<led1Pin>, public Singleton<Led1>
 {
   public:
     friend class Singleton<Led1>;

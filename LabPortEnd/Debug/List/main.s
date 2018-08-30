@@ -1,13 +1,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM        28/Aug/2018  20:09:49
+// IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM        30/Aug/2018  10:45:55
 // Copyright 1999-2018 IAR Systems AB.
 //
 //    Cpu mode     =  thumb
 //    Endian       =  little
 //    Source file  =  E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\main.cpp
 //    Command line =  
-//        -f C:\Users\Sergey\AppData\Local\Temp\EWDEB5.tmp
+//        -f C:\Users\Sergey\AppData\Local\Temp\EW94D2.tmp
 //        (E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\main.cpp -lcN
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\List -lb
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\List -o
@@ -36,17 +36,29 @@
         EXTWEAK __iar_EmptyStepPoint
 
         PUBLIC _Z5Delaym
+        PUBLIC _ZGVZN9SingletonI10UserButtonE11GetInstanceEvE8instance
         PUBLIC _ZGVZN9SingletonI4Led1E11GetInstanceEvE8instance
+        PUBLIC _ZN10UserButton9IsPressedEv
+        PUBLIC _ZN10UserButtonC1Ev
         PUBLIC _ZN4Led1C1Ev
+        PUBLIC _ZN5utils8checkBitIVjmEEbRKT_T0_
         PUBLIC _ZN5utils9toggleBitIVjmEEvRT_T0_
+        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm13EEC1ERS0_
+        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm13EEC2ERS0_
         PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm5EE6ToggleEv
         PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm5EEC1ERS0_
         PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm5EEC2ERS0_
         PUBLIC _ZN9GpioPortAILm5EEC1Ev
         PUBLIC _ZN9GpioPortAILm5EEC2Ev
+        PUBLIC _ZN9GpioPortCILm13EEC1Ev
+        PUBLIC _ZN9GpioPortCILm13EEC2Ev
+        PUBLIC _ZN9SingletonI10UserButtonE11GetInstanceEv
         PUBLIC _ZN9SingletonI4Led1E11GetInstanceEv
+        PUBLIC _ZZN5utils8checkBitIVjmEEbRKT_T0_Es
+        PUBLIC _ZZN5utils8checkBitIVjmEEbRKT_T0_Es_0
         PUBLIC _ZZN5utils9toggleBitIVjmEEvRT_T0_Es
         PUBLIC _ZZN5utils9toggleBitIVjmEEvRT_T0_Es_0
+        PUBLIC _ZZN9SingletonI10UserButtonE11GetInstanceEvE8instance
         PUBLIC _ZZN9SingletonI4Led1E11GetInstanceEvE8instance
         PUBLIC __low_level_init
         PUBLIC main
@@ -80,6 +92,32 @@ _ZN5utils9toggleBitIVjmEEvRT_T0_:
         DC32     _ZZN5utils9toggleBitIVjmEEvRT_T0_Es_0
         DC32     _ZZN5utils9toggleBitIVjmEEvRT_T0_Es
 
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN5utils8checkBitIVjmEEbRKT_T0_
+        THUMB
+// __interwork __softfp bool utils::checkBit<uint32_t volatile, tU32>(uint32_t const volatile &, tU32)
+_ZN5utils8checkBitIVjmEEbRKT_T0_:
+        PUSH     {R3-R5,LR}
+        MOV      R4,R0
+        MOV      R5,R1
+        CMP      R5,#+32
+        BCC.N    ??checkBit_1
+        MOVS     R2,#+27
+        LDR.N    R1,??checkBit_0
+        LDR.N    R0,??checkBit_0+0x4
+        BL       __aeabi_assert
+        BL       __iar_EmptyStepPoint
+??checkBit_1:
+        LDR      R0,[R4, #+0]
+        LSRS     R0,R0,R5
+        AND      R0,R0,#0x1
+        POP      {R1,R4,R5,PC}    ;; return
+        Nop      
+        DATA
+??checkBit_0:
+        DC32     _ZZN5utils8checkBitIVjmEEbRKT_T0_Es_0
+        DC32     _ZZN5utils8checkBitIVjmEEbRKT_T0_Es
+
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm5EEC2ERS0_
         THUMB
@@ -88,10 +126,25 @@ _ZN8GpioPortI12GPIO_TypeDefLm5EEC2ERS0_:
         B.W      _ZN8GpioPortI12GPIO_TypeDefLm5EEC1ERS0_
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm13EEC2ERS0_
+        THUMB
+// __code __interwork __softfp GpioPort<GPIO_TypeDef, 13UL>::subobject GpioPort(GPIO_TypeDef &)
+_ZN8GpioPortI12GPIO_TypeDefLm13EEC2ERS0_:
+        B.W      _ZN8GpioPortI12GPIO_TypeDefLm13EEC1ERS0_
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm5EEC1ERS0_
         THUMB
 // __code __interwork __softfp GpioPort<GPIO_TypeDef, 5UL>::GpioPort(GPIO_TypeDef &)
 _ZN8GpioPortI12GPIO_TypeDefLm5EEC1ERS0_:
+        STR      R1,[R0, #+0]
+        BX       LR               ;; return
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm13EEC1ERS0_
+        THUMB
+// __code __interwork __softfp GpioPort<GPIO_TypeDef, 13UL>::GpioPort(GPIO_TypeDef &)
+_ZN8GpioPortI12GPIO_TypeDefLm13EEC1ERS0_:
         STR      R1,[R0, #+0]
         BX       LR               ;; return
 
@@ -129,6 +182,29 @@ _ZN9GpioPortAILm5EEC2Ev:
         B.W      _ZN9GpioPortAILm5EEC1Ev
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN9GpioPortCILm13EEC1Ev
+        THUMB
+// __code __interwork __softfp GpioPortC<13UL>::GpioPortC()
+_ZN9GpioPortCILm13EEC1Ev:
+        PUSH     {R4,LR}
+        MOV      R4,R0
+        LDR.N    R1,??GpioPortC_0  ;; 0x40020800
+        BL       _ZN8GpioPortI12GPIO_TypeDefLm13EEC2ERS0_
+        MOV      R0,R4
+        POP      {R4,PC}          ;; return
+        Nop      
+        DATA
+??GpioPortC_0:
+        DC32     0x40020800
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN9GpioPortCILm13EEC2Ev
+        THUMB
+// __code __interwork __softfp GpioPortC<13UL>::subobject GpioPortC()
+_ZN9GpioPortCILm13EEC2Ev:
+        B.W      _ZN9GpioPortCILm13EEC1Ev
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN9SingletonI4Led1E11GetInstanceEv
         THUMB
 // __interwork __softfp Led1 &Singleton<Led1>::GetInstance()
@@ -138,12 +214,12 @@ _ZN9SingletonI4Led1E11GetInstanceEv:
         LDR.N    R1,??GetInstance_0+0x4
         LDRB     R0,[R1, #+0]
         CMP      R0,#+0
-        BNE.N    ??GetInstance_1
+        BNE.N    ??GetInstance_2
         MOVS     R0,#+1
         STRB     R0,[R1, #+0]
         MOV      R0,R4
         BL       _ZN4Led1C1Ev
-??GetInstance_1:
+??GetInstance_2:
         MOV      R0,R4
         POP      {R4,PC}          ;; return
         Nop      
@@ -151,6 +227,30 @@ _ZN9SingletonI4Led1E11GetInstanceEv:
 ??GetInstance_0:
         DC32     _ZZN9SingletonI4Led1E11GetInstanceEvE8instance
         DC32     _ZGVZN9SingletonI4Led1E11GetInstanceEvE8instance
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN9SingletonI10UserButtonE11GetInstanceEv
+        THUMB
+// __interwork __softfp UserButton &Singleton<UserButton>::GetInstance()
+_ZN9SingletonI10UserButtonE11GetInstanceEv:
+        PUSH     {R4,LR}
+        LDR.N    R4,??GetInstance_1
+        LDR.N    R1,??GetInstance_1+0x4
+        LDRB     R0,[R1, #+0]
+        CMP      R0,#+0
+        BNE.N    ??GetInstance_3
+        MOVS     R0,#+1
+        STRB     R0,[R1, #+0]
+        MOV      R0,R4
+        BL       _ZN10UserButtonC1Ev
+??GetInstance_3:
+        MOV      R0,R4
+        POP      {R4,PC}          ;; return
+        Nop      
+        DATA
+??GetInstance_1:
+        DC32     _ZZN9SingletonI10UserButtonE11GetInstanceEvE8instance
+        DC32     _ZGVZN9SingletonI10UserButtonE11GetInstanceEvE8instance
 
         SECTION `.bss`:DATA:REORDER:NOROOT(0)
         SECTION_GROUP _ZGVZN9SingletonI4Led1E11GetInstanceEvE8instance
@@ -166,6 +266,20 @@ _ZGVZN9SingletonI4Led1E11GetInstanceEvE8instance:
 _ZZN9SingletonI4Led1E11GetInstanceEvE8instance:
         DS8 4
 
+        SECTION `.bss`:DATA:REORDER:NOROOT(0)
+        SECTION_GROUP _ZGVZN9SingletonI10UserButtonE11GetInstanceEvE8instance
+        DATA
+// __absolute unsigned char static guard for instance
+_ZGVZN9SingletonI10UserButtonE11GetInstanceEvE8instance:
+        DS8 1
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(2)
+        SECTION_GROUP _ZZN9SingletonI10UserButtonE11GetInstanceEvE8instance
+        DATA
+// __absolute UserButton instance
+_ZZN9SingletonI10UserButtonE11GetInstanceEvE8instance:
+        DS8 4
+
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN4Led1C1Ev
         THUMB
@@ -174,6 +288,32 @@ _ZN4Led1C1Ev:
         PUSH     {R4,LR}
         MOV      R4,R0
         BL       _ZN9GpioPortAILm5EEC2Ev
+        MOV      R0,R4
+        POP      {R4,PC}          ;; return
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN10UserButton9IsPressedEv
+        THUMB
+// __interwork __softfp bool UserButton::IsPressed()
+_ZN10UserButton9IsPressedEv:
+        PUSH     {R7,LR}
+        MOVS     R1,#+13
+        LDR      R0,[R0, #+0]
+        ADDS     R0,R0,#+16
+        BL       _ZN5utils8checkBitIVjmEEbRKT_T0_
+        SUBS     R0,R0,#+1
+        SBCS     R0,R0,R0
+        LSRS     R0,R0,#+31
+        POP      {R1,PC}          ;; return
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN10UserButtonC1Ev
+        THUMB
+// __code __interwork __softfp UserButton::UserButton()
+_ZN10UserButtonC1Ev:
+        PUSH     {R4,LR}
+        MOV      R4,R0
+        BL       _ZN9GpioPortCILm13EEC2Ev
         MOV      R0,R4
         POP      {R4,PC}          ;; return
 
@@ -229,9 +369,14 @@ _Z5Delaym:
 main:
         PUSH     {R7,LR}
 ??main_0:
+        BL       _ZN9SingletonI10UserButtonE11GetInstanceEv
+        BL       _ZN10UserButton9IsPressedEv
+        CMP      R0,#+0
+        BEQ.N    ??main_1
         BL       _ZN9SingletonI4Led1E11GetInstanceEv
         BL       _ZN8GpioPortI12GPIO_TypeDefLm5EE6ToggleEv
-        LDR.N    R0,??DataTable1_3  ;; 0x30d400
+??main_1:
+        LDR.N    R0,??DataTable1_3  ;; 0xc3500
         BL       _Z5Delaym
         B.N      ??main_0
 
@@ -257,12 +402,35 @@ main:
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable1_3:
-        DC32     0x30d400
+        DC32     0xc3500
 
         SECTION `.iar_vfe_header`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
         DC32 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        SECTION_GROUP _ZZN5utils8checkBitIVjmEEbRKT_T0_Es
+        DATA
+// __absolute char const <_ZZN5utils8checkBitIVjmEEbRKT_T0_Es>[23]
+_ZZN5utils8checkBitIVjmEEbRKT_T0_Es:
+        DC8 "(sizeof(T) * 8U) > bit"
+        DC8 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        SECTION_GROUP _ZZN5utils8checkBitIVjmEEbRKT_T0_Es_0
+        DATA
+// __absolute char const <_ZZN5utils8checkBitIVjmEEbRKT_T0_Es_0>[58]
+_ZZN5utils8checkBitIVjmEEbRKT_T0_Es_0:
+        DC8 45H, 3AH, 5CH, 50H, 72H, 6FH, 6AH, 65H
+        DC8 63H, 74H, 73H, 5CH, 41H, 52H, 4DH, 5FH
+        DC8 4CH, 41H, 42H, 5CH, 73H, 74H, 6DH, 33H
+        DC8 32H, 4CH, 61H, 62H, 73H, 5CH, 4CH, 61H
+        DC8 62H, 50H, 6FH, 72H, 74H, 45H, 6EH, 64H
+        DC8 5CH, 43H, 6FH, 6DH, 6DH, 6FH, 6EH, 5CH
+        DC8 75H, 74H, 69H, 6CH, 73H, 2EH, 68H, 70H
+        DC8 70H, 0
+        DC8 0, 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZZN5utils9toggleBitIVjmEEvRT_T0_Es
@@ -289,13 +457,13 @@ _ZZN5utils9toggleBitIVjmEEvRT_T0_Es_0:
 
         END
 // 
-//   5 bytes in section .bss
-//  84 bytes in section .rodata
-// 256 bytes in section .text
+//  10 bytes in section .bss
+// 168 bytes in section .rodata
+// 412 bytes in section .text
 // 
-// 118 bytes of CODE  memory (+ 138 bytes shared)
-//   0 bytes of CONST memory (+  84 bytes shared)
-//   0 bytes of DATA  memory (+   5 bytes shared)
+// 130 bytes of CODE  memory (+ 282 bytes shared)
+//   0 bytes of CONST memory (+ 168 bytes shared)
+//   0 bytes of DATA  memory (+  10 bytes shared)
 //
 //Errors: none
 //Warnings: 1
