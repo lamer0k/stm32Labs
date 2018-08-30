@@ -1,13 +1,13 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM         30/Aug/2018  12:32:27
+# IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM         30/Aug/2018  15:31:19
 # Copyright 1999-2018 IAR Systems AB.
 #
 #    Cpu mode     =  thumb
 #    Endian       =  little
 #    Source file  =  E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\main.cpp
 #    Command line =  
-#        -f C:\Users\Sergey\AppData\Local\Temp\EW1F1B.tmp
+#        -f C:\Users\Sergey\AppData\Local\Temp\EWE1C9.tmp
 #        (E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\main.cpp -lcN
 #        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\List -lb
 #        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\List -o
@@ -33,7 +33,7 @@
 
 E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\main.cpp
       1          #include "CMSIS/stm32f411xe.h"
-      2          #include "led1.hpp"
+      2          #include "leds.hpp"
       3          #include "userbutton.hpp"
       4          
       5          extern "C" 
@@ -76,7 +76,7 @@ E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\main.cpp
      42          
      43          void Delay(tU32 duration)
      44          {
-     45            for (tU32 i = 0; i < duration; i++)
+     45            for (tU32 i = 0U; i < duration; i++)
      46            {    
      47            }
      48          }
@@ -100,43 +100,75 @@ E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\main.cpp
 
    .cstack Function
    ------- --------
+       0   Button::Button(IPort &)
+       0   Button::IsPressed() const
+         0   -- Indirect call
+       0   Button::subobject Button(IPort &)
+         0   -> Button::Button(IPort &)
        0   Delay(tU32)
-       8   GpioPort<GPIO_TypeDef, 13UL>::GetState()
+       0   GpioPort<13UL>::Clear()
+         0   -> utils::setBitValue<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
+       8   GpioPort<13UL>::GetState() const
          8   -> utils::checkBit<uint32_t volatile, tU32>(uint32_t const volatile &, tU32)
-       0   GpioPort<GPIO_TypeDef, 13UL>::GpioPort(GPIO_TypeDef &)
-       0   GpioPort<GPIO_TypeDef, 13UL>::subobject GpioPort(GPIO_TypeDef &)
-         0   -> GpioPort<GPIO_TypeDef, 13UL>::GpioPort(GPIO_TypeDef &)
-       0   GpioPort<GPIO_TypeDef, 5UL>::GpioPort(GPIO_TypeDef &)
-       0   GpioPort<GPIO_TypeDef, 5UL>::Toggle()
+      16   GpioPort<13UL>::GpioPort(GPIO_TypeDef &)
+        16   -> IPort::subobject IPort()
+       0   GpioPort<13UL>::Set()
+         0   -> utils::setBitValue<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
+       0   GpioPort<13UL>::SetMode(PortMode)
+       0   GpioPort<13UL>::Toggle()
          0   -> utils::toggleBit<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
-       0   GpioPort<GPIO_TypeDef, 5UL>::subobject GpioPort(GPIO_TypeDef &)
-         0   -> GpioPort<GPIO_TypeDef, 5UL>::GpioPort(GPIO_TypeDef &)
+       0   GpioPort<13UL>::subobject GpioPort(GPIO_TypeDef &)
+         0   -> GpioPort<13UL>::GpioPort(GPIO_TypeDef &)
+       0   GpioPort<5UL>::Clear()
+         0   -> utils::setBitValue<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
+       8   GpioPort<5UL>::GetState() const
+         8   -> utils::checkBit<uint32_t volatile, tU32>(uint32_t const volatile &, tU32)
+      16   GpioPort<5UL>::GpioPort(GPIO_TypeDef &)
+        16   -> IPort::subobject IPort()
+       0   GpioPort<5UL>::Set()
+         0   -> utils::setBitValue<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
+       0   GpioPort<5UL>::SetMode(PortMode)
+       0   GpioPort<5UL>::Toggle()
+         0   -> utils::toggleBit<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
+       0   GpioPort<5UL>::subobject GpioPort(GPIO_TypeDef &)
+         0   -> GpioPort<5UL>::GpioPort(GPIO_TypeDef &)
        8   GpioPortA<5UL>::GpioPortA()
-         8   -> GpioPort<GPIO_TypeDef, 5UL>::subobject GpioPort(GPIO_TypeDef &)
-       0   GpioPortA<5UL>::subobject GpioPortA()
-         0   -> GpioPortA<5UL>::GpioPortA()
+         8   -> GpioPort<5UL>::subobject GpioPort(GPIO_TypeDef &)
        8   GpioPortC<13UL>::GpioPortC()
-         8   -> GpioPort<GPIO_TypeDef, 13UL>::subobject GpioPort(GPIO_TypeDef &)
-       0   GpioPortC<13UL>::subobject GpioPortC()
-         0   -> GpioPortC<13UL>::GpioPortC()
+         8   -> GpioPort<13UL>::subobject GpioPort(GPIO_TypeDef &)
+       0   IPort::IPort()
+       0   IPort::subobject IPort()
+         0   -> IPort::IPort()
        8   Led1::Led1()
-         8   -> GpioPortA<5UL>::subobject GpioPortA()
+         8   -> Led::subobject Led(IPort &)
+         8   -> Singleton<GpioPortA<5UL>>::GetInstance()
+       0   Led::Led(IPort &)
+       0   Led::Toggle()
+         0   -- Indirect call
+       0   Led::subobject Led(IPort &)
+         0   -> Led::Led(IPort &)
+       8   Singleton<GpioPortA<5UL>>::GetInstance()
+         8   -> GpioPortA<5UL>::GpioPortA()
+       8   Singleton<GpioPortC<13UL>>::GetInstance()
+         8   -> GpioPortC<13UL>::GpioPortC()
        8   Singleton<Led1>::GetInstance()
          8   -> Led1::Led1()
        8   Singleton<UserButton>::GetInstance()
          8   -> UserButton::UserButton()
-       0   UserButton::IsPressed()
-         0   -> GpioPort<GPIO_TypeDef, 13UL>::GetState()
        8   UserButton::UserButton()
-         8   -> GpioPortC<13UL>::subobject GpioPortC()
+         8   -> Button::subobject Button(IPort &)
+         8   -> Singleton<GpioPortC<13UL>>::GetInstance()
        0   __low_level_init
        8   main
+         8   -> Button::IsPressed() const
          8   -> Delay(tU32)
-         8   -> GpioPort<GPIO_TypeDef, 5UL>::Toggle()
+         8   -> Led::Toggle()
          8   -> Singleton<Led1>::GetInstance()
          8   -> Singleton<UserButton>::GetInstance()
-         8   -> UserButton::IsPressed()
       16   utils::checkBit<uint32_t volatile, tU32>(uint32_t const volatile &, tU32)
+        16   -> __aeabi_assert
+        16   -> __iar_EmptyStepPoint
+      16   utils::setBitValue<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
         16   -> __aeabi_assert
         16   -> __iar_EmptyStepPoint
       16   utils::toggleBit<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
@@ -154,38 +186,56 @@ E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\main.cpp
        4  ??DataTable1_3
        4  ??DataTable1_4
        4  ??DataTable1_5
+       4  Button::Button(IPort &)
+       8  Button::IsPressed() const
+       4  Button::subobject Button(IPort &)
       12  Delay(tU32)
-      20  GpioPort<GPIO_TypeDef, 13UL>::GetState()
-       4  GpioPort<GPIO_TypeDef, 13UL>::GpioPort(GPIO_TypeDef &)
-       4  GpioPort<GPIO_TypeDef, 13UL>::subobject GpioPort(GPIO_TypeDef &)
-       4  GpioPort<GPIO_TypeDef, 5UL>::GpioPort(GPIO_TypeDef &)
-      10  GpioPort<GPIO_TypeDef, 5UL>::Toggle()
-       4  GpioPort<GPIO_TypeDef, 5UL>::subobject GpioPort(GPIO_TypeDef &)
-      20  GpioPortA<5UL>::GpioPortA()
-       4  GpioPortA<5UL>::subobject GpioPortA()
-      20  GpioPortC<13UL>::GpioPortC()
-       4  GpioPortC<13UL>::subobject GpioPortC()
-      12  Led1::Led1()
+      10  GpioPort<13UL>::Clear()
+      20  GpioPort<13UL>::GetState() const
+      24  GpioPort<13UL>::GpioPort(GPIO_TypeDef &)
+      10  GpioPort<13UL>::Set()
+      28  GpioPort<13UL>::SetMode(PortMode)
+      10  GpioPort<13UL>::Toggle()
+       4  GpioPort<13UL>::subobject GpioPort(GPIO_TypeDef &)
+      10  GpioPort<5UL>::Clear()
+      20  GpioPort<5UL>::GetState() const
+      24  GpioPort<5UL>::GpioPort(GPIO_TypeDef &)
+      10  GpioPort<5UL>::Set()
+      28  GpioPort<5UL>::SetMode(PortMode)
+      10  GpioPort<5UL>::Toggle()
+       4  GpioPort<5UL>::subobject GpioPort(GPIO_TypeDef &)
+      28  GpioPortA<5UL>::GpioPortA()
+      28  GpioPortC<13UL>::GpioPortC()
+       2  IPort::IPort()
+       4  IPort::subobject IPort()
+      20  Led1::Led1()
+       4  Led::Led(IPort &)
+       8  Led::Toggle()
+       4  Led::subobject Led(IPort &)
+      36  Singleton<GpioPortA<5UL>>::GetInstance()
+      36  Singleton<GpioPortC<13UL>>::GetInstance()
       36  Singleton<Led1>::GetInstance()
       36  Singleton<UserButton>::GetInstance()
-       4  UserButton::IsPressed()
-      12  UserButton::UserButton()
+      20  UserButton::UserButton()
      122  __low_level_init
        4  instance
        4  instance
+       8  instance
+       8  instance
       30  main
       44  utils::checkBit<uint32_t volatile, tU32>(uint32_t const volatile &, tU32)
+      44  utils::setBitValue<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
       48  utils::toggleBit<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
-     170  -- Other
+     748  -- Other
 
  
-  10 bytes in section .bss
- 168 bytes in section .rodata
- 474 bytes in section .text
+  28 bytes in section .bss
+ 744 bytes in section .rodata
+ 814 bytes in section .text
  
- 188 bytes of CODE  memory (+ 286 bytes shared)
-   0 bytes of CONST memory (+ 168 bytes shared)
-   0 bytes of DATA  memory (+  10 bytes shared)
+ 188 bytes of CODE  memory (+ 626 bytes shared)
+   0 bytes of CONST memory (+ 744 bytes shared)
+   0 bytes of DATA  memory (+  28 bytes shared)
 
 Errors: none
 Warnings: 1

@@ -2082,7 +2082,7 @@
     <group>
         <name>Application</name>
         <file>
-            <name>$PROJ_DIR$\Application\led1.hpp</name>
+            <name>$PROJ_DIR$\Application\leds.hpp</name>
         </file>
         <file>
             <name>$PROJ_DIR$\Application\userbutton.hpp</name>

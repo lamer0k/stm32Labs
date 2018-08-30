@@ -4,18 +4,24 @@
 #include "GpioPort/gpioports.hpp"
 #include "../Common/singleton.hpp"
 
-constexpr tU32 buttonPin = 13U;
-
-class UserButton : public GpioPortC<buttonPin>, public Singleton<UserButton>
+class Button
 {
   public:
-    inline bool IsPressed()
+    Button(IPort & portName) : port{portName} {};
+    inline bool IsPressed()const
     {
-      return GetState();
+      return port.GetState();      
     }
-    static void HandleInterrupt();
-    friend class Singleton<UserButton>;
+    static void HandleInterrupt();    
   private:
-    UserButton()  = default;
+    IPort &port;
+};
+
+constexpr tU32 buttonPin = 13U;
+class UserButton: public Button, public Singleton<UserButton> 
+{
+  friend class Singleton;
+  private:
+     UserButton(): Button {GpioPortC<buttonPin>::GetInstance()} {};
 };
 #endif //__BUTTON_H

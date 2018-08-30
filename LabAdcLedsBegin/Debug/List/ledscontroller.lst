@@ -1,38 +1,39 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM         30/Aug/2018  14:57:33
+# IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM         30/Aug/2018  15:15:01
 # Copyright 1999-2018 IAR Systems AB.
 #
 #    Cpu mode     =  thumb
 #    Endian       =  little
 #    Source file  =  
-#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Application\ledscontroller.cpp
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Application\ledscontroller.cpp
 #    Command line =  
-#        -f C:\Users\Sergey\AppData\Local\Temp\EWF833.tmp
-#        (E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Application\ledscontroller.cpp
-#        -D NDEBUG -lcN E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Debug\List -lb
-#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Debug\List -o
-#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Debug\Obj --debug
+#        -f C:\Users\Sergey\AppData\Local\Temp\EWF33F.tmp
+#        (E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Application\ledscontroller.cpp
+#        -D NDEBUG -lcN
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Debug\List -lb
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Debug\List -o
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Debug\Obj --debug
 #        --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config
 #        "D:\Program Files (x86)\IAR Systems\Embedded Workbench
 #        8.1\arm\inc\c\DLib_Config_Normal.h" -I
-#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\ -I
-#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Application\ -I
-#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Common\ -I
-#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\AHardware\ -I
-#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\AHardware\GpioPort\ -I
-#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\AHardware\IrqController\ -I
-#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\CMSIS\ -Oh --c++
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\ -I
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Application\ -I
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Common\ -I
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\AHardware\ -I
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\AHardware\GpioPort\ -I
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\AHardware\IrqController\
+#        -I E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\CMSIS\ -Oh --c++
 #        --no_exceptions --no_rtti)
 #    Locale       =  C
 #    List file    =  
-#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Debug\List\ledscontroller.lst
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Debug\List\ledscontroller.lst
 #    Object file  =  
-#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Debug\Obj\ledscontroller.o
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Debug\Obj\ledscontroller.o
 #
 ###############################################################################
 
-E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Application\ledscontroller.cpp
+E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Application\ledscontroller.cpp
       1          /*******************************************************************************
       2          *  FILENAME: ledscontroller.cpp
       3          *
@@ -101,21 +102,21 @@ E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Application\ledscontroller.cpp
 
    .cstack Function
    ------- --------
-       0   GpioPort<GPIO_TypeDef, 5UL>::Clear()
-       0   GpioPort<GPIO_TypeDef, 5UL>::GetState() const
-       0   GpioPort<GPIO_TypeDef, 5UL>::Set()
-       0   GpioPort<GPIO_TypeDef, 5UL>::SetMode(PortMode)
-       0   GpioPort<GPIO_TypeDef, 5UL>::Toggle()
-       0   GpioPort<GPIO_TypeDef, 8UL>::Clear()
-       0   GpioPort<GPIO_TypeDef, 8UL>::GetState() const
-       0   GpioPort<GPIO_TypeDef, 8UL>::Set()
-       0   GpioPort<GPIO_TypeDef, 8UL>::SetMode(PortMode)
-       0   GpioPort<GPIO_TypeDef, 8UL>::Toggle()
-       0   GpioPort<GPIO_TypeDef, 9UL>::Clear()
-       0   GpioPort<GPIO_TypeDef, 9UL>::GetState() const
-       0   GpioPort<GPIO_TypeDef, 9UL>::Set()
-       0   GpioPort<GPIO_TypeDef, 9UL>::SetMode(PortMode)
-       0   GpioPort<GPIO_TypeDef, 9UL>::Toggle()
+       0   GpioPort<5UL>::Clear()
+       0   GpioPort<5UL>::GetState() const
+       0   GpioPort<5UL>::Set()
+       0   GpioPort<5UL>::SetMode(PortMode)
+       0   GpioPort<5UL>::Toggle()
+       0   GpioPort<8UL>::Clear()
+       0   GpioPort<8UL>::GetState() const
+       0   GpioPort<8UL>::Set()
+       0   GpioPort<8UL>::SetMode(PortMode)
+       0   GpioPort<8UL>::Toggle()
+       0   GpioPort<9UL>::Clear()
+       0   GpioPort<9UL>::GetState() const
+       0   GpioPort<9UL>::Set()
+       0   GpioPort<9UL>::SetMode(PortMode)
+       0   GpioPort<9UL>::Toggle()
        4   LedDriver::LedDriver()
       16   LedsController::Update(tU8)
         16   -- Indirect call
@@ -126,21 +127,21 @@ E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Application\ledscontroller.cpp
 
    Bytes  Function/Label
    -----  --------------
-      10  GpioPort<GPIO_TypeDef, 5UL>::Clear()
-      16  GpioPort<GPIO_TypeDef, 5UL>::GetState() const
-       8  GpioPort<GPIO_TypeDef, 5UL>::Set()
-      26  GpioPort<GPIO_TypeDef, 5UL>::SetMode(PortMode)
-      14  GpioPort<GPIO_TypeDef, 5UL>::Toggle()
-      10  GpioPort<GPIO_TypeDef, 8UL>::Clear()
-      16  GpioPort<GPIO_TypeDef, 8UL>::GetState() const
-      10  GpioPort<GPIO_TypeDef, 8UL>::Set()
-      26  GpioPort<GPIO_TypeDef, 8UL>::SetMode(PortMode)
-      14  GpioPort<GPIO_TypeDef, 8UL>::Toggle()
-      10  GpioPort<GPIO_TypeDef, 9UL>::Clear()
-      16  GpioPort<GPIO_TypeDef, 9UL>::GetState() const
-      10  GpioPort<GPIO_TypeDef, 9UL>::Set()
-      26  GpioPort<GPIO_TypeDef, 9UL>::SetMode(PortMode)
-      14  GpioPort<GPIO_TypeDef, 9UL>::Toggle()
+      10  GpioPort<5UL>::Clear()
+      16  GpioPort<5UL>::GetState() const
+       8  GpioPort<5UL>::Set()
+      26  GpioPort<5UL>::SetMode(PortMode)
+      14  GpioPort<5UL>::Toggle()
+      10  GpioPort<8UL>::Clear()
+      16  GpioPort<8UL>::GetState() const
+      10  GpioPort<8UL>::Set()
+      26  GpioPort<8UL>::SetMode(PortMode)
+      14  GpioPort<8UL>::Toggle()
+      10  GpioPort<9UL>::Clear()
+      16  GpioPort<9UL>::GetState() const
+      10  GpioPort<9UL>::Set()
+      26  GpioPort<9UL>::SetMode(PortMode)
+      14  GpioPort<9UL>::Toggle()
      180  LedDriver::LedDriver()
      212  LedsController::Update(tU8)
        8  instance
@@ -148,15 +149,15 @@ E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Application\ledscontroller.cpp
        8  instance
        8  instance
       16  instance
-     741  -- Other
+     693  -- Other
 
  
   53 bytes in section .bss
- 736 bytes in section .rodata
+ 688 bytes in section .rodata
  618 bytes in section .text
  
  212 bytes of CODE  memory (+ 406 bytes shared)
-   0 bytes of CONST memory (+ 736 bytes shared)
+   0 bytes of CONST memory (+ 688 bytes shared)
    0 bytes of DATA  memory (+  53 bytes shared)
 
 Errors: none

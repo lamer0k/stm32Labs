@@ -2,8 +2,8 @@
 // Created by Sergey on 27.08.2018.
 //
 
-#ifndef UNTITLED_GPIOPORT_HPP
-#define UNTITLED_GPIOPORT_HPP
+#ifndef GPIOPORT_HPP
+#define GPIOPORT_HPP
 #include "susudefs.hpp"
 #include "utils.hpp"
 #include "iport.hpp"
@@ -12,12 +12,12 @@
 constexpr tU32 outputBits = 1;
 constexpr tU32 inputBits = 3;
  
-template<typename T, tU32 pin>
+template<tU32 pin>
 class GpioPort : public IPort
 {
        
   public:       
-    GpioPort(T &portName): port{portName} {};
+    explicit GpioPort(GPIO_TypeDef &portName): port{portName} {};
     virtual void SetMode(PortMode mode) override
     {      
       switch (mode)
@@ -49,8 +49,8 @@ class GpioPort : public IPort
       return !utils::checkBit(port.IDR, pin);
     }
   protected:
-    T &port;
+    GPIO_TypeDef &port;
 };
 
 
-#endif //UNTITLED_GPIOPORT_HPP
+#endif //GPIOPORT_HPP

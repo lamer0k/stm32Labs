@@ -120498,6 +120498,396 @@
     "scope": null
   },
   {
+    "ID": "c:utils.hpp@25@macro@UTILS_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UTILS_H",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
+    },
+    "name": "UTILS_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@N@utils",
+    "What": "Namespace",
+    "defdec": "Def",
+    "display": "utils",
+    "location": {
+      "column": "11",
+      "line": "4",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
+    },
+    "members": [
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "15",
+          "line": "8",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
+        },
+        "name": "setBit",
+        "origin": "user_include",
+        "scope": "utils"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "15",
+          "line": "14",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
+        },
+        "name": "clearBit",
+        "origin": "user_include",
+        "scope": "utils"
+      },
+      {
+        "ID": "c:@N@utils@FT@>2#T#TtoggleBit#&t0.0#t0.1#v#",
+        "What": "FunctionTemplate",
+        "defdec": "Def",
+        "display": "void toggleBit(T &, T1)",
+        "location": {
+          "column": "15",
+          "line": "20",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
+        },
+        "name": "toggleBit",
+        "origin": "user_include",
+        "scope": "utils"
+      },
+      {
+        "ID": "c:@N@utils@FT@>2#T#TcheckBit#&1t0.0#t0.1#b#",
+        "What": "FunctionTemplate",
+        "defdec": "Def",
+        "display": "bool checkBit(const T &, T1)",
+        "location": {
+          "column": "15",
+          "line": "26",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
+        },
+        "name": "checkBit",
+        "origin": "user_include",
+        "scope": "utils"
+      },
+      {
+        "ID": "c:@N@utils@FT@>2#T#TsetBitValue#&t0.0#t0.1#v#",
+        "What": "FunctionTemplate",
+        "defdec": "Def",
+        "display": "void setBitValue(T &, T1)",
+        "location": {
+          "column": "15",
+          "line": "32",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
+        },
+        "name": "setBitValue",
+        "origin": "user_include",
+        "scope": "utils"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "15",
+          "line": "38",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
+        },
+        "name": "setBitsAt",
+        "origin": "user_include",
+        "scope": "utils"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "15",
+          "line": "44",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
+        },
+        "name": "clearBitsAt",
+        "origin": "user_include",
+        "scope": "utils"
+      }
+    ],
+    "name": "utils",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@operator\"\"sec#k#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "unsigned long long operator\"\"sec(unsigned long long)",
+    "location": {
+      "column": "30",
+      "line": "50",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
+    },
+    "name": "operator\"\"sec",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@operator\"\"msec#k#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "unsigned long long operator\"\"msec(unsigned long long)",
+    "location": {
+      "column": "30",
+      "line": "54",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
+    },
+    "name": "operator\"\"msec",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:gpioports.hpp@87@macro@UNTITLED_GPIOPORTS_HPP",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UNTITLED_GPIOPORTS_HPP",
+    "location": {
+      "column": "9",
+      "line": "6",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
+    },
+    "name": "UNTITLED_GPIOPORTS_HPP",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@ST>1#Nl@GpioPortA",
+    "What": "ClassTemplate",
+    "defdec": "Def",
+    "display": "GpioPortA<pin>",
+    "location": {
+      "column": "7",
+      "line": "12",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@ST>1#Nl@GpioPortA@F@GpioPortA<pin>#",
+        "What": "CXXConstructor",
+        "defdec": "Def",
+        "display": "void GpioPortA<pin>(void)",
+        "location": {
+          "column": "5",
+          "line": "16",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
+        },
+        "name": "GpioPortA<pin>",
+        "origin": "user_include",
+        "scope": "GpioPortA"
+      }
+    ],
+    "name": "GpioPortA",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@ST>1#Nl@GpioPortB",
+    "What": "ClassTemplate",
+    "defdec": "Def",
+    "display": "GpioPortB<pin>",
+    "location": {
+      "column": "7",
+      "line": "20",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@ST>1#Nl@GpioPortB@F@GpioPortB<pin>#",
+        "What": "CXXConstructor",
+        "defdec": "Dec",
+        "display": "void GpioPortB<pin>(void)",
+        "location": {
+          "column": "5",
+          "line": "24",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
+        },
+        "name": "GpioPortB<pin>",
+        "origin": "user_include",
+        "scope": "GpioPortB"
+      }
+    ],
+    "name": "GpioPortB",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@ST>1#Nl@GpioPortC",
+    "What": "ClassTemplate",
+    "defdec": "Def",
+    "display": "GpioPortC<pin>",
+    "location": {
+      "column": "7",
+      "line": "28",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@ST>1#Nl@GpioPortC@F@GpioPortC<pin>#",
+        "What": "CXXConstructor",
+        "defdec": "Def",
+        "display": "void GpioPortC<pin>(void)",
+        "location": {
+          "column": "5",
+          "line": "32",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
+        },
+        "name": "GpioPortC<pin>",
+        "origin": "user_include",
+        "scope": "GpioPortC"
+      }
+    ],
+    "name": "GpioPortC",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@ST>1#Nl@GpioPortD",
+    "What": "ClassTemplate",
+    "defdec": "Def",
+    "display": "GpioPortD<pin>",
+    "location": {
+      "column": "7",
+      "line": "36",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@ST>1#Nl@GpioPortD@F@GpioPortD<pin>#",
+        "What": "CXXConstructor",
+        "defdec": "Dec",
+        "display": "void GpioPortD<pin>(void)",
+        "location": {
+          "column": "5",
+          "line": "40",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
+        },
+        "name": "GpioPortD<pin>",
+        "origin": "user_include",
+        "scope": "GpioPortD"
+      }
+    ],
+    "name": "GpioPortD",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:singleton.hpp@33@macro@__SINGLETON_HPP",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__SINGLETON_HPP",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\singleton.hpp"
+    },
+    "name": "__SINGLETON_HPP",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@ST>1#T@Singleton",
+    "What": "ClassTemplate",
+    "defdec": "Def",
+    "display": "Singleton<T>",
+    "location": {
+      "column": "7",
+      "line": "5",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\singleton.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@ST>1#T@Singleton@F@Singleton<T>#&1>@ST>1#T@Singleton1t0.0#",
+        "What": "CXXConstructor",
+        "defdec": "Dec",
+        "display": "void Singleton<T>(const Singleton<T> &)",
+        "location": {
+          "column": "4",
+          "line": "8",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\singleton.hpp"
+        },
+        "name": "Singleton<T>",
+        "origin": "user_include",
+        "scope": "Singleton"
+      },
+      {
+        "ID": "c:@ST>1#T@Singleton@F@operator=#&1>@ST>1#T@Singleton1t0.0#",
+        "What": "CXXMethod",
+        "defdec": "Dec",
+        "display": "Singleton<T> & operator=(const Singleton<T> &)",
+        "location": {
+          "column": "15",
+          "line": "9",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\singleton.hpp"
+        },
+        "name": "operator=",
+        "origin": "user_include",
+        "scope": "Singleton"
+      },
+      {
+        "ID": "c:@ST>1#T@Singleton@F@GetInstance#S",
+        "What": "CXXMethod",
+        "defdec": "Def",
+        "display": "T & GetInstance(void)",
+        "location": {
+          "column": "14",
+          "line": "10",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\singleton.hpp"
+        },
+        "name": "GetInstance",
+        "origin": "user_include",
+        "scope": "Singleton"
+      },
+      {
+        "ID": "c:@ST>1#T@Singleton@F@GetInstance#S@instance",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "instance",
+        "location": {
+          "column": "15",
+          "line": "13",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\singleton.hpp"
+        },
+        "name": "instance",
+        "origin": "user_include",
+        "scope": "Singleton"
+      },
+      {
+        "ID": "c:@ST>1#T@Singleton@F@Singleton<T>#",
+        "What": "CXXConstructor",
+        "defdec": "Dec",
+        "display": "void Singleton<T>(void)",
+        "location": {
+          "column": "4",
+          "line": "17",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\singleton.hpp"
+        },
+        "name": "Singleton<T>",
+        "origin": "user_include",
+        "scope": "Singleton"
+      }
+    ],
+    "name": "Singleton",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@__low_level_init",
     "What": "Function",
     "defdec": "Def",
@@ -120551,6 +120941,282 @@
     },
     "name": "main",
     "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:leds.hpp@24@macro@LED1_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LED1_H",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+    },
+    "name": "LED1_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:leds.hpp@led1Pin",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "led1Pin",
+    "location": {
+      "column": "16",
+      "line": "7",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+    },
+    "name": "led1Pin",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:leds.hpp@led2Pin",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "led2Pin",
+    "location": {
+      "column": "16",
+      "line": "8",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+    },
+    "name": "led2Pin",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:leds.hpp@led3Pin",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "led3Pin",
+    "location": {
+      "column": "16",
+      "line": "9",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+    },
+    "name": "led3Pin",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:leds.hpp@led4Pin",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "led4Pin",
+    "location": {
+      "column": "16",
+      "line": "10",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+    },
+    "name": "led4Pin",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@Led",
+    "What": "Class",
+    "defdec": "Def",
+    "display": "Led",
+    "location": {
+      "column": "7",
+      "line": "12",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@S@Led@F@Led#&$@S@IPort#",
+        "What": "CXXConstructor",
+        "defdec": "Def",
+        "display": "void Led(IPort &)",
+        "location": {
+          "column": "5",
+          "line": "15",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+        },
+        "name": "Led",
+        "origin": "user_include",
+        "scope": "Led"
+      },
+      {
+        "ID": "c:@S@Led@F@SwitchOn#",
+        "What": "CXXMethod",
+        "defdec": "Def",
+        "display": "void SwitchOn(void)",
+        "location": {
+          "column": "10",
+          "line": "18",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+        },
+        "name": "SwitchOn",
+        "origin": "user_include",
+        "scope": "Led"
+      },
+      {
+        "ID": "c:@S@Led@F@SwitchOff#",
+        "What": "CXXMethod",
+        "defdec": "Def",
+        "display": "void SwitchOff(void)",
+        "location": {
+          "column": "10",
+          "line": "22",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+        },
+        "name": "SwitchOff",
+        "origin": "user_include",
+        "scope": "Led"
+      },
+      {
+        "ID": "c:@S@Led@F@Toggle#",
+        "What": "CXXMethod",
+        "defdec": "Def",
+        "display": "void Toggle(void)",
+        "location": {
+          "column": "10",
+          "line": "26",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+        },
+        "name": "Toggle",
+        "origin": "user_include",
+        "scope": "Led"
+      },
+      {
+        "ID": "c:@S@Led@FI@port",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "port",
+        "location": {
+          "column": "11",
+          "line": "31",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+        },
+        "name": "port",
+        "origin": "user_include",
+        "scope": "Led"
+      }
+    ],
+    "name": "Led",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@Led1",
+    "What": "Class",
+    "defdec": "Def",
+    "display": "Led1",
+    "location": {
+      "column": "7",
+      "line": "34",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@S@Led1@F@Led1#",
+        "What": "CXXConstructor",
+        "defdec": "Def",
+        "display": "void Led1(void)",
+        "location": {
+          "column": "5",
+          "line": "38",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+        },
+        "name": "Led1",
+        "origin": "user_include",
+        "scope": "Led1"
+      }
+    ],
+    "name": "Led1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@Led2",
+    "What": "Class",
+    "defdec": "Def",
+    "display": "Led2",
+    "location": {
+      "column": "7",
+      "line": "41",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@S@Led2@F@Led2#",
+        "What": "CXXConstructor",
+        "defdec": "Def",
+        "display": "void Led2(void)",
+        "location": {
+          "column": "5",
+          "line": "45",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+        },
+        "name": "Led2",
+        "origin": "user_include",
+        "scope": "Led2"
+      }
+    ],
+    "name": "Led2",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@Led3",
+    "What": "Class",
+    "defdec": "Def",
+    "display": "Led3",
+    "location": {
+      "column": "7",
+      "line": "48",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@S@Led3@F@Led3#",
+        "What": "CXXConstructor",
+        "defdec": "Def",
+        "display": "void Led3(void)",
+        "location": {
+          "column": "5",
+          "line": "52",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+        },
+        "name": "Led3",
+        "origin": "user_include",
+        "scope": "Led3"
+      }
+    ],
+    "name": "Led3",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@Led4",
+    "What": "Class",
+    "defdec": "Def",
+    "display": "Led4",
+    "location": {
+      "column": "7",
+      "line": "55",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@S@Led4@F@Led4#",
+        "What": "CXXConstructor",
+        "defdec": "Def",
+        "display": "void Led4(void)",
+        "location": {
+          "column": "5",
+          "line": "59",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\leds.hpp"
+        },
+        "name": "Led4",
+        "origin": "user_include",
+        "scope": "Led4"
+      }
+    ],
+    "name": "Led4",
+    "origin": "user_include",
     "scope": null
   },
   {
@@ -120652,399 +121318,79 @@
     "scope": null
   },
   {
-    "ID": "c:led1.hpp@24@macro@LED1_H",
+    "ID": "c:gpioport.hpp@77@macro@GPIOPORT_HPP",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "LED1_H",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\led1.hpp"
-    },
-    "name": "LED1_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:led1.hpp@led1Pin",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "led1Pin",
-    "location": {
-      "column": "16",
-      "line": "7",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\led1.hpp"
-    },
-    "name": "led1Pin",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@S@Led1",
-    "What": "Class",
-    "defdec": "Def",
-    "display": "Led1",
-    "location": {
-      "column": "7",
-      "line": "9",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\led1.hpp"
-    },
-    "members": [
-      {
-        "ID": "c:@S@Led1@F@Led1#",
-        "What": "CXXConstructor",
-        "defdec": "Def",
-        "display": "void Led1(void)",
-        "location": {
-          "column": "5",
-          "line": "14",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\led1.hpp"
-        },
-        "name": "Led1",
-        "origin": "user_include",
-        "scope": "Led1"
-      }
-    ],
-    "name": "Led1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:gpioports.hpp@87@macro@UNTITLED_GPIOPORTA_HPP",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UNTITLED_GPIOPORTA_HPP",
-    "location": {
-      "column": "9",
-      "line": "6",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
-    },
-    "name": "UNTITLED_GPIOPORTA_HPP",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@ST>1#Nl@GpioPortA",
-    "What": "ClassTemplate",
-    "defdec": "Def",
-    "display": "GpioPortA<pin>",
-    "location": {
-      "column": "7",
-      "line": "11",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
-    },
-    "members": [
-      {
-        "ID": "c:@ST>1#Nl@GpioPortA@F@GpioPortA<pin>#",
-        "What": "CXXConstructor",
-        "defdec": "Def",
-        "display": "void GpioPortA<pin>(void)",
-        "location": {
-          "column": "14",
-          "line": "14",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
-        },
-        "name": "GpioPortA<pin>",
-        "origin": "user_include",
-        "scope": "GpioPortA"
-      }
-    ],
-    "name": "GpioPortA",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@ST>1#Nl@GpioPortB",
-    "What": "ClassTemplate",
-    "defdec": "Def",
-    "display": "GpioPortB<pin>",
-    "location": {
-      "column": "7",
-      "line": "18",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
-    },
-    "members": [
-      {
-        "ID": "c:@ST>1#Nl@GpioPortB@F@GpioPortB<pin>#",
-        "What": "CXXConstructor",
-        "defdec": "Dec",
-        "display": "void GpioPortB<pin>(void)",
-        "location": {
-          "column": "14",
-          "line": "21",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
-        },
-        "name": "GpioPortB<pin>",
-        "origin": "user_include",
-        "scope": "GpioPortB"
-      }
-    ],
-    "name": "GpioPortB",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@ST>1#Nl@GpioPortC",
-    "What": "ClassTemplate",
-    "defdec": "Def",
-    "display": "GpioPortC<pin>",
-    "location": {
-      "column": "7",
-      "line": "25",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
-    },
-    "members": [
-      {
-        "ID": "c:@ST>1#Nl@GpioPortC@F@GpioPortC<pin>#",
-        "What": "CXXConstructor",
-        "defdec": "Def",
-        "display": "void GpioPortC<pin>(void)",
-        "location": {
-          "column": "14",
-          "line": "28",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
-        },
-        "name": "GpioPortC<pin>",
-        "origin": "user_include",
-        "scope": "GpioPortC"
-      }
-    ],
-    "name": "GpioPortC",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@ST>1#Nl@GpioPortD",
-    "What": "ClassTemplate",
-    "defdec": "Def",
-    "display": "GpioPortD<pin>",
-    "location": {
-      "column": "7",
-      "line": "32",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
-    },
-    "members": [
-      {
-        "ID": "c:@ST>1#Nl@GpioPortD@F@GpioPortD<pin>#",
-        "What": "CXXConstructor",
-        "defdec": "Dec",
-        "display": "void GpioPortD<pin>(void)",
-        "location": {
-          "column": "14",
-          "line": "35",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioports.hpp"
-        },
-        "name": "GpioPortD<pin>",
-        "origin": "user_include",
-        "scope": "GpioPortD"
-      }
-    ],
-    "name": "GpioPortD",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:utils.hpp@25@macro@UTILS_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UTILS_H",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
-    },
-    "name": "UTILS_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@N@utils",
-    "What": "Namespace",
-    "defdec": "Def",
-    "display": "utils",
-    "location": {
-      "column": "11",
-      "line": "4",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
-    },
-    "members": [
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "15",
-          "line": "8",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
-        },
-        "name": "setBit",
-        "origin": "user_include",
-        "scope": "utils"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "15",
-          "line": "14",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
-        },
-        "name": "clearBit",
-        "origin": "user_include",
-        "scope": "utils"
-      },
-      {
-        "ID": "c:@N@utils@FT@>2#T#TtoggleBit#&t0.0#t0.1#v#",
-        "What": "FunctionTemplate",
-        "defdec": "Def",
-        "display": "void toggleBit(T &, T1)",
-        "location": {
-          "column": "15",
-          "line": "20",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
-        },
-        "name": "toggleBit",
-        "origin": "user_include",
-        "scope": "utils"
-      },
-      {
-        "ID": "c:@N@utils@FT@>2#T#TcheckBit#&1t0.0#t0.1#b#",
-        "What": "FunctionTemplate",
-        "defdec": "Def",
-        "display": "bool checkBit(const T &, T1)",
-        "location": {
-          "column": "15",
-          "line": "26",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
-        },
-        "name": "checkBit",
-        "origin": "user_include",
-        "scope": "utils"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "15",
-          "line": "32",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
-        },
-        "name": "setBitValue",
-        "origin": "user_include",
-        "scope": "utils"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "15",
-          "line": "38",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
-        },
-        "name": "setBitsAt",
-        "origin": "user_include",
-        "scope": "utils"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "15",
-          "line": "44",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
-        },
-        "name": "clearBitsAt",
-        "origin": "user_include",
-        "scope": "utils"
-      }
-    ],
-    "name": "utils",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@operator\"\"sec#k#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "unsigned long long operator\"\"sec(unsigned long long)",
-    "location": {
-      "column": "30",
-      "line": "50",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
-    },
-    "name": "operator\"\"sec",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@operator\"\"msec#k#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "unsigned long long operator\"\"msec(unsigned long long)",
-    "location": {
-      "column": "30",
-      "line": "54",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\utils.hpp"
-    },
-    "name": "operator\"\"msec",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:gpioport.hpp@86@macro@UNTITLED_GPIOPORT_HPP",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UNTITLED_GPIOPORT_HPP",
+    "display": "GPIOPORT_HPP",
     "location": {
       "column": "9",
       "line": "6",
       "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioport.hpp"
     },
-    "name": "UNTITLED_GPIOPORT_HPP",
+    "name": "GPIOPORT_HPP",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@ST>2#T#Nl@GpioPort",
-    "What": "ClassTemplate",
+    "ID": "c:gpioport.hpp@outputBits",
+    "What": "Variable",
     "defdec": "Def",
-    "display": "GpioPort<T, pin>",
+    "display": "outputBits",
     "location": {
-      "column": "7",
+      "column": "16",
       "line": "12",
       "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioport.hpp"
     },
+    "name": "outputBits",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:gpioport.hpp@inputBits",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "inputBits",
+    "location": {
+      "column": "16",
+      "line": "13",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioport.hpp"
+    },
+    "name": "inputBits",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@ST>1#Nl@GpioPort",
+    "What": "ClassTemplate",
+    "defdec": "Def",
+    "display": "GpioPort<pin>",
+    "location": {
+      "column": "7",
+      "line": "16",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioport.hpp"
+    },
     "members": [
       {
-        "ID": "c:@ST>2#T#Nl@GpioPort@F@GpioPort<T, pin>#&t0.0#",
+        "ID": "c:@ST>1#Nl@GpioPort@F@GpioPort<pin>#&$@SA@GPIO_TypeDef#",
         "What": "CXXConstructor",
         "defdec": "Def",
-        "display": "void GpioPort<T, pin>(T &)",
+        "display": "void GpioPort<pin>(GPIO_TypeDef &)",
         "location": {
-          "column": "5",
+          "column": "14",
           "line": "20",
           "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioport.hpp"
         },
-        "name": "GpioPort<T, pin>",
+        "name": "GpioPort<pin>",
         "origin": "user_include",
         "scope": "GpioPort"
       },
       {
-        "ID": "c:@ST>2#T#Nl@GpioPort@F@SetMode#$@ST>2#T#Nl@GpioPort@E@PortMode#",
+        "ID": "c:@ST>1#Nl@GpioPort@F@SetMode#$@E@PortMode#",
         "What": "CXXMethod",
-        "defdec": "Dec",
-        "display": "void SetMode(GpioPort::PortMode)",
+        "defdec": "Def",
+        "display": "void SetMode(PortMode)",
         "location": {
-          "column": "10",
+          "column": "18",
           "line": "21",
           "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioport.hpp"
         },
@@ -121053,13 +121399,13 @@
         "scope": "GpioPort"
       },
       {
-        "ID": "c:@ST>2#T#Nl@GpioPort@F@Set#",
+        "ID": "c:@ST>1#Nl@GpioPort@F@Set#",
         "What": "CXXMethod",
-        "defdec": "Dec",
+        "defdec": "Def",
         "display": "void Set(void)",
         "location": {
-          "column": "10",
-          "line": "37",
+          "column": "18",
+          "line": "35",
           "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioport.hpp"
         },
         "name": "Set",
@@ -121067,13 +121413,13 @@
         "scope": "GpioPort"
       },
       {
-        "ID": "c:@ST>2#T#Nl@GpioPort@F@Clear#",
+        "ID": "c:@ST>1#Nl@GpioPort@F@Clear#",
         "What": "CXXMethod",
-        "defdec": "Dec",
+        "defdec": "Def",
         "display": "void Clear(void)",
         "location": {
-          "column": "10",
-          "line": "41",
+          "column": "25",
+          "line": "39",
           "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioport.hpp"
         },
         "name": "Clear",
@@ -121081,13 +121427,13 @@
         "scope": "GpioPort"
       },
       {
-        "ID": "c:@ST>2#T#Nl@GpioPort@F@Toggle#",
+        "ID": "c:@ST>1#Nl@GpioPort@F@Toggle#",
         "What": "CXXMethod",
         "defdec": "Def",
         "display": "void Toggle(void)",
         "location": {
-          "column": "10",
-          "line": "45",
+          "column": "18",
+          "line": "43",
           "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioport.hpp"
         },
         "name": "Toggle",
@@ -121095,13 +121441,13 @@
         "scope": "GpioPort"
       },
       {
-        "ID": "c:@ST>2#T#Nl@GpioPort@F@GetState#",
+        "ID": "c:@ST>1#Nl@GpioPort@F@GetState#1",
         "What": "CXXMethod",
         "defdec": "Def",
         "display": "bool GetState(void)",
         "location": {
-          "column": "10",
-          "line": "49",
+          "column": "18",
+          "line": "47",
           "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioport.hpp"
         },
         "name": "GetState",
@@ -121109,13 +121455,13 @@
         "scope": "GpioPort"
       },
       {
-        "ID": "c:@ST>2#T#Nl@GpioPort@FI@port",
+        "ID": "c:@ST>1#Nl@GpioPort@FI@port",
         "What": "FieldDecl",
         "defdec": "Def",
         "display": "port",
         "location": {
-          "column": "8",
-          "line": "54",
+          "column": "19",
+          "line": "52",
           "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\gpioport.hpp"
         },
         "name": "port",
@@ -121128,88 +121474,146 @@
     "scope": null
   },
   {
-    "ID": "c:userbutton.hpp@28@macro@__BUTTON_H",
+    "ID": "c:iport.hpp@74@macro@IPORT_HPP",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "__BUTTON_H",
+    "display": "IPORT_HPP",
     "location": {
       "column": "9",
-      "line": "2",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\userbutton.hpp"
+      "line": "6",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\iport.hpp"
     },
-    "name": "__BUTTON_H",
+    "name": "IPORT_HPP",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:userbutton.hpp@buttonPin",
-    "What": "Variable",
+    "ID": "c:@E@PortMode",
+    "What": "Enum",
     "defdec": "Def",
-    "display": "buttonPin",
+    "display": "PortMode",
+    "fields": [
+      {
+        "ID": "c:@E@PortMode@Input",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "Input",
+        "location": {
+          "column": "3",
+          "line": "10",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\iport.hpp"
+        },
+        "name": "Input",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@E@PortMode@Output",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "Output",
+        "location": {
+          "column": "3",
+          "line": "11",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\iport.hpp"
+        },
+        "name": "Output",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
     "location": {
-      "column": "16",
-      "line": "7",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\userbutton.hpp"
+      "column": "12",
+      "line": "8",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\iport.hpp"
     },
-    "name": "buttonPin",
+    "name": "PortMode",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@S@UserButton",
+    "ID": "c:@S@IPort",
     "What": "Class",
     "defdec": "Def",
-    "display": "UserButton",
+    "display": "IPort",
     "location": {
       "column": "7",
-      "line": "9",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\userbutton.hpp"
+      "line": "14",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\iport.hpp"
     },
     "members": [
       {
-        "ID": "c:@S@UserButton@F@IsPressed#",
-        "What": "CXXMethod",
-        "defdec": "Def",
-        "display": "bool IsPressed(void)",
-        "location": {
-          "column": "17",
-          "line": "12",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\userbutton.hpp"
-        },
-        "name": "IsPressed",
-        "origin": "user_include",
-        "scope": "UserButton"
-      },
-      {
-        "ID": "c:@S@UserButton@F@HandleInterrupt#S",
+        "ID": "c:@S@IPort@F@SetMode#$@E@PortMode#",
         "What": "CXXMethod",
         "defdec": "Dec",
-        "display": "void HandleInterrupt(void)",
+        "display": "void SetMode(PortMode)",
         "location": {
-          "column": "17",
-          "line": "16",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\userbutton.hpp"
+          "column": "18",
+          "line": "17",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\iport.hpp"
         },
-        "name": "HandleInterrupt",
+        "name": "SetMode",
         "origin": "user_include",
-        "scope": "UserButton"
+        "scope": "IPort"
       },
       {
-        "ID": "c:@S@UserButton@F@UserButton#",
-        "What": "CXXConstructor",
-        "defdec": "Def",
-        "display": "void UserButton(void)",
+        "ID": "c:@S@IPort@F@Set#",
+        "What": "CXXMethod",
+        "defdec": "Dec",
+        "display": "void Set(void)",
         "location": {
-          "column": "5",
-          "line": "19",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\userbutton.hpp"
+          "column": "18",
+          "line": "18",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\iport.hpp"
         },
-        "name": "UserButton",
+        "name": "Set",
         "origin": "user_include",
-        "scope": "UserButton"
+        "scope": "IPort"
+      },
+      {
+        "ID": "c:@S@IPort@F@Clear#",
+        "What": "CXXMethod",
+        "defdec": "Dec",
+        "display": "void Clear(void)",
+        "location": {
+          "column": "18",
+          "line": "19",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\iport.hpp"
+        },
+        "name": "Clear",
+        "origin": "user_include",
+        "scope": "IPort"
+      },
+      {
+        "ID": "c:@S@IPort@F@Toggle#",
+        "What": "CXXMethod",
+        "defdec": "Dec",
+        "display": "void Toggle(void)",
+        "location": {
+          "column": "18",
+          "line": "20",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\iport.hpp"
+        },
+        "name": "Toggle",
+        "origin": "user_include",
+        "scope": "IPort"
+      },
+      {
+        "ID": "c:@S@IPort@F@GetState#1",
+        "What": "CXXMethod",
+        "defdec": "Dec",
+        "display": "bool GetState(void)",
+        "location": {
+          "column": "18",
+          "line": "21",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\AHardware\\GpioPort\\iport.hpp"
+        },
+        "name": "GetState",
+        "origin": "user_include",
+        "scope": "IPort"
       }
     ],
-    "name": "UserButton",
+    "name": "IPort",
     "origin": "user_include",
     "scope": null
   },
@@ -121340,102 +121744,132 @@
     "scope": null
   },
   {
-    "ID": "c:singleton.hpp@33@macro@__SINGLETON_HPP",
+    "ID": "c:userbutton.hpp@28@macro@__BUTTON_H",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "__SINGLETON_HPP",
+    "display": "__BUTTON_H",
     "location": {
       "column": "9",
       "line": "2",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\singleton.hpp"
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\userbutton.hpp"
     },
-    "name": "__SINGLETON_HPP",
+    "name": "__BUTTON_H",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@ST>1#T@Singleton",
-    "What": "ClassTemplate",
+    "ID": "c:@S@Button",
+    "What": "Class",
     "defdec": "Def",
-    "display": "Singleton<T>",
+    "display": "Button",
     "location": {
       "column": "7",
-      "line": "5",
-      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\singleton.hpp"
+      "line": "7",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\userbutton.hpp"
     },
     "members": [
       {
-        "ID": "c:@ST>1#T@Singleton@F@Singleton<T>#&1>@ST>1#T@Singleton1t0.0#",
+        "ID": "c:@S@Button@F@Button#&$@S@IPort#",
         "What": "CXXConstructor",
-        "defdec": "Dec",
-        "display": "void Singleton<T>(const Singleton<T> &)",
-        "location": {
-          "column": "4",
-          "line": "8",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\singleton.hpp"
-        },
-        "name": "Singleton<T>",
-        "origin": "user_include",
-        "scope": "Singleton"
-      },
-      {
-        "ID": "c:@ST>1#T@Singleton@F@operator=#&1>@ST>1#T@Singleton1t0.0#",
-        "What": "CXXMethod",
-        "defdec": "Dec",
-        "display": "Singleton<T> & operator=(const Singleton<T> &)",
-        "location": {
-          "column": "15",
-          "line": "9",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\singleton.hpp"
-        },
-        "name": "operator=",
-        "origin": "user_include",
-        "scope": "Singleton"
-      },
-      {
-        "ID": "c:@ST>1#T@Singleton@F@GetInstance#S",
-        "What": "CXXMethod",
         "defdec": "Def",
-        "display": "T & GetInstance(void)",
+        "display": "void Button(IPort &)",
         "location": {
-          "column": "14",
+          "column": "5",
           "line": "10",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\singleton.hpp"
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\userbutton.hpp"
         },
-        "name": "GetInstance",
+        "name": "Button",
         "origin": "user_include",
-        "scope": "Singleton"
+        "scope": "Button"
       },
       {
-        "ID": "c:@ST>1#T@Singleton@F@GetInstance#S@instance",
-        "What": "VarDecl",
+        "ID": "c:@S@Button@F@IsPressed#1",
+        "What": "CXXMethod",
         "defdec": "Def",
-        "display": "instance",
+        "display": "bool IsPressed(void)",
         "location": {
-          "column": "15",
-          "line": "13",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\singleton.hpp"
+          "column": "17",
+          "line": "11",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\userbutton.hpp"
         },
-        "name": "instance",
+        "name": "IsPressed",
         "origin": "user_include",
-        "scope": "Singleton"
+        "scope": "Button"
       },
       {
-        "ID": "c:@ST>1#T@Singleton@F@Singleton<T>#",
-        "What": "CXXConstructor",
+        "ID": "c:@S@Button@F@HandleInterrupt#S",
+        "What": "CXXMethod",
         "defdec": "Dec",
-        "display": "void Singleton<T>(void)",
+        "display": "void HandleInterrupt(void)",
         "location": {
-          "column": "4",
-          "line": "17",
-          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Common\\singleton.hpp"
+          "column": "17",
+          "line": "15",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\userbutton.hpp"
         },
-        "name": "Singleton<T>",
+        "name": "HandleInterrupt",
         "origin": "user_include",
-        "scope": "Singleton"
+        "scope": "Button"
+      },
+      {
+        "ID": "c:@S@Button@FI@port",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "port",
+        "location": {
+          "column": "12",
+          "line": "17",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\userbutton.hpp"
+        },
+        "name": "port",
+        "origin": "user_include",
+        "scope": "Button"
       }
     ],
-    "name": "Singleton",
+    "name": "Button",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:userbutton.hpp@buttonPin",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "buttonPin",
+    "location": {
+      "column": "16",
+      "line": "20",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\userbutton.hpp"
+    },
+    "name": "buttonPin",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@UserButton",
+    "What": "Class",
+    "defdec": "Def",
+    "display": "UserButton",
+    "location": {
+      "column": "7",
+      "line": "21",
+      "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\userbutton.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@S@UserButton@F@UserButton#",
+        "What": "CXXConstructor",
+        "defdec": "Def",
+        "display": "void UserButton(void)",
+        "location": {
+          "column": "6",
+          "line": "25",
+          "path": "E:\\Projects\\ARM_LAB\\stm32Labs\\LabPortEnd\\Application\\userbutton.hpp"
+        },
+        "name": "UserButton",
+        "origin": "user_include",
+        "scope": "UserButton"
+      }
+    ],
+    "name": "UserButton",
     "origin": "user_include",
     "scope": null
   },

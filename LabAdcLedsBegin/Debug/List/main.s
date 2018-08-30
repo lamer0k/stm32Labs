@@ -1,30 +1,31 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM        30/Aug/2018  14:57:33
+// IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM        30/Aug/2018  15:15:01
 // Copyright 1999-2018 IAR Systems AB.
 //
 //    Cpu mode     =  thumb
 //    Endian       =  little
-//    Source file  =  E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\main.cpp
+//    Source file  =  E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\main.cpp
 //    Command line =  
-//        -f C:\Users\Sergey\AppData\Local\Temp\EWF843.tmp
-//        (E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\main.cpp -D NDEBUG -lcN
-//        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Debug\List -lb
-//        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Debug\List -o
-//        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Debug\Obj --debug
+//        -f C:\Users\Sergey\AppData\Local\Temp\EWF33E.tmp
+//        (E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\main.cpp -D NDEBUG
+//        -lcN E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Debug\List -lb
+//        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Debug\List -o
+//        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Debug\Obj --debug
 //        --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config
 //        "D:\Program Files (x86)\IAR Systems\Embedded Workbench
 //        8.1\arm\inc\c\DLib_Config_Normal.h" -I
-//        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\ -I
-//        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Application\ -I
-//        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Common\ -I
-//        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\AHardware\ -I
-//        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\AHardware\GpioPort\ -I
-//        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\AHardware\IrqController\ -I
-//        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\CMSIS\ -Oh --c++
+//        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\ -I
+//        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Application\ -I
+//        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Common\ -I
+//        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\AHardware\ -I
+//        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\AHardware\GpioPort\ -I
+//        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\AHardware\IrqController\
+//        -I E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\CMSIS\ -Oh --c++
 //        --no_exceptions --no_rtti)
 //    Locale       =  C
-//    List file    =  E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Debug\List\main.s
+//    List file    =  
+//        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Debug\List\main.s
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -44,32 +45,32 @@
         PUBLIC _ZGVZN9SingletonI9GpioPortCILm8EEE11GetInstanceEvE8instance
         PUBLIC _ZGVZN9SingletonI9GpioPortCILm9EEE11GetInstanceEvE8instance
         PUBLIC _ZGVZN9SingletonI9LedDriverE11GetInstanceEvE8instance
-        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm13EE3SetEv
-        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm13EE5ClearEv
-        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm13EE6ToggleEv
-        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm13EE7SetModeE8PortMode
-        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm5EE3SetEv
-        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm5EE5ClearEv
-        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm5EE6ToggleEv
-        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm5EE7SetModeE8PortMode
-        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm8EE3SetEv
-        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm8EE5ClearEv
-        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm8EE6ToggleEv
-        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm8EE7SetModeE8PortMode
-        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm9EE3SetEv
-        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm9EE5ClearEv
-        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm9EE6ToggleEv
-        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm9EE7SetModeE8PortMode
+        PUBLIC _ZN8GpioPortILm13EE3SetEv
+        PUBLIC _ZN8GpioPortILm13EE5ClearEv
+        PUBLIC _ZN8GpioPortILm13EE6ToggleEv
+        PUBLIC _ZN8GpioPortILm13EE7SetModeE8PortMode
+        PUBLIC _ZN8GpioPortILm5EE3SetEv
+        PUBLIC _ZN8GpioPortILm5EE5ClearEv
+        PUBLIC _ZN8GpioPortILm5EE6ToggleEv
+        PUBLIC _ZN8GpioPortILm5EE7SetModeE8PortMode
+        PUBLIC _ZN8GpioPortILm8EE3SetEv
+        PUBLIC _ZN8GpioPortILm8EE5ClearEv
+        PUBLIC _ZN8GpioPortILm8EE6ToggleEv
+        PUBLIC _ZN8GpioPortILm8EE7SetModeE8PortMode
+        PUBLIC _ZN8GpioPortILm9EE3SetEv
+        PUBLIC _ZN8GpioPortILm9EE5ClearEv
+        PUBLIC _ZN8GpioPortILm9EE6ToggleEv
+        PUBLIC _ZN8GpioPortILm9EE7SetModeE8PortMode
         PUBLIC _ZN9LedDriverC1Ev
-        PUBLIC _ZNK8GpioPortI12GPIO_TypeDefLm13EE8GetStateEv
-        PUBLIC _ZNK8GpioPortI12GPIO_TypeDefLm5EE8GetStateEv
-        PUBLIC _ZNK8GpioPortI12GPIO_TypeDefLm8EE8GetStateEv
-        PUBLIC _ZNK8GpioPortI12GPIO_TypeDefLm9EE8GetStateEv
+        PUBLIC _ZNK8GpioPortILm13EE8GetStateEv
+        PUBLIC _ZNK8GpioPortILm5EE8GetStateEv
+        PUBLIC _ZNK8GpioPortILm8EE8GetStateEv
+        PUBLIC _ZNK8GpioPortILm9EE8GetStateEv
         PUBLIC _ZTI5IPort
-        PUBLIC _ZTI8GpioPortI12GPIO_TypeDefLm13EE
-        PUBLIC _ZTI8GpioPortI12GPIO_TypeDefLm5EE
-        PUBLIC _ZTI8GpioPortI12GPIO_TypeDefLm8EE
-        PUBLIC _ZTI8GpioPortI12GPIO_TypeDefLm9EE
+        PUBLIC _ZTI8GpioPortILm13EE
+        PUBLIC _ZTI8GpioPortILm5EE
+        PUBLIC _ZTI8GpioPortILm8EE
+        PUBLIC _ZTI8GpioPortILm9EE
         PUBLIC _ZTI9GpioPortAILm5EE
         PUBLIC _ZTI9GpioPortCILm13EE
         PUBLIC _ZTI9GpioPortCILm5EE
@@ -82,10 +83,10 @@
         PUBLIC _ZTI9SingletonI9GpioPortCILm9EEE
         PUBLIC _ZTISt10ctype_base
         PUBLIC _ZTS5IPort
-        PUBLIC _ZTS8GpioPortI12GPIO_TypeDefLm13EE
-        PUBLIC _ZTS8GpioPortI12GPIO_TypeDefLm5EE
-        PUBLIC _ZTS8GpioPortI12GPIO_TypeDefLm8EE
-        PUBLIC _ZTS8GpioPortI12GPIO_TypeDefLm9EE
+        PUBLIC _ZTS8GpioPortILm13EE
+        PUBLIC _ZTS8GpioPortILm5EE
+        PUBLIC _ZTS8GpioPortILm8EE
+        PUBLIC _ZTS8GpioPortILm9EE
         PUBLIC _ZTS9GpioPortAILm5EE
         PUBLIC _ZTS9GpioPortCILm13EE
         PUBLIC _ZTS9GpioPortCILm5EE
@@ -97,10 +98,10 @@
         PUBLIC _ZTS9SingletonI9GpioPortCILm8EEE
         PUBLIC _ZTS9SingletonI9GpioPortCILm9EEE
         PUBLIC _ZTSSt10ctype_base
-        PUBLIC _ZTV8GpioPortI12GPIO_TypeDefLm13EE
-        PUBLIC _ZTV8GpioPortI12GPIO_TypeDefLm5EE
-        PUBLIC _ZTV8GpioPortI12GPIO_TypeDefLm8EE
-        PUBLIC _ZTV8GpioPortI12GPIO_TypeDefLm9EE
+        PUBLIC _ZTV8GpioPortILm13EE
+        PUBLIC _ZTV8GpioPortILm5EE
+        PUBLIC _ZTV8GpioPortILm8EE
+        PUBLIC _ZTV8GpioPortILm9EE
         PUBLIC _ZTV9GpioPortAILm5EE
         PUBLIC _ZTV9GpioPortCILm13EE
         PUBLIC _ZTV9GpioPortCILm5EE
@@ -119,10 +120,10 @@
 
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm13EE7SetModeE8PortMode
+        SECTION_GROUP _ZN8GpioPortILm13EE7SetModeE8PortMode
         THUMB
-// __interwork __softfp void GpioPort<GPIO_TypeDef, 13UL>::SetMode(PortMode)
-_ZN8GpioPortI12GPIO_TypeDefLm13EE7SetModeE8PortMode:
+// __interwork __softfp void GpioPort<13UL>::SetMode(PortMode)
+_ZN8GpioPortILm13EE7SetModeE8PortMode:
         LDR      R2,[R0, #+4]
         CBNZ.N   R1,??SetMode_0
         LDR      R0,[R2, #+0]
@@ -137,10 +138,10 @@ _ZN8GpioPortI12GPIO_TypeDefLm13EE7SetModeE8PortMode:
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm5EE7SetModeE8PortMode
+        SECTION_GROUP _ZN8GpioPortILm5EE7SetModeE8PortMode
         THUMB
-// __interwork __softfp void GpioPort<GPIO_TypeDef, 5UL>::SetMode(PortMode)
-_ZN8GpioPortI12GPIO_TypeDefLm5EE7SetModeE8PortMode:
+// __interwork __softfp void GpioPort<5UL>::SetMode(PortMode)
+_ZN8GpioPortILm5EE7SetModeE8PortMode:
         LDR      R2,[R0, #+4]
         CBNZ.N   R1,??SetMode_1
         LDR      R0,[R2, #+0]
@@ -155,10 +156,10 @@ _ZN8GpioPortI12GPIO_TypeDefLm5EE7SetModeE8PortMode:
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm9EE7SetModeE8PortMode
+        SECTION_GROUP _ZN8GpioPortILm9EE7SetModeE8PortMode
         THUMB
-// __interwork __softfp void GpioPort<GPIO_TypeDef, 9UL>::SetMode(PortMode)
-_ZN8GpioPortI12GPIO_TypeDefLm9EE7SetModeE8PortMode:
+// __interwork __softfp void GpioPort<9UL>::SetMode(PortMode)
+_ZN8GpioPortILm9EE7SetModeE8PortMode:
         LDR      R2,[R0, #+4]
         CBNZ.N   R1,??SetMode_2
         LDR      R0,[R2, #+0]
@@ -173,10 +174,10 @@ _ZN8GpioPortI12GPIO_TypeDefLm9EE7SetModeE8PortMode:
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm8EE7SetModeE8PortMode
+        SECTION_GROUP _ZN8GpioPortILm8EE7SetModeE8PortMode
         THUMB
-// __interwork __softfp void GpioPort<GPIO_TypeDef, 8UL>::SetMode(PortMode)
-_ZN8GpioPortI12GPIO_TypeDefLm8EE7SetModeE8PortMode:
+// __interwork __softfp void GpioPort<8UL>::SetMode(PortMode)
+_ZN8GpioPortILm8EE7SetModeE8PortMode:
         LDR      R2,[R0, #+4]
         CBNZ.N   R1,??SetMode_3
         LDR      R0,[R2, #+0]
@@ -191,90 +192,90 @@ _ZN8GpioPortI12GPIO_TypeDefLm8EE7SetModeE8PortMode:
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm13EE3SetEv
+        SECTION_GROUP _ZN8GpioPortILm13EE3SetEv
         THUMB
-// __interwork __softfp void GpioPort<GPIO_TypeDef, 13UL>::Set()
-_ZN8GpioPortI12GPIO_TypeDefLm13EE3SetEv:
+// __interwork __softfp void GpioPort<13UL>::Set()
+_ZN8GpioPortILm13EE3SetEv:
         LDR      R0,[R0, #+4]
         MOV      R1,#+8192
         STR      R1,[R0, #+24]
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm5EE3SetEv
+        SECTION_GROUP _ZN8GpioPortILm5EE3SetEv
         THUMB
-// __interwork __softfp void GpioPort<GPIO_TypeDef, 5UL>::Set()
-_ZN8GpioPortI12GPIO_TypeDefLm5EE3SetEv:
+// __interwork __softfp void GpioPort<5UL>::Set()
+_ZN8GpioPortILm5EE3SetEv:
         LDR      R0,[R0, #+4]
         MOVS     R1,#+32
         STR      R1,[R0, #+24]
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm9EE3SetEv
+        SECTION_GROUP _ZN8GpioPortILm9EE3SetEv
         THUMB
-// __interwork __softfp void GpioPort<GPIO_TypeDef, 9UL>::Set()
-_ZN8GpioPortI12GPIO_TypeDefLm9EE3SetEv:
+// __interwork __softfp void GpioPort<9UL>::Set()
+_ZN8GpioPortILm9EE3SetEv:
         LDR      R0,[R0, #+4]
         MOV      R1,#+512
         STR      R1,[R0, #+24]
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm8EE3SetEv
+        SECTION_GROUP _ZN8GpioPortILm8EE3SetEv
         THUMB
-// __interwork __softfp void GpioPort<GPIO_TypeDef, 8UL>::Set()
-_ZN8GpioPortI12GPIO_TypeDefLm8EE3SetEv:
+// __interwork __softfp void GpioPort<8UL>::Set()
+_ZN8GpioPortILm8EE3SetEv:
         LDR      R0,[R0, #+4]
         MOV      R1,#+256
         STR      R1,[R0, #+24]
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm13EE5ClearEv
+        SECTION_GROUP _ZN8GpioPortILm13EE5ClearEv
         THUMB
-// __interwork __softfp void GpioPort<GPIO_TypeDef, 13UL>::Clear()
-_ZN8GpioPortI12GPIO_TypeDefLm13EE5ClearEv:
+// __interwork __softfp void GpioPort<13UL>::Clear()
+_ZN8GpioPortILm13EE5ClearEv:
         LDR      R0,[R0, #+4]
         MOV      R1,#+536870912
         STR      R1,[R0, #+24]
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm5EE5ClearEv
+        SECTION_GROUP _ZN8GpioPortILm5EE5ClearEv
         THUMB
-// __interwork __softfp void GpioPort<GPIO_TypeDef, 5UL>::Clear()
-_ZN8GpioPortI12GPIO_TypeDefLm5EE5ClearEv:
+// __interwork __softfp void GpioPort<5UL>::Clear()
+_ZN8GpioPortILm5EE5ClearEv:
         LDR      R0,[R0, #+4]
         MOV      R1,#+2097152
         STR      R1,[R0, #+24]
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm9EE5ClearEv
+        SECTION_GROUP _ZN8GpioPortILm9EE5ClearEv
         THUMB
-// __interwork __softfp void GpioPort<GPIO_TypeDef, 9UL>::Clear()
-_ZN8GpioPortI12GPIO_TypeDefLm9EE5ClearEv:
+// __interwork __softfp void GpioPort<9UL>::Clear()
+_ZN8GpioPortILm9EE5ClearEv:
         LDR      R0,[R0, #+4]
         MOV      R1,#+33554432
         STR      R1,[R0, #+24]
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm8EE5ClearEv
+        SECTION_GROUP _ZN8GpioPortILm8EE5ClearEv
         THUMB
-// __interwork __softfp void GpioPort<GPIO_TypeDef, 8UL>::Clear()
-_ZN8GpioPortI12GPIO_TypeDefLm8EE5ClearEv:
+// __interwork __softfp void GpioPort<8UL>::Clear()
+_ZN8GpioPortILm8EE5ClearEv:
         LDR      R0,[R0, #+4]
         MOV      R1,#+16777216
         STR      R1,[R0, #+24]
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm13EE6ToggleEv
+        SECTION_GROUP _ZN8GpioPortILm13EE6ToggleEv
         THUMB
-// __interwork __softfp void GpioPort<GPIO_TypeDef, 13UL>::Toggle()
-_ZN8GpioPortI12GPIO_TypeDefLm13EE6ToggleEv:
+// __interwork __softfp void GpioPort<13UL>::Toggle()
+_ZN8GpioPortILm13EE6ToggleEv:
         LDR      R0,[R0, #+4]
         LDR      R1,[R0, #+20]!
         EOR      R1,R1,#0x2000
@@ -282,10 +283,10 @@ _ZN8GpioPortI12GPIO_TypeDefLm13EE6ToggleEv:
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm5EE6ToggleEv
+        SECTION_GROUP _ZN8GpioPortILm5EE6ToggleEv
         THUMB
-// __interwork __softfp void GpioPort<GPIO_TypeDef, 5UL>::Toggle()
-_ZN8GpioPortI12GPIO_TypeDefLm5EE6ToggleEv:
+// __interwork __softfp void GpioPort<5UL>::Toggle()
+_ZN8GpioPortILm5EE6ToggleEv:
         LDR      R0,[R0, #+4]
         LDR      R1,[R0, #+20]!
         EOR      R1,R1,#0x20
@@ -293,10 +294,10 @@ _ZN8GpioPortI12GPIO_TypeDefLm5EE6ToggleEv:
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm9EE6ToggleEv
+        SECTION_GROUP _ZN8GpioPortILm9EE6ToggleEv
         THUMB
-// __interwork __softfp void GpioPort<GPIO_TypeDef, 9UL>::Toggle()
-_ZN8GpioPortI12GPIO_TypeDefLm9EE6ToggleEv:
+// __interwork __softfp void GpioPort<9UL>::Toggle()
+_ZN8GpioPortILm9EE6ToggleEv:
         LDR      R0,[R0, #+4]
         LDR      R1,[R0, #+20]!
         EOR      R1,R1,#0x200
@@ -304,10 +305,10 @@ _ZN8GpioPortI12GPIO_TypeDefLm9EE6ToggleEv:
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm8EE6ToggleEv
+        SECTION_GROUP _ZN8GpioPortILm8EE6ToggleEv
         THUMB
-// __interwork __softfp void GpioPort<GPIO_TypeDef, 8UL>::Toggle()
-_ZN8GpioPortI12GPIO_TypeDefLm8EE6ToggleEv:
+// __interwork __softfp void GpioPort<8UL>::Toggle()
+_ZN8GpioPortILm8EE6ToggleEv:
         LDR      R0,[R0, #+4]
         LDR      R1,[R0, #+20]!
         EOR      R1,R1,#0x100
@@ -315,10 +316,10 @@ _ZN8GpioPortI12GPIO_TypeDefLm8EE6ToggleEv:
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNK8GpioPortI12GPIO_TypeDefLm13EE8GetStateEv
+        SECTION_GROUP _ZNK8GpioPortILm13EE8GetStateEv
         THUMB
-// __interwork __softfp bool GpioPort<GPIO_TypeDef, 13UL>::GetState() const
-_ZNK8GpioPortI12GPIO_TypeDefLm13EE8GetStateEv:
+// __interwork __softfp bool GpioPort<13UL>::GetState() const
+_ZNK8GpioPortILm13EE8GetStateEv:
         LDR      R0,[R0, #+4]
         LDR      R0,[R0, #+16]
         LSRS     R0,R0,#+13
@@ -327,10 +328,10 @@ _ZNK8GpioPortI12GPIO_TypeDefLm13EE8GetStateEv:
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNK8GpioPortI12GPIO_TypeDefLm5EE8GetStateEv
+        SECTION_GROUP _ZNK8GpioPortILm5EE8GetStateEv
         THUMB
-// __interwork __softfp bool GpioPort<GPIO_TypeDef, 5UL>::GetState() const
-_ZNK8GpioPortI12GPIO_TypeDefLm5EE8GetStateEv:
+// __interwork __softfp bool GpioPort<5UL>::GetState() const
+_ZNK8GpioPortILm5EE8GetStateEv:
         LDR      R0,[R0, #+4]
         LDR      R0,[R0, #+16]
         LSRS     R0,R0,#+5
@@ -339,10 +340,10 @@ _ZNK8GpioPortI12GPIO_TypeDefLm5EE8GetStateEv:
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNK8GpioPortI12GPIO_TypeDefLm9EE8GetStateEv
+        SECTION_GROUP _ZNK8GpioPortILm9EE8GetStateEv
         THUMB
-// __interwork __softfp bool GpioPort<GPIO_TypeDef, 9UL>::GetState() const
-_ZNK8GpioPortI12GPIO_TypeDefLm9EE8GetStateEv:
+// __interwork __softfp bool GpioPort<9UL>::GetState() const
+_ZNK8GpioPortILm9EE8GetStateEv:
         LDR      R0,[R0, #+4]
         LDR      R0,[R0, #+16]
         LSRS     R0,R0,#+9
@@ -351,10 +352,10 @@ _ZNK8GpioPortI12GPIO_TypeDefLm9EE8GetStateEv:
         BX       LR               ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNK8GpioPortI12GPIO_TypeDefLm8EE8GetStateEv
+        SECTION_GROUP _ZNK8GpioPortILm8EE8GetStateEv
         THUMB
-// __interwork __softfp bool GpioPort<GPIO_TypeDef, 8UL>::GetState() const
-_ZNK8GpioPortI12GPIO_TypeDefLm8EE8GetStateEv:
+// __interwork __softfp bool GpioPort<8UL>::GetState() const
+_ZNK8GpioPortILm8EE8GetStateEv:
         LDR      R0,[R0, #+4]
         LDR      R0,[R0, #+16]
         LSRS     R0,R0,#+8
@@ -543,17 +544,17 @@ _ZN9LedDriverC1Ev:
 ??LedDriver_0:
         DC32     _ZGVZN9SingletonI9GpioPortAILm5EEE11GetInstanceEvE8instance
         DC32     _ZZN9SingletonI9GpioPortAILm5EEE11GetInstanceEvE8instance
-        DC32     _ZTV8GpioPortI12GPIO_TypeDefLm5EE+0x8
+        DC32     _ZTV8GpioPortILm5EE+0x8
         DC32     0x40020000
         DC32     _ZTV9GpioPortAILm5EE+0x8
         DC32     _ZGVZN9SingletonI9GpioPortCILm9EEE11GetInstanceEvE8instance
         DC32     _ZZN9SingletonI9GpioPortCILm9EEE11GetInstanceEvE8instance
-        DC32     _ZTV8GpioPortI12GPIO_TypeDefLm9EE+0x8
+        DC32     _ZTV8GpioPortILm9EE+0x8
         DC32     0x40020800
         DC32     _ZTV9GpioPortCILm9EE+0x8
         DC32     _ZGVZN9SingletonI9GpioPortCILm8EEE11GetInstanceEvE8instance
         DC32     _ZZN9SingletonI9GpioPortCILm8EEE11GetInstanceEvE8instance
-        DC32     _ZTV8GpioPortI12GPIO_TypeDefLm8EE+0x8
+        DC32     _ZTV8GpioPortILm8EE+0x8
         DC32     _ZTV9GpioPortCILm8EE+0x8
         DC32     _ZGVZN9SingletonI9GpioPortCILm5EEE11GetInstanceEvE8instance
         DC32     _ZZN9SingletonI9GpioPortCILm5EEE11GetInstanceEvE8instance
@@ -729,7 +730,7 @@ main:
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable1_6:
-        DC32     _ZTV8GpioPortI12GPIO_TypeDefLm13EE+0x8
+        DC32     _ZTV8GpioPortILm13EE+0x8
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -773,21 +774,21 @@ main:
 ??DataTable1_13:
         DC32     _ZGVZN9SingletonI9LedDriverE11GetInstanceEvE8instance
 
-        SECTION `.iar_vfe_vtableinfo_ZTV8GpioPortI12GPIO_TypeDefLm13EE`:DATA:NOALLOC:NOROOT(2)
+        SECTION `.iar_vfe_vtableinfo_ZTV8GpioPortILm13EE`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
-        SECTION_GROUP _ZTV8GpioPortI12GPIO_TypeDefLm13EE
+        SECTION_GROUP _ZTV8GpioPortILm13EE
         DATA
-        DC32    _ZTV8GpioPortI12GPIO_TypeDefLm13EE
+        DC32    _ZTV8GpioPortILm13EE
         DC32    7
         DC32    2
         DC32    _ZTI5IPort
         DC32    0
         DC32    1
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm13EE
+        DC32    _ZTI8GpioPortILm13EE
         DC32    1
         DC32    2
         DC32    0
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm13EE
+        DC32    _ZTI8GpioPortILm13EE
         DC32    1
         DC32    2
         DC32    0
@@ -802,14 +803,14 @@ main:
         DC32    _ZTI5IPort
         DC32    0
         DC32    1
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm13EE
+        DC32    _ZTI8GpioPortILm13EE
         DC32    0
         DC32    1
         DC32    _ZTI9GpioPortCILm13EE
         DC32    1
         DC32    2
         DC32    0
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm13EE
+        DC32    _ZTI8GpioPortILm13EE
         DC32    0
         DC32    1
         DC32    _ZTI9GpioPortCILm13EE
@@ -817,21 +818,21 @@ main:
         DC32    2
         DC32    0
 
-        SECTION `.iar_vfe_vtableinfo_ZTV8GpioPortI12GPIO_TypeDefLm5EE`:DATA:NOALLOC:NOROOT(2)
+        SECTION `.iar_vfe_vtableinfo_ZTV8GpioPortILm5EE`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
-        SECTION_GROUP _ZTV8GpioPortI12GPIO_TypeDefLm5EE
+        SECTION_GROUP _ZTV8GpioPortILm5EE
         DATA
-        DC32    _ZTV8GpioPortI12GPIO_TypeDefLm5EE
+        DC32    _ZTV8GpioPortILm5EE
         DC32    7
         DC32    2
         DC32    _ZTI5IPort
         DC32    0
         DC32    1
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm5EE
+        DC32    _ZTI8GpioPortILm5EE
         DC32    1
         DC32    2
         DC32    0
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm5EE
+        DC32    _ZTI8GpioPortILm5EE
         DC32    1
         DC32    2
         DC32    0
@@ -846,14 +847,14 @@ main:
         DC32    _ZTI5IPort
         DC32    0
         DC32    1
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm5EE
+        DC32    _ZTI8GpioPortILm5EE
         DC32    0
         DC32    1
         DC32    _ZTI9GpioPortAILm5EE
         DC32    1
         DC32    2
         DC32    0
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm5EE
+        DC32    _ZTI8GpioPortILm5EE
         DC32    0
         DC32    1
         DC32    _ZTI9GpioPortAILm5EE
@@ -861,21 +862,21 @@ main:
         DC32    2
         DC32    0
 
-        SECTION `.iar_vfe_vtableinfo_ZTV8GpioPortI12GPIO_TypeDefLm9EE`:DATA:NOALLOC:NOROOT(2)
+        SECTION `.iar_vfe_vtableinfo_ZTV8GpioPortILm9EE`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
-        SECTION_GROUP _ZTV8GpioPortI12GPIO_TypeDefLm9EE
+        SECTION_GROUP _ZTV8GpioPortILm9EE
         DATA
-        DC32    _ZTV8GpioPortI12GPIO_TypeDefLm9EE
+        DC32    _ZTV8GpioPortILm9EE
         DC32    7
         DC32    2
         DC32    _ZTI5IPort
         DC32    0
         DC32    1
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm9EE
+        DC32    _ZTI8GpioPortILm9EE
         DC32    1
         DC32    2
         DC32    0
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm9EE
+        DC32    _ZTI8GpioPortILm9EE
         DC32    1
         DC32    2
         DC32    0
@@ -890,14 +891,14 @@ main:
         DC32    _ZTI5IPort
         DC32    0
         DC32    1
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm9EE
+        DC32    _ZTI8GpioPortILm9EE
         DC32    0
         DC32    1
         DC32    _ZTI9GpioPortCILm9EE
         DC32    1
         DC32    2
         DC32    0
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm9EE
+        DC32    _ZTI8GpioPortILm9EE
         DC32    0
         DC32    1
         DC32    _ZTI9GpioPortCILm9EE
@@ -905,21 +906,21 @@ main:
         DC32    2
         DC32    0
 
-        SECTION `.iar_vfe_vtableinfo_ZTV8GpioPortI12GPIO_TypeDefLm8EE`:DATA:NOALLOC:NOROOT(2)
+        SECTION `.iar_vfe_vtableinfo_ZTV8GpioPortILm8EE`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
-        SECTION_GROUP _ZTV8GpioPortI12GPIO_TypeDefLm8EE
+        SECTION_GROUP _ZTV8GpioPortILm8EE
         DATA
-        DC32    _ZTV8GpioPortI12GPIO_TypeDefLm8EE
+        DC32    _ZTV8GpioPortILm8EE
         DC32    7
         DC32    2
         DC32    _ZTI5IPort
         DC32    0
         DC32    1
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm8EE
+        DC32    _ZTI8GpioPortILm8EE
         DC32    1
         DC32    2
         DC32    0
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm8EE
+        DC32    _ZTI8GpioPortILm8EE
         DC32    1
         DC32    2
         DC32    0
@@ -934,14 +935,14 @@ main:
         DC32    _ZTI5IPort
         DC32    0
         DC32    1
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm8EE
+        DC32    _ZTI8GpioPortILm8EE
         DC32    0
         DC32    1
         DC32    _ZTI9GpioPortCILm8EE
         DC32    1
         DC32    2
         DC32    0
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm8EE
+        DC32    _ZTI8GpioPortILm8EE
         DC32    0
         DC32    1
         DC32    _ZTI9GpioPortCILm8EE
@@ -959,14 +960,14 @@ main:
         DC32    _ZTI5IPort
         DC32    0
         DC32    1
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm5EE
+        DC32    _ZTI8GpioPortILm5EE
         DC32    0
         DC32    1
         DC32    _ZTI9GpioPortCILm5EE
         DC32    1
         DC32    2
         DC32    0
-        DC32    _ZTI8GpioPortI12GPIO_TypeDefLm5EE
+        DC32    _ZTI8GpioPortILm5EE
         DC32    0
         DC32    1
         DC32    _ZTI9GpioPortCILm5EE
@@ -1001,120 +1002,93 @@ _ZTI5IPort:
         DC32 _ZTVN10__cxxabiv117__class_type_infoE + 8H, _ZTS5IPort
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTV8GpioPortI12GPIO_TypeDefLm13EE
+        SECTION_GROUP _ZTV8GpioPortILm13EE
         DATA
-// __absolute void (*const GpioPort<GPIO_TypeDef, 13UL>::__vtbl[7])()
-_ZTV8GpioPortI12GPIO_TypeDefLm13EE:
-        DC32 0H, _ZTI8GpioPortI12GPIO_TypeDefLm13EE
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm13EE7SetModeE8PortMode
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm13EE3SetEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm13EE5ClearEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm13EE6ToggleEv
-        DC32 _ZNK8GpioPortI12GPIO_TypeDefLm13EE8GetStateEv
+// __absolute void (*const GpioPort<13UL>::__vtbl[7])()
+_ZTV8GpioPortILm13EE:
+        DC32 0H, _ZTI8GpioPortILm13EE, _ZN8GpioPortILm13EE7SetModeE8PortMode
+        DC32 _ZN8GpioPortILm13EE3SetEv, _ZN8GpioPortILm13EE5ClearEv
+        DC32 _ZN8GpioPortILm13EE6ToggleEv, _ZNK8GpioPortILm13EE8GetStateEv
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTV9GpioPortCILm13EE
         DATA
 // __absolute void (*const GpioPortC<13UL>::__vtbl[7])()
 _ZTV9GpioPortCILm13EE:
-        DC32 0H, _ZTI9GpioPortCILm13EE
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm13EE7SetModeE8PortMode
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm13EE3SetEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm13EE5ClearEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm13EE6ToggleEv
-        DC32 _ZNK8GpioPortI12GPIO_TypeDefLm13EE8GetStateEv
+        DC32 0H, _ZTI9GpioPortCILm13EE, _ZN8GpioPortILm13EE7SetModeE8PortMode
+        DC32 _ZN8GpioPortILm13EE3SetEv, _ZN8GpioPortILm13EE5ClearEv
+        DC32 _ZN8GpioPortILm13EE6ToggleEv, _ZNK8GpioPortILm13EE8GetStateEv
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTV8GpioPortI12GPIO_TypeDefLm5EE
+        SECTION_GROUP _ZTV8GpioPortILm5EE
         DATA
-// __absolute void (*const GpioPort<GPIO_TypeDef, 5UL>::__vtbl[7])()
-_ZTV8GpioPortI12GPIO_TypeDefLm5EE:
-        DC32 0H, _ZTI8GpioPortI12GPIO_TypeDefLm5EE
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm5EE7SetModeE8PortMode
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm5EE3SetEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm5EE5ClearEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm5EE6ToggleEv
-        DC32 _ZNK8GpioPortI12GPIO_TypeDefLm5EE8GetStateEv
+// __absolute void (*const GpioPort<5UL>::__vtbl[7])()
+_ZTV8GpioPortILm5EE:
+        DC32 0H, _ZTI8GpioPortILm5EE, _ZN8GpioPortILm5EE7SetModeE8PortMode
+        DC32 _ZN8GpioPortILm5EE3SetEv, _ZN8GpioPortILm5EE5ClearEv
+        DC32 _ZN8GpioPortILm5EE6ToggleEv, _ZNK8GpioPortILm5EE8GetStateEv
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTV9GpioPortAILm5EE
         DATA
 // __absolute void (*const GpioPortA<5UL>::__vtbl[7])()
 _ZTV9GpioPortAILm5EE:
-        DC32 0H, _ZTI9GpioPortAILm5EE
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm5EE7SetModeE8PortMode
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm5EE3SetEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm5EE5ClearEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm5EE6ToggleEv
-        DC32 _ZNK8GpioPortI12GPIO_TypeDefLm5EE8GetStateEv
+        DC32 0H, _ZTI9GpioPortAILm5EE, _ZN8GpioPortILm5EE7SetModeE8PortMode
+        DC32 _ZN8GpioPortILm5EE3SetEv, _ZN8GpioPortILm5EE5ClearEv
+        DC32 _ZN8GpioPortILm5EE6ToggleEv, _ZNK8GpioPortILm5EE8GetStateEv
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTV8GpioPortI12GPIO_TypeDefLm9EE
+        SECTION_GROUP _ZTV8GpioPortILm9EE
         DATA
-// __absolute void (*const GpioPort<GPIO_TypeDef, 9UL>::__vtbl[7])()
-_ZTV8GpioPortI12GPIO_TypeDefLm9EE:
-        DC32 0H, _ZTI8GpioPortI12GPIO_TypeDefLm9EE
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm9EE7SetModeE8PortMode
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm9EE3SetEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm9EE5ClearEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm9EE6ToggleEv
-        DC32 _ZNK8GpioPortI12GPIO_TypeDefLm9EE8GetStateEv
+// __absolute void (*const GpioPort<9UL>::__vtbl[7])()
+_ZTV8GpioPortILm9EE:
+        DC32 0H, _ZTI8GpioPortILm9EE, _ZN8GpioPortILm9EE7SetModeE8PortMode
+        DC32 _ZN8GpioPortILm9EE3SetEv, _ZN8GpioPortILm9EE5ClearEv
+        DC32 _ZN8GpioPortILm9EE6ToggleEv, _ZNK8GpioPortILm9EE8GetStateEv
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTV9GpioPortCILm9EE
         DATA
 // __absolute void (*const GpioPortC<9UL>::__vtbl[7])()
 _ZTV9GpioPortCILm9EE:
-        DC32 0H, _ZTI9GpioPortCILm9EE
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm9EE7SetModeE8PortMode
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm9EE3SetEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm9EE5ClearEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm9EE6ToggleEv
-        DC32 _ZNK8GpioPortI12GPIO_TypeDefLm9EE8GetStateEv
+        DC32 0H, _ZTI9GpioPortCILm9EE, _ZN8GpioPortILm9EE7SetModeE8PortMode
+        DC32 _ZN8GpioPortILm9EE3SetEv, _ZN8GpioPortILm9EE5ClearEv
+        DC32 _ZN8GpioPortILm9EE6ToggleEv, _ZNK8GpioPortILm9EE8GetStateEv
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTV8GpioPortI12GPIO_TypeDefLm8EE
+        SECTION_GROUP _ZTV8GpioPortILm8EE
         DATA
-// __absolute void (*const GpioPort<GPIO_TypeDef, 8UL>::__vtbl[7])()
-_ZTV8GpioPortI12GPIO_TypeDefLm8EE:
-        DC32 0H, _ZTI8GpioPortI12GPIO_TypeDefLm8EE
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm8EE7SetModeE8PortMode
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm8EE3SetEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm8EE5ClearEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm8EE6ToggleEv
-        DC32 _ZNK8GpioPortI12GPIO_TypeDefLm8EE8GetStateEv
+// __absolute void (*const GpioPort<8UL>::__vtbl[7])()
+_ZTV8GpioPortILm8EE:
+        DC32 0H, _ZTI8GpioPortILm8EE, _ZN8GpioPortILm8EE7SetModeE8PortMode
+        DC32 _ZN8GpioPortILm8EE3SetEv, _ZN8GpioPortILm8EE5ClearEv
+        DC32 _ZN8GpioPortILm8EE6ToggleEv, _ZNK8GpioPortILm8EE8GetStateEv
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTV9GpioPortCILm8EE
         DATA
 // __absolute void (*const GpioPortC<8UL>::__vtbl[7])()
 _ZTV9GpioPortCILm8EE:
-        DC32 0H, _ZTI9GpioPortCILm8EE
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm8EE7SetModeE8PortMode
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm8EE3SetEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm8EE5ClearEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm8EE6ToggleEv
-        DC32 _ZNK8GpioPortI12GPIO_TypeDefLm8EE8GetStateEv
+        DC32 0H, _ZTI9GpioPortCILm8EE, _ZN8GpioPortILm8EE7SetModeE8PortMode
+        DC32 _ZN8GpioPortILm8EE3SetEv, _ZN8GpioPortILm8EE5ClearEv
+        DC32 _ZN8GpioPortILm8EE6ToggleEv, _ZNK8GpioPortILm8EE8GetStateEv
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTV9GpioPortCILm5EE
         DATA
 // __absolute void (*const GpioPortC<5UL>::__vtbl[7])()
 _ZTV9GpioPortCILm5EE:
-        DC32 0H, _ZTI9GpioPortCILm5EE
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm5EE7SetModeE8PortMode
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm5EE3SetEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm5EE5ClearEv
-        DC32 _ZN8GpioPortI12GPIO_TypeDefLm5EE6ToggleEv
-        DC32 _ZNK8GpioPortI12GPIO_TypeDefLm5EE8GetStateEv
+        DC32 0H, _ZTI9GpioPortCILm5EE, _ZN8GpioPortILm5EE7SetModeE8PortMode
+        DC32 _ZN8GpioPortILm5EE3SetEv, _ZN8GpioPortILm5EE5ClearEv
+        DC32 _ZN8GpioPortILm5EE6ToggleEv, _ZNK8GpioPortILm5EE8GetStateEv
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTI8GpioPortI12GPIO_TypeDefLm13EE
+        SECTION_GROUP _ZTI8GpioPortILm13EE
         DATA
-// __absolute __si_class_type_info const <Typeinfo for GpioPort<GPIO_TypeDef, (unsigned long)13>>
-_ZTI8GpioPortI12GPIO_TypeDefLm13EE:
+// __absolute __si_class_type_info const <Typeinfo for GpioPort<(unsigned long)13>>
+_ZTI8GpioPortILm13EE:
         DC32 _ZTVN10__cxxabiv120__si_class_type_infoE + 8H
-        DC32 _ZTS8GpioPortI12GPIO_TypeDefLm13EE, _ZTI5IPort
+        DC32 _ZTS8GpioPortILm13EE, _ZTI5IPort
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTI9GpioPortCILm13EE
@@ -1122,16 +1096,16 @@ _ZTI8GpioPortI12GPIO_TypeDefLm13EE:
 // __absolute __vmi_class_type_info const <Typeinfo for GpioPortC<(unsigned long)13>>
 _ZTI9GpioPortCILm13EE:
         DC32 _ZTVN10__cxxabiv121__vmi_class_type_infoE + 8H
-        DC32 _ZTS9GpioPortCILm13EE, 0, 2, _ZTI8GpioPortI12GPIO_TypeDefLm13EE, 2
+        DC32 _ZTS9GpioPortCILm13EE, 0, 2, _ZTI8GpioPortILm13EE, 2
         DC32 _ZTI9SingletonI9GpioPortCILm13EEE, 2
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTI8GpioPortI12GPIO_TypeDefLm5EE
+        SECTION_GROUP _ZTI8GpioPortILm5EE
         DATA
-// __absolute __si_class_type_info const <Typeinfo for GpioPort<GPIO_TypeDef, (unsigned long)5>>
-_ZTI8GpioPortI12GPIO_TypeDefLm5EE:
-        DC32 _ZTVN10__cxxabiv120__si_class_type_infoE + 8H
-        DC32 _ZTS8GpioPortI12GPIO_TypeDefLm5EE, _ZTI5IPort
+// __absolute __si_class_type_info const <Typeinfo for GpioPort<(unsigned long)5>>
+_ZTI8GpioPortILm5EE:
+        DC32 _ZTVN10__cxxabiv120__si_class_type_infoE + 8H, _ZTS8GpioPortILm5EE
+        DC32 _ZTI5IPort
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTI9GpioPortAILm5EE
@@ -1139,16 +1113,16 @@ _ZTI8GpioPortI12GPIO_TypeDefLm5EE:
 // __absolute __vmi_class_type_info const <Typeinfo for GpioPortA<(unsigned long)5>>
 _ZTI9GpioPortAILm5EE:
         DC32 _ZTVN10__cxxabiv121__vmi_class_type_infoE + 8H
-        DC32 _ZTS9GpioPortAILm5EE, 0, 2, _ZTI8GpioPortI12GPIO_TypeDefLm5EE, 2
+        DC32 _ZTS9GpioPortAILm5EE, 0, 2, _ZTI8GpioPortILm5EE, 2
         DC32 _ZTI9SingletonI9GpioPortAILm5EEE, 2
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTI8GpioPortI12GPIO_TypeDefLm9EE
+        SECTION_GROUP _ZTI8GpioPortILm9EE
         DATA
-// __absolute __si_class_type_info const <Typeinfo for GpioPort<GPIO_TypeDef, (unsigned long)9>>
-_ZTI8GpioPortI12GPIO_TypeDefLm9EE:
-        DC32 _ZTVN10__cxxabiv120__si_class_type_infoE + 8H
-        DC32 _ZTS8GpioPortI12GPIO_TypeDefLm9EE, _ZTI5IPort
+// __absolute __si_class_type_info const <Typeinfo for GpioPort<(unsigned long)9>>
+_ZTI8GpioPortILm9EE:
+        DC32 _ZTVN10__cxxabiv120__si_class_type_infoE + 8H, _ZTS8GpioPortILm9EE
+        DC32 _ZTI5IPort
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTI9GpioPortCILm9EE
@@ -1156,16 +1130,16 @@ _ZTI8GpioPortI12GPIO_TypeDefLm9EE:
 // __absolute __vmi_class_type_info const <Typeinfo for GpioPortC<(unsigned long)9>>
 _ZTI9GpioPortCILm9EE:
         DC32 _ZTVN10__cxxabiv121__vmi_class_type_infoE + 8H
-        DC32 _ZTS9GpioPortCILm9EE, 0, 2, _ZTI8GpioPortI12GPIO_TypeDefLm9EE, 2
+        DC32 _ZTS9GpioPortCILm9EE, 0, 2, _ZTI8GpioPortILm9EE, 2
         DC32 _ZTI9SingletonI9GpioPortCILm9EEE, 2
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTI8GpioPortI12GPIO_TypeDefLm8EE
+        SECTION_GROUP _ZTI8GpioPortILm8EE
         DATA
-// __absolute __si_class_type_info const <Typeinfo for GpioPort<GPIO_TypeDef, (unsigned long)8>>
-_ZTI8GpioPortI12GPIO_TypeDefLm8EE:
-        DC32 _ZTVN10__cxxabiv120__si_class_type_infoE + 8H
-        DC32 _ZTS8GpioPortI12GPIO_TypeDefLm8EE, _ZTI5IPort
+// __absolute __si_class_type_info const <Typeinfo for GpioPort<(unsigned long)8>>
+_ZTI8GpioPortILm8EE:
+        DC32 _ZTVN10__cxxabiv120__si_class_type_infoE + 8H, _ZTS8GpioPortILm8EE
+        DC32 _ZTI5IPort
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTI9GpioPortCILm8EE
@@ -1173,7 +1147,7 @@ _ZTI8GpioPortI12GPIO_TypeDefLm8EE:
 // __absolute __vmi_class_type_info const <Typeinfo for GpioPortC<(unsigned long)8>>
 _ZTI9GpioPortCILm8EE:
         DC32 _ZTVN10__cxxabiv121__vmi_class_type_infoE + 8H
-        DC32 _ZTS9GpioPortCILm8EE, 0, 2, _ZTI8GpioPortI12GPIO_TypeDefLm8EE, 2
+        DC32 _ZTS9GpioPortCILm8EE, 0, 2, _ZTI8GpioPortILm8EE, 2
         DC32 _ZTI9SingletonI9GpioPortCILm8EEE, 2
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
@@ -1182,7 +1156,7 @@ _ZTI9GpioPortCILm8EE:
 // __absolute __vmi_class_type_info const <Typeinfo for GpioPortC<(unsigned long)5>>
 _ZTI9GpioPortCILm5EE:
         DC32 _ZTVN10__cxxabiv121__vmi_class_type_infoE + 8H
-        DC32 _ZTS9GpioPortCILm5EE, 0, 2, _ZTI8GpioPortI12GPIO_TypeDefLm5EE, 2
+        DC32 _ZTS9GpioPortCILm5EE, 0, 2, _ZTI8GpioPortILm5EE, 2
         DC32 _ZTI9SingletonI9GpioPortCILm5EEE, 2
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
@@ -1194,12 +1168,12 @@ _ZTS5IPort:
         DC8 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTS8GpioPortI12GPIO_TypeDefLm13EE
+        SECTION_GROUP _ZTS8GpioPortILm13EE
         DATA
-// __absolute char const <Typeinfo name for GpioPort<GPIO_TypeDef, (unsigned long)13>>[31]
-_ZTS8GpioPortI12GPIO_TypeDefLm13EE:
-        DC8 "8GpioPortI12GPIO_TypeDefLm13EE"
-        DC8 0
+// __absolute char const <Typeinfo name for GpioPort<(unsigned long)13>>[17]
+_ZTS8GpioPortILm13EE:
+        DC8 "8GpioPortILm13EE"
+        DC8 0, 0, 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTI9SingletonI9GpioPortCILm13EEE
@@ -1226,12 +1200,11 @@ _ZTS9GpioPortCILm13EE:
         DC8 0, 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTS8GpioPortI12GPIO_TypeDefLm5EE
+        SECTION_GROUP _ZTS8GpioPortILm5EE
         DATA
-// __absolute char const <Typeinfo name for GpioPort<GPIO_TypeDef, (unsigned long)5>>[30]
-_ZTS8GpioPortI12GPIO_TypeDefLm5EE:
-        DC8 "8GpioPortI12GPIO_TypeDefLm5EE"
-        DC8 0, 0
+// __absolute char const <Typeinfo name for GpioPort<(unsigned long)5>>[16]
+_ZTS8GpioPortILm5EE:
+        DC8 "8GpioPortILm5EE"
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTI9SingletonI9GpioPortAILm5EEE
@@ -1258,12 +1231,11 @@ _ZTS9GpioPortAILm5EE:
         DC8 0, 0, 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTS8GpioPortI12GPIO_TypeDefLm9EE
+        SECTION_GROUP _ZTS8GpioPortILm9EE
         DATA
-// __absolute char const <Typeinfo name for GpioPort<GPIO_TypeDef, (unsigned long)9>>[30]
-_ZTS8GpioPortI12GPIO_TypeDefLm9EE:
-        DC8 "8GpioPortI12GPIO_TypeDefLm9EE"
-        DC8 0, 0
+// __absolute char const <Typeinfo name for GpioPort<(unsigned long)9>>[16]
+_ZTS8GpioPortILm9EE:
+        DC8 "8GpioPortILm9EE"
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTI9SingletonI9GpioPortCILm9EEE
@@ -1290,12 +1262,11 @@ _ZTS9GpioPortCILm9EE:
         DC8 0, 0, 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTS8GpioPortI12GPIO_TypeDefLm8EE
+        SECTION_GROUP _ZTS8GpioPortILm8EE
         DATA
-// __absolute char const <Typeinfo name for GpioPort<GPIO_TypeDef, (unsigned long)8>>[30]
-_ZTS8GpioPortI12GPIO_TypeDefLm8EE:
-        DC8 "8GpioPortI12GPIO_TypeDefLm8EE"
-        DC8 0, 0
+// __absolute char const <Typeinfo name for GpioPort<(unsigned long)8>>[16]
+_ZTS8GpioPortILm8EE:
+        DC8 "8GpioPortILm8EE"
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTI9SingletonI9GpioPortCILm8EEE
@@ -1363,11 +1334,11 @@ _ZTSSt10ctype_base:
         END
 // 
 //  76 bytes in section .bss
-// 928 bytes in section .rodata
+// 868 bytes in section .rodata
 // 772 bytes in section .text
 // 
 // 290 bytes of CODE  memory (+ 482 bytes shared)
-//   0 bytes of CONST memory (+ 928 bytes shared)
+//   0 bytes of CONST memory (+ 868 bytes shared)
 //   0 bytes of DATA  memory (+  76 bytes shared)
 //
 //Errors: none
