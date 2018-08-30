@@ -1,0 +1,186 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM         30/Aug/2018  14:57:33
+# Copyright 1999-2018 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\main.cpp
+#    Command line =  
+#        -f C:\Users\Sergey\AppData\Local\Temp\EWF843.tmp
+#        (E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\main.cpp -D NDEBUG -lcN
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Debug\List -lb
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Debug\List -o
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Debug\Obj --debug
+#        --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config
+#        "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.1\arm\inc\c\DLib_Config_Normal.h" -I
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\ -I
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Application\ -I
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Common\ -I
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\AHardware\ -I
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\AHardware\GpioPort\ -I
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\AHardware\IrqController\ -I
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\CMSIS\ -Oh --c++
+#        --no_exceptions --no_rtti)
+#    Locale       =  C
+#    List file    =  
+#        E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Debug\List\main.lst
+#    Object file  =  E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\Debug\Obj\main.o
+#
+###############################################################################
+
+E:\Projects\ARM_LAB\stm32Labs\LabAdcEnd\main.cpp
+      1          #include "CMSIS/stm32f411xe.h"
+      2          #include "leds.hpp"
+      3          #include "userbutton.hpp"
+      4          #include "ledscontroller.hpp"
+      5          
+      6          extern "C" 
+      7          {
+      8            int __low_level_init(void) 
+      9            {
+     10              //Switch on external 16 MHz oscilator    
+     11              RCC->CR |= RCC_CR_HSION;
+     12              while ((RCC->CR & RCC_CR_HSIRDY) != RCC_CR_HSIRDY) 
+     13              {
+     14              }
+     15              //Swicth system clock on extrenal oscilator
+     16              RCC->CFGR |= RCC_CFGR_SW_HSI;
+     17              while ((RCC->CFGR & RCC_CFGR_SWS) != RCC_CFGR_SWS_HSI) 
+     18              {
+     19              }
+     20              //Swicth on clock on PortA and PortC 
+     21              RCC->AHB1ENR |= (RCC_AHB1ENR_GPIOCEN | RCC_AHB1ENR_GPIOAEN);
+     22              RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN ;
+     23              //LED1 on PortA.5, set PortA.5 as output
+     24              GPIOA->MODER |= GPIO_MODER_MODE5_0;
+     25              //LED2 on PortC.9, LED3 on PortC.8, LED4 on PortC.5 set PortC.5,8,9 as output 
+     26              GPIOC->MODER |= (GPIO_MODER_MODE9_0 | GPIO_MODER_MODE5_0 | GPIO_MODER_MODE8_0);
+     27              
+     28              return 1;
+     29            }
+     30          }
+     31          
+     32          
+     33          void Delay(tU32 duration)
+     34          {
+     35            for (tU32 i = 0U; i < duration; i++)
+     36            {    
+     37              __NOP();
+     38            }
+     39          }
+     40          
+     41          int main()
+     42          {
+     43            using utils::operator""msec;
+     44            const UserButton & button = UserButton::GetInstance();  
+     45            LedsController & ledsController = LedsController::GetInstance();
+     46            for(;;)
+     47            {
+     48              if (button.IsPressed())
+     49              {
+     50                ledsController.NextMode();
+     51              } 
+     52              Delay(250msec);
+     53              ledsController.Update();
+     54            }
+     55            return 0;
+     56          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   Delay(tU32)
+       0   GpioPort<GPIO_TypeDef, 13UL>::Clear()
+       0   GpioPort<GPIO_TypeDef, 13UL>::GetState() const
+       0   GpioPort<GPIO_TypeDef, 13UL>::Set()
+       0   GpioPort<GPIO_TypeDef, 13UL>::SetMode(PortMode)
+       0   GpioPort<GPIO_TypeDef, 13UL>::Toggle()
+       0   GpioPort<GPIO_TypeDef, 5UL>::Clear()
+       0   GpioPort<GPIO_TypeDef, 5UL>::GetState() const
+       0   GpioPort<GPIO_TypeDef, 5UL>::Set()
+       0   GpioPort<GPIO_TypeDef, 5UL>::SetMode(PortMode)
+       0   GpioPort<GPIO_TypeDef, 5UL>::Toggle()
+       0   GpioPort<GPIO_TypeDef, 8UL>::Clear()
+       0   GpioPort<GPIO_TypeDef, 8UL>::GetState() const
+       0   GpioPort<GPIO_TypeDef, 8UL>::Set()
+       0   GpioPort<GPIO_TypeDef, 8UL>::SetMode(PortMode)
+       0   GpioPort<GPIO_TypeDef, 8UL>::Toggle()
+       0   GpioPort<GPIO_TypeDef, 9UL>::Clear()
+       0   GpioPort<GPIO_TypeDef, 9UL>::GetState() const
+       0   GpioPort<GPIO_TypeDef, 9UL>::Set()
+       0   GpioPort<GPIO_TypeDef, 9UL>::SetMode(PortMode)
+       0   GpioPort<GPIO_TypeDef, 9UL>::Toggle()
+       4   LedDriver::LedDriver()
+       0   __low_level_init
+      16   main
+        16   -- Indirect call
+        16   -> LedDriver::LedDriver()
+        16   -> LedsController::Update(tU8)
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_10
+       4  ??DataTable1_11
+       4  ??DataTable1_12
+       4  ??DataTable1_13
+       4  ??DataTable1_2
+       4  ??DataTable1_3
+       4  ??DataTable1_4
+       4  ??DataTable1_5
+       4  ??DataTable1_6
+       4  ??DataTable1_7
+       4  ??DataTable1_8
+       4  ??DataTable1_9
+      10  Delay(tU32)
+      10  GpioPort<GPIO_TypeDef, 13UL>::Clear()
+      16  GpioPort<GPIO_TypeDef, 13UL>::GetState() const
+      10  GpioPort<GPIO_TypeDef, 13UL>::Set()
+      26  GpioPort<GPIO_TypeDef, 13UL>::SetMode(PortMode)
+      14  GpioPort<GPIO_TypeDef, 13UL>::Toggle()
+      10  GpioPort<GPIO_TypeDef, 5UL>::Clear()
+      16  GpioPort<GPIO_TypeDef, 5UL>::GetState() const
+       8  GpioPort<GPIO_TypeDef, 5UL>::Set()
+      26  GpioPort<GPIO_TypeDef, 5UL>::SetMode(PortMode)
+      14  GpioPort<GPIO_TypeDef, 5UL>::Toggle()
+      10  GpioPort<GPIO_TypeDef, 8UL>::Clear()
+      16  GpioPort<GPIO_TypeDef, 8UL>::GetState() const
+      10  GpioPort<GPIO_TypeDef, 8UL>::Set()
+      26  GpioPort<GPIO_TypeDef, 8UL>::SetMode(PortMode)
+      14  GpioPort<GPIO_TypeDef, 8UL>::Toggle()
+      10  GpioPort<GPIO_TypeDef, 9UL>::Clear()
+      16  GpioPort<GPIO_TypeDef, 9UL>::GetState() const
+      10  GpioPort<GPIO_TypeDef, 9UL>::Set()
+      26  GpioPort<GPIO_TypeDef, 9UL>::SetMode(PortMode)
+      14  GpioPort<GPIO_TypeDef, 9UL>::Toggle()
+     180  LedDriver::LedDriver()
+      72  __low_level_init
+       4  instance
+       8  instance
+       8  instance
+       8  instance
+       8  instance
+       8  instance
+       8  instance
+      16  instance
+     152  main
+     936  -- Other
+
+ 
+  76 bytes in section .bss
+ 928 bytes in section .rodata
+ 772 bytes in section .text
+ 
+ 290 bytes of CODE  memory (+ 482 bytes shared)
+   0 bytes of CONST memory (+ 928 bytes shared)
+   0 bytes of DATA  memory (+  76 bytes shared)
+
+Errors: none
+Warnings: 1

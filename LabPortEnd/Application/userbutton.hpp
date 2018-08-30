@@ -11,8 +11,7 @@ class UserButton : public GpioPortC<buttonPin>, public Singleton<UserButton>
   public:
     inline bool IsPressed()
     {
-      using namespace utils;
-      return !checkBit(port.IDR, buttonPin);
+      return GetState();
     }
     static void HandleInterrupt();
     friend class Singleton<UserButton>;

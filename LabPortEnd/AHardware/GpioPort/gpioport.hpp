@@ -46,7 +46,10 @@ class GpioPort
     {
       utils::toggleBit(port.ODR, pin);
     }
-
+    bool GetState()
+    {
+      return !utils::checkBit(port.IDR, pin);
+    }
   protected:
     T &port;
 };

@@ -1,13 +1,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM        30/Aug/2018  10:45:55
+// IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM        30/Aug/2018  12:32:27
 // Copyright 1999-2018 IAR Systems AB.
 //
 //    Cpu mode     =  thumb
 //    Endian       =  little
 //    Source file  =  E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\main.cpp
 //    Command line =  
-//        -f C:\Users\Sergey\AppData\Local\Temp\EW94D2.tmp
+//        -f C:\Users\Sergey\AppData\Local\Temp\EW1F1B.tmp
 //        (E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\main.cpp -lcN
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\List -lb
 //        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\List -o
@@ -43,6 +43,7 @@
         PUBLIC _ZN4Led1C1Ev
         PUBLIC _ZN5utils8checkBitIVjmEEbRKT_T0_
         PUBLIC _ZN5utils9toggleBitIVjmEEvRT_T0_
+        PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm13EE8GetStateEv
         PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm13EEC1ERS0_
         PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm13EEC2ERS0_
         PUBLIC _ZN8GpioPortI12GPIO_TypeDefLm5EE6ToggleEv
@@ -157,6 +158,21 @@ _ZN8GpioPortI12GPIO_TypeDefLm5EE6ToggleEv:
         LDR      R0,[R0, #+0]
         ADDS     R0,R0,#+20
         B.W      _ZN5utils9toggleBitIVjmEEvRT_T0_
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN8GpioPortI12GPIO_TypeDefLm13EE8GetStateEv
+        THUMB
+// __interwork __softfp bool GpioPort<GPIO_TypeDef, 13UL>::GetState()
+_ZN8GpioPortI12GPIO_TypeDefLm13EE8GetStateEv:
+        PUSH     {R7,LR}
+        MOVS     R1,#+13
+        LDR      R0,[R0, #+0]
+        ADDS     R0,R0,#+16
+        BL       _ZN5utils8checkBitIVjmEEbRKT_T0_
+        SUBS     R0,R0,#+1
+        SBCS     R0,R0,R0
+        LSRS     R0,R0,#+31
+        POP      {R1,PC}          ;; return
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN9GpioPortAILm5EEC1Ev
@@ -296,15 +312,7 @@ _ZN4Led1C1Ev:
         THUMB
 // __interwork __softfp bool UserButton::IsPressed()
 _ZN10UserButton9IsPressedEv:
-        PUSH     {R7,LR}
-        MOVS     R1,#+13
-        LDR      R0,[R0, #+0]
-        ADDS     R0,R0,#+16
-        BL       _ZN5utils8checkBitIVjmEEbRKT_T0_
-        SUBS     R0,R0,#+1
-        SBCS     R0,R0,R0
-        LSRS     R0,R0,#+31
-        POP      {R1,PC}          ;; return
+        B.W      _ZN8GpioPortI12GPIO_TypeDefLm13EE8GetStateEv
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN10UserButtonC1Ev
@@ -340,15 +348,34 @@ __low_level_init:
         LDR      R1,[R0, #+68]
         ORR      R1,R1,#0x4000
         STR      R1,[R0, #+68]
-        LDR.N    R0,??DataTable1_1  ;; 0x40020000
+        LDR.N    R1,??DataTable1_1  ;; 0x40020000
+        LDR      R2,[R1, #+0]
+        ORR      R2,R2,#0x400
+        STR      R2,[R1, #+0]
+        LDR.N    R1,??DataTable1_2  ;; 0x40020800
+        LDR      R2,[R1, #+0]
+        ORR      R2,R2,#0x40000
+        ORR      R2,R2,#0x10400
+        STR      R2,[R1, #+0]
+        LDR      R1,[R0, #+68]
+        ORR      R1,R1,#0x100
+        STR      R1,[R0, #+68]
+        LDR.N    R0,??DataTable1_3  ;; 0x40012304
+        LDR      R1,[R0, #+0]
+        ORR      R1,R1,#0x800000
+        STR      R1,[R0, #+0]
+        LDR.N    R0,??DataTable1_4  ;; 0x40012008
         LDR      R1,[R0, #+0]
         ORR      R1,R1,#0x400
         STR      R1,[R0, #+0]
-        LDR.N    R0,??DataTable1_2  ;; 0x40020800
-        LDR      R1,[R0, #+0]
-        ORR      R1,R1,#0x40000
-        ORR      R1,R1,#0x10400
-        STR      R1,[R0, #+0]
+        LDR      R1,[R0, #+4]
+        ORR      R1,R1,#0x4000000
+        STR      R1,[R0, #+4]
+        MOV      R1,#+1048576
+        STR      R1,[R0, #+36]
+        LDR      R1,[R0, #+44]
+        ORR      R1,R1,#0x12
+        STR      R1,[R0, #+44]
         MOVS     R0,#+1
         BX       LR               ;; return
 
@@ -376,7 +403,7 @@ main:
         BL       _ZN9SingletonI4Led1E11GetInstanceEv
         BL       _ZN8GpioPortI12GPIO_TypeDefLm5EE6ToggleEv
 ??main_1:
-        LDR.N    R0,??DataTable1_3  ;; 0xc3500
+        LDR.N    R0,??DataTable1_5  ;; 0xc3500
         BL       _Z5Delaym
         B.N      ??main_0
 
@@ -402,6 +429,18 @@ main:
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable1_3:
+        DC32     0x40012304
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable1_4:
+        DC32     0x40012008
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable1_5:
         DC32     0xc3500
 
         SECTION `.iar_vfe_header`:DATA:NOALLOC:NOROOT(2)
@@ -459,9 +498,9 @@ _ZZN5utils9toggleBitIVjmEEvRT_T0_Es_0:
 // 
 //  10 bytes in section .bss
 // 168 bytes in section .rodata
-// 412 bytes in section .text
+// 474 bytes in section .text
 // 
-// 130 bytes of CODE  memory (+ 282 bytes shared)
+// 188 bytes of CODE  memory (+ 286 bytes shared)
 //   0 bytes of CONST memory (+ 168 bytes shared)
 //   0 bytes of DATA  memory (+  10 bytes shared)
 //

@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.30.1.114/W32 for ARM                  30/Aug/2018  10:45:55
+# IAR ELF Linker V8.30.1.114/W32 for ARM                  30/Aug/2018  12:32:27
 # Copyright 2007-2018 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,7 +8,7 @@
 #    Map file     =  
 #        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\List\portend.map
 #    Command line =  
-#        -f C:\Users\Sergey\AppData\Local\Temp\EW95ED.tmp
+#        -f C:\Users\Sergey\AppData\Local\Temp\EW2055.tmp
 #        (E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\Obj\irqcontroller.o
 #        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\Obj\main.o
 #        E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\Obj\startupF411RE.o
@@ -59,45 +59,46 @@ define block HEAP with size = 0M, alignment = 8 { };
   .intvec          const     0x800'0000  0x198  startupF411RE.o [1]
                            - 0x800'0198  0x198
 
-"P1":                                    0x378
-  .text            ro code   0x800'0198   0x84  main.o [1]
-  .text            ro code   0x800'021c   0x24  main.o [1]
-  .text            ro code   0x800'0240   0x14  main.o [1]
+"P1":                                    0x3b4
+  .text            ro code   0x800'0198   0xbc  main.o [1]
   .text            ro code   0x800'0254   0x24  main.o [1]
-  .text            ro code   0x800'0278    0xa  main.o [1]
-  .text            ro code   0x800'0282    0xc  main.o [1]
-  .text            ro code   0x800'028e   0x3a  zero_init3.o [4]
-  .text            ro code   0x800'02c8   0x2c  main.o [1]
-  .text            ro code   0x800'02f4    0xc  main.o [1]
-  .text            ro code   0x800'0300   0x30  main.o [1]
-  .text            ro code   0x800'0330    0x4  main.o [1]
-  .text            ro code   0x800'0334   0x24  ABIassert.o [5]
-  .text            ro code   0x800'0358    0x4  main.o [1]
-  .text            ro code   0x800'035c   0x14  main.o [1]
-  .text            ro code   0x800'0370    0x6  abort.o [2]
-  .text            ro code   0x800'0376    0x2  startupF411RE.o [1]
-  .text            ro code   0x800'0378   0x14  main.o [1]
-  .text            ro code   0x800'038c    0x4  main.o [1]
-  .text            ro code   0x800'0390   0x14  exit.o [5]
-  .text            ro code   0x800'03a4    0x4  main.o [1]
-  .text            ro code   0x800'03a8    0x4  main.o [1]
-  .text            ro code   0x800'03ac    0x4  main.o [1]
-  .rodata          const     0x800'03b0   0x3c  main.o [1]
+  .text            ro code   0x800'0278    0x4  main.o [1]
+  .text            ro code   0x800'027c   0x24  main.o [1]
+  .text            ro code   0x800'02a0    0xa  main.o [1]
+  .text            ro code   0x800'02aa    0xc  main.o [1]
+  .text            ro code   0x800'02b6   0x14  main.o [1]
+  .text            ro code   0x800'02ca    0xc  main.o [1]
+  .text            ro code   0x800'02d6   0x3a  zero_init3.o [4]
+  .text            ro code   0x800'0310   0x30  main.o [1]
+  .text            ro code   0x800'0340    0x4  main.o [1]
+  .text            ro code   0x800'0344   0x2c  main.o [1]
+  .text            ro code   0x800'0370    0x4  main.o [1]
+  .text            ro code   0x800'0374   0x24  ABIassert.o [5]
+  .text            ro code   0x800'0398   0x14  main.o [1]
+  .text            ro code   0x800'03ac   0x14  main.o [1]
+  .text            ro code   0x800'03c0    0x6  abort.o [2]
+  .text            ro code   0x800'03c6    0x4  main.o [1]
+  .text            ro code   0x800'03ca    0x4  main.o [1]
+  .text            ro code   0x800'03ce    0x2  startupF411RE.o [1]
+  .text            ro code   0x800'03d0   0x14  exit.o [5]
+  .text            ro code   0x800'03e4    0x4  main.o [1]
+  .text            ro code   0x800'03e8    0x4  main.o [1]
   .rodata          const     0x800'03ec   0x3c  main.o [1]
-  .text            ro code   0x800'0428   0x28  data_init.o [4]
-  .text            ro code   0x800'0450   0x22  fpinit_M.o [3]
-  .iar.init_table  const     0x800'0474   0x10  - Linker created -
-  .text            ro code   0x800'0484    0x2  startupF411RE.o [1]
-  .text            ro code   0x800'0488   0x1e  cmain.o [4]
-  .text            ro code   0x800'04a6    0x4  exit.o [2]
-  .rodata          const     0x800'04aa    0x1  unwind_debug.o [5]
-  .text            ro code   0x800'04ac    0xa  cexit.o [4]
-  .rodata          const     0x800'04b8   0x18  main.o [1]
-  .rodata          const     0x800'04d0   0x18  main.o [1]
-  .text            ro code   0x800'04e8   0x16  startupF411RE.o [1]
-  .text            ro code   0x800'0500   0x10  irqcontroller.o [1]
-  .rodata          const     0x800'0510    0x0  zero_init3.o [4]
-                           - 0x800'0510  0x378
+  .rodata          const     0x800'0428   0x3c  main.o [1]
+  .text            ro code   0x800'0464   0x28  data_init.o [4]
+  .text            ro code   0x800'048c   0x22  fpinit_M.o [3]
+  .iar.init_table  const     0x800'04b0   0x10  - Linker created -
+  .text            ro code   0x800'04c0    0x2  startupF411RE.o [1]
+  .text            ro code   0x800'04c4   0x1e  cmain.o [4]
+  .text            ro code   0x800'04e2    0x4  exit.o [2]
+  .rodata          const     0x800'04e6    0x1  unwind_debug.o [5]
+  .text            ro code   0x800'04e8    0xa  cexit.o [4]
+  .rodata          const     0x800'04f4   0x18  main.o [1]
+  .rodata          const     0x800'050c   0x18  main.o [1]
+  .text            ro code   0x800'0524   0x16  startupF411RE.o [1]
+  .text            ro code   0x800'053c   0x10  irqcontroller.o [1]
+  .rodata          const     0x800'054c    0x0  zero_init3.o [4]
+                           - 0x800'054c  0x3b4
 
 "P2", part 1 of 2:                         0xc
   .bss             zero     0x2000'0000    0x4  main.o [1]
@@ -115,7 +116,7 @@ Unused ranges:
 
          From           To      Size
          ----           --      ----
-   0x800'0510   0x807'ffff  0x7'faf0
+   0x800'054c   0x807'ffff  0x7'fab4
   0x2000'000c  0x2000'000f       0x4
   0x2000'0110  0x2001'ffff  0x1'fef0
 
@@ -144,10 +145,10 @@ command line/config:
 
 E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\Obj: [1]
     irqcontroller.o       16
-    main.o               414      168       10
+    main.o               474      168       10
     startupF411RE.o       26      408
     ------------------------------------------
-    Total:               456      576       10
+    Total:               516      576       10
 
 dl7M_tln.a: [2]
     abort.o                6
@@ -178,7 +179,7 @@ shb_l.a: [5]
     Gaps                   5        4
     Linker created                 16      256
 ----------------------------------------------
-    Grand Total:         699      597      266
+    Grand Total:         759      597      266
 
 
 *******************************************************************************
@@ -187,80 +188,82 @@ shb_l.a: [5]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base    0x800'0474          --   Gb  - Linker created -
-.iar.init_table$$Limit   0x800'0484          --   Gb  - Linker created -
-?main                    0x800'0489         Code  Gb  cmain.o [4]
+.iar.init_table$$Base    0x800'04b0          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'04c0          --   Gb  - Linker created -
+?main                    0x800'04c5         Code  Gb  cmain.o [4]
 CSTACK$$Base            0x2000'0010          --   Gb  - Linker created -
 CSTACK$$Limit           0x2000'0110          --   Gb  - Linker created -
-Delay(unsigned long)     0x800'01e1    0xc  Code  Gb  main.o [1]
-DummyModule::handler()   0x800'04e9    0x2  Code  Gb  startupF411RE.o [1]
+Delay(unsigned long)     0x800'0213    0xc  Code  Gb  main.o [1]
+DummyModule::handler()   0x800'0525    0x2  Code  Gb  startupF411RE.o [1]
+GpioPort<GPIO_TypeDef, (unsigned long)13>::GetState()
+                         0x800'02b7   0x14  Code  Gb  main.o [1]
 GpioPort<GPIO_TypeDef, (unsigned long)13>::GpioPort(GPIO_TypeDef &)
-                         0x800'03a9    0x4  Code  Gb  main.o [1]
+                         0x800'03e5    0x4  Code  Gb  main.o [1]
 GpioPort<GPIO_TypeDef, (unsigned long)13>::GpioPort(GPIO_TypeDef &) [subobject]
-                         0x800'038d    0x4  Code  Gb  main.o [1]
+                         0x800'03c7    0x4  Code  Gb  main.o [1]
 GpioPort<GPIO_TypeDef, (unsigned long)5>::GpioPort(GPIO_TypeDef &)
-                         0x800'03ad    0x4  Code  Gb  main.o [1]
+                         0x800'03e9    0x4  Code  Gb  main.o [1]
 GpioPort<GPIO_TypeDef, (unsigned long)5>::GpioPort(GPIO_TypeDef &) [subobject]
-                         0x800'03a5    0x4  Code  Gb  main.o [1]
+                         0x800'03cb    0x4  Code  Gb  main.o [1]
 GpioPort<GPIO_TypeDef, (unsigned long)5>::Toggle()
-                         0x800'0279    0xa  Code  Gb  main.o [1]
+                         0x800'02a1    0xa  Code  Gb  main.o [1]
 GpioPortA<(unsigned long)5>::GpioPortA()
-                         0x800'0379   0x14  Code  Gb  main.o [1]
+                         0x800'03ad   0x14  Code  Gb  main.o [1]
 GpioPortA<(unsigned long)5>::GpioPortA() [subobject]
-                         0x800'0359    0x4  Code  Gb  main.o [1]
+                         0x800'0371    0x4  Code  Gb  main.o [1]
 GpioPortC<(unsigned long)13>::GpioPortC()
-                         0x800'035d   0x14  Code  Gb  main.o [1]
+                         0x800'0399   0x14  Code  Gb  main.o [1]
 GpioPortC<(unsigned long)13>::GpioPortC() [subobject]
-                         0x800'0331    0x4  Code  Gb  main.o [1]
+                         0x800'0341    0x4  Code  Gb  main.o [1]
 Initialization guard variable for Singleton<Led1>::GetInstance()::instance
                         0x2000'0008    0x1  Data  Gb  main.o [1]
 Initialization guard variable for Singleton<UserButton>::GetInstance()::instance
                         0x2000'0009    0x1  Data  Gb  main.o [1]
 IrqController::HandleIrqExtiLine15_10()
-                         0x800'0501   0x10  Code  Gb  irqcontroller.o [1]
-Led1::Led1()             0x800'02f5    0xc  Code  Gb  main.o [1]
-Region$$Table$$Base      0x800'0474          --   Gb  - Linker created -
-Region$$Table$$Limit     0x800'0484          --   Gb  - Linker created -
+                         0x800'053d   0x10  Code  Gb  irqcontroller.o [1]
+Led1::Led1()             0x800'02cb    0xc  Code  Gb  main.o [1]
+Region$$Table$$Base      0x800'04b0          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'04c0          --   Gb  - Linker created -
 Singleton<Led1>::GetInstance()
-                         0x800'0255   0x24  Code  Gb  main.o [1]
+                         0x800'027d   0x24  Code  Gb  main.o [1]
 Singleton<Led1>::GetInstance()::instance
                         0x2000'0000    0x4  Data  Gb  main.o [1]
 Singleton<UserButton>::GetInstance()
-                         0x800'021d   0x24  Code  Gb  main.o [1]
+                         0x800'0255   0x24  Code  Gb  main.o [1]
 Singleton<UserButton>::GetInstance()::instance
                         0x2000'0004    0x4  Data  Gb  main.o [1]
 UserButton::IsPressed()
-                         0x800'0241   0x14  Code  Gb  main.o [1]
+                         0x800'0279    0x4  Code  Gb  main.o [1]
 UserButton::UserButton()
-                         0x800'0283    0xc  Code  Gb  main.o [1]
-__aeabi_assert           0x800'0335   0x24  Code  Gb  ABIassert.o [5]
-__cmain                  0x800'0489         Code  Gb  cmain.o [4]
-__exit                   0x800'0391   0x14  Code  Gb  exit.o [5]
-__iar_data_init3         0x800'0429   0x28  Code  Gb  data_init.o [4]
-__iar_debug_exceptions   0x800'04aa    0x1  Data  Gb  unwind_debug.o [5]
-__iar_init_vfp           0x800'0451         Code  Gb  fpinit_M.o [3]
-__iar_program_start      0x800'04eb   0x12  Code  Gb  startupF411RE.o [1]
-__iar_zero_init3         0x800'028f   0x3a  Code  Gb  zero_init3.o [4]
-__low_level_init         0x800'0199   0x48  Code  Gb  main.o [1]
+                         0x800'02ab    0xc  Code  Gb  main.o [1]
+__aeabi_assert           0x800'0375   0x24  Code  Gb  ABIassert.o [5]
+__cmain                  0x800'04c5         Code  Gb  cmain.o [4]
+__exit                   0x800'03d1   0x14  Code  Gb  exit.o [5]
+__iar_data_init3         0x800'0465   0x28  Code  Gb  data_init.o [4]
+__iar_debug_exceptions   0x800'04e6    0x1  Data  Gb  unwind_debug.o [5]
+__iar_init_vfp           0x800'048d         Code  Gb  fpinit_M.o [3]
+__iar_program_start      0x800'0527   0x12  Code  Gb  startupF411RE.o [1]
+__iar_zero_init3         0x800'02d7   0x3a  Code  Gb  zero_init3.o [4]
+__low_level_init         0x800'0199   0x7a  Code  Gb  main.o [1]
 __vector_table           0x800'0000  0x198  Data  Gb  startupF411RE.o [1]
-_call_main               0x800'0495         Code  Gb  cmain.o [4]
-_exit                    0x800'04ad         Code  Gb  cexit.o [4]
-_main                    0x800'04a3         Code  Gb  cmain.o [4]
-abort                    0x800'0371    0x6  Code  Gb  abort.o [2]
+_call_main               0x800'04d1         Code  Gb  cmain.o [4]
+_exit                    0x800'04e9         Code  Gb  cexit.o [4]
+_main                    0x800'04df         Code  Gb  cmain.o [4]
+abort                    0x800'03c1    0x6  Code  Gb  abort.o [2]
 bool utils::checkBit<unsigned int volatile, unsigned long>(unsigned int volatile const &, unsigned long)
-                         0x800'02c9   0x2c  Code  Gb  main.o [1]
+                         0x800'0345   0x2c  Code  Gb  main.o [1]
 bool utils::checkBit<unsigned int volatile, unsigned long>(unsigned int volatile const &, unsigned long)::string
-                         0x800'04b8   0x18  Data  Gb  main.o [1]
+                         0x800'04f4   0x18  Data  Gb  main.o [1]
 bool utils::checkBit<unsigned int volatile, unsigned long>(unsigned int volatile const &, unsigned long)::string (instance 2)
-                         0x800'03b0   0x3c  Data  Gb  main.o [1]
-exit                     0x800'04a7    0x4  Code  Gb  exit.o [2]
-main                     0x800'01ed   0x1e  Code  Gb  main.o [1]
-void utils::toggleBit<unsigned int volatile, unsigned long>(unsigned int volatile &, unsigned long)
-                         0x800'0301   0x30  Code  Gb  main.o [1]
-void utils::toggleBit<unsigned int volatile, unsigned long>(unsigned int volatile &, unsigned long)::string
-                         0x800'04d0   0x18  Data  Gb  main.o [1]
-void utils::toggleBit<unsigned int volatile, unsigned long>(unsigned int volatile &, unsigned long)::string (instance 2)
                          0x800'03ec   0x3c  Data  Gb  main.o [1]
+exit                     0x800'04e3    0x4  Code  Gb  exit.o [2]
+main                     0x800'021f   0x1e  Code  Gb  main.o [1]
+void utils::toggleBit<unsigned int volatile, unsigned long>(unsigned int volatile &, unsigned long)
+                         0x800'0311   0x30  Code  Gb  main.o [1]
+void utils::toggleBit<unsigned int volatile, unsigned long>(unsigned int volatile &, unsigned long)::string
+                         0x800'050c   0x18  Data  Gb  main.o [1]
+void utils::toggleBit<unsigned int volatile, unsigned long>(unsigned int volatile &, unsigned long)::string (instance 2)
+                         0x800'0428   0x3c  Data  Gb  main.o [1]
 
 
 [1] = E:\Projects\ARM_LAB\stm32Labs\LabPortEnd\Debug\Obj
@@ -269,7 +272,7 @@ void utils::toggleBit<unsigned int volatile, unsigned long>(unsigned int volatil
 [4] = rt7M_tl.a
 [5] = shb_l.a
 
-  699 bytes of readonly  code memory
+  759 bytes of readonly  code memory
   597 bytes of readonly  data memory
   266 bytes of readwrite data memory
 
