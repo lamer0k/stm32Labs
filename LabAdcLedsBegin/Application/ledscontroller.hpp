@@ -2,45 +2,37 @@
 #define LEDSCONTROLLER_H
 #include "utils.hpp"
 #include "ledsdriver.hpp"
+#include "ledsmodes.hpp"
 #include "../Common/singleton.hpp"
 #include <array>
-
- enum class LedsMode
-  {
-    tree = 0,
-    myMode = 1,
-    adcMode = 2,
-    all = 3,
-    end = all
-   }; 
+#include <functional>
 
 class LedsController : public Singleton<LedsController>
 {
   public:
-    void Update(tU8 value = 0);
-    inline void SetMode(LedsMode ledMode)
+    inline void Update(tU8 value = 0)
     {
-       mode = ledMode;
-       currentLed = 0;
-       LedDriver::GetInstance().SwitchOffAll();
-    }
-    inline void NextMode()
-    {
-      tU8 currentMode = static_cast<tU8>(mode);
-      currentMode++;
-      if (currentMode > static_cast<tU8>(LedsMode::end))
-      {
-        currentMode = static_cast<tU8>(LedsMode::tree);
-      }
-  
-      SetMode(static_cast<LedsMode>(currentMode));
+      modes[currentMode].get().Do();
     }
     
+    inline void NextMode()
+    {
+      currentMode++;
+      if (currentMode >= modes.size())
+      {
+        currentMode = 0U;
+      }
+      modes[currentMode].get().Reset();
+    }    
     friend class Singleton<LedsController>;
   private:
     LedsController() = default;        
-    LedsMode mode =  LedsMode::tree;;
-    tU8 currentLed = 0U;
-    
+    tU8 currentMode = 0U;
+    using tModesArray = std::array<std::reference_wrapper<LedsMode>, 4U>;    
+    tModesArray modes = { LedsModeTree::GetInstance(),
+                          LedsModeChess::GetInstance(),
+                          LedsModeAll::GetInstance(),
+                          LedsModeAdc::GetInstance()                                              
+                        }; 
 };
 #endif //LEDSCONTROLLER_H

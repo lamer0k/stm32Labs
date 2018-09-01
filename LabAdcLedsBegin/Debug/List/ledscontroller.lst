@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM         30/Aug/2018  15:15:01
+# IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM         01/Sep/2018  18:56:23
 # Copyright 1999-2018 IAR Systems AB.
 #
 #    Cpu mode     =  thumb
@@ -8,7 +8,7 @@
 #    Source file  =  
 #        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Application\ledscontroller.cpp
 #    Command line =  
-#        -f C:\Users\Sergey\AppData\Local\Temp\EWF33F.tmp
+#        -f C:\Users\Sergey\AppData\Local\Temp\EW8979.tmp
 #        (E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Application\ledscontroller.cpp
 #        -D NDEBUG -lcN
 #        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Debug\List -lb
@@ -42,123 +42,40 @@ E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Application\ledscontroller.cpp
       6          *
       7          *******************************************************************************/
       8          #include "ledscontroller.hpp" 
-      9          #include "ledsdriver.hpp"
+      9          #include "ledsmode.hpp"
      10          
      11          /*******************************************************************************
      12          * Function:  nextStep
      13          * Description: 
      14          * Threading usage and Assumptions:  none
      15          ******************************************************************************/
-     16          void LedsController::Update(tU8 value) 
+     16          inline void LedsController::Update(tU8 value) 
      17          {
-     18            LedDriver & ledsDriver = LedDriver::GetInstance();
-     19            switch  (mode)
-     20            {
-     21            case LedsMode::tree:    
-     22                  ledsDriver.GetLed(static_cast<LedNum>(currentLed)).Toggle();
-     23                  currentLed++;
-     24                  if (currentLed >= ledsDriver.GetLedsCount())
-     25                  {
-     26                    currentLed = 0U;
-     27                  }
-     28                break;
-     29              case LedsMode::myMode:
-     30                  if (currentLed % 2U == 0U)
-     31                  {
-     32                    ledsDriver.GetLed(LedNum::led1).SwitchOn();
-     33                    ledsDriver.GetLed(LedNum::led3).SwitchOn();
-     34                    ledsDriver.GetLed(LedNum::led2).SwitchOff();
-     35                    ledsDriver.GetLed(LedNum::led4).SwitchOff();          
-     36                  } else 
-     37                  {
-     38                    ledsDriver.GetLed(LedNum::led1).SwitchOff();
-     39                    ledsDriver.GetLed(LedNum::led3).SwitchOff();
-     40                    ledsDriver.GetLed(LedNum::led2).SwitchOn();
-     41                    ledsDriver.GetLed(LedNum::led4).SwitchOn();                    
-     42                  }        
-     43                  currentLed++;        
-     44                break;
-     45                case LedsMode::all:  
-     46                  ledsDriver.ToggleAll();
-     47                break;
-     48              case LedsMode::adcMode:
-     49                   for (tU32 i = 0U; i < ledsDriver.GetLedsCount(); i++)
-     50                   {
-     51                     if (i <= value)
-     52                     {
-     53                      ledsDriver.GetLed(static_cast<LedNum>(i)).SwitchOn();
-     54                     } else
-     55                     {
-     56                       ledsDriver.GetLed(static_cast<LedNum>(i)).SwitchOff();
-     57                     }
-     58                   }   
-     59                break;  
-     60              default:
-     61              break;
-     62            }
-     63          }
-
-   Maximum stack usage in bytes:
-
-   .cstack Function
-   ------- --------
-       0   GpioPort<5UL>::Clear()
-       0   GpioPort<5UL>::GetState() const
-       0   GpioPort<5UL>::Set()
-       0   GpioPort<5UL>::SetMode(PortMode)
-       0   GpioPort<5UL>::Toggle()
-       0   GpioPort<8UL>::Clear()
-       0   GpioPort<8UL>::GetState() const
-       0   GpioPort<8UL>::Set()
-       0   GpioPort<8UL>::SetMode(PortMode)
-       0   GpioPort<8UL>::Toggle()
-       0   GpioPort<9UL>::Clear()
-       0   GpioPort<9UL>::GetState() const
-       0   GpioPort<9UL>::Set()
-       0   GpioPort<9UL>::SetMode(PortMode)
-       0   GpioPort<9UL>::Toggle()
-       4   LedDriver::LedDriver()
-      16   LedsController::Update(tU8)
-        16   -- Indirect call
-        16   -> LedDriver::LedDriver()
+     18            modes[currentMode].get().Do();
+     19          }
 
 
    Section sizes:
 
    Bytes  Function/Label
    -----  --------------
-      10  GpioPort<5UL>::Clear()
-      16  GpioPort<5UL>::GetState() const
-       8  GpioPort<5UL>::Set()
-      26  GpioPort<5UL>::SetMode(PortMode)
-      14  GpioPort<5UL>::Toggle()
-      10  GpioPort<8UL>::Clear()
-      16  GpioPort<8UL>::GetState() const
-      10  GpioPort<8UL>::Set()
-      26  GpioPort<8UL>::SetMode(PortMode)
-      14  GpioPort<8UL>::Toggle()
-      10  GpioPort<9UL>::Clear()
-      16  GpioPort<9UL>::GetState() const
-      10  GpioPort<9UL>::Set()
-      26  GpioPort<9UL>::SetMode(PortMode)
-      14  GpioPort<9UL>::Toggle()
-     180  LedDriver::LedDriver()
-     212  LedsController::Update(tU8)
+       8  instance
+       8  instance
+       8  instance
+       8  instance
        8  instance
        8  instance
        8  instance
        8  instance
       16  instance
-     693  -- Other
+     337  -- Other
 
  
-  53 bytes in section .bss
- 688 bytes in section .rodata
- 618 bytes in section .text
+  89 bytes in section .bss
+ 328 bytes in section .rodata
  
- 212 bytes of CODE  memory (+ 406 bytes shared)
-   0 bytes of CONST memory (+ 688 bytes shared)
-   0 bytes of DATA  memory (+  53 bytes shared)
+ 0 bytes of CONST memory (+ 328 bytes shared)
+ 0 bytes of DATA  memory (+  89 bytes shared)
 
 Errors: none
 Warnings: none

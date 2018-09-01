@@ -25,7 +25,7 @@ enum class LedNum
   ledMax = led4
 };
 
-class LedDriver : public Singleton<LedDriver> 
+class LedsDriver : public Singleton<LedsDriver> 
 { 
   public:    
     void SwitchOnAll()
@@ -59,9 +59,9 @@ class LedDriver : public Singleton<LedDriver>
     {
       return leds[static_cast<tU8>(num)];
     }
-    friend class Singleton<LedDriver>;
+    friend class Singleton<LedsDriver>;
   private:
-    LedDriver() = default;     
+    LedsDriver() = default;     
     std::array<Led, ledsCount> leds {  Led(GpioPortA<led1Pin>::GetInstance()),
                                        Led(GpioPortC<led2Pin>::GetInstance()),        
                                        Led(GpioPortC<led3Pin>::GetInstance()),

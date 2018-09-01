@@ -1,13 +1,13 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM         30/Aug/2018  15:15:01
+# IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM         01/Sep/2018  18:57:06
 # Copyright 1999-2018 IAR Systems AB.
 #
 #    Cpu mode     =  thumb
 #    Endian       =  little
 #    Source file  =  E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\main.cpp
 #    Command line =  
-#        -f C:\Users\Sergey\AppData\Local\Temp\EWF33E.tmp
+#        -f C:\Users\Sergey\AppData\Local\Temp\EW3489.tmp
 #        (E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\main.cpp -D NDEBUG -lcN
 #        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Debug\List -lb
 #        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Debug\List -o
@@ -114,12 +114,27 @@ E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\main.cpp
        0   GpioPort<9UL>::Set()
        0   GpioPort<9UL>::SetMode(PortMode)
        0   GpioPort<9UL>::Toggle()
-       4   LedDriver::LedDriver()
-       0   __low_level_init
-      16   main
+       4   LedsController::LedsController()
+       4   LedsDriver::LedsDriver()
+      16   LedsModeAdc::Do(tU8)
         16   -- Indirect call
-        16   -> LedDriver::LedDriver()
-        16   -> LedsController::Update(tU8)
+        16   -> LedsDriver::LedsDriver()
+      16   LedsModeAll::Do(tU8)
+        16   -- Indirect call
+        16   -> LedsDriver::LedsDriver()
+      16   LedsModeChess::Do(tU8)
+        16   -- Indirect call
+        16   -> LedsDriver::LedsDriver()
+       8   LedsModeTree::Do(tU8)
+         8   -- Indirect call
+         8   -> LedsDriver::LedsDriver()
+       0   UserButton::UserButton()
+       0   __low_level_init
+      24   main
+        24   -- Indirect call
+        24   -> LedsController::LedsController()
+        24   -> LedsDriver::LedsDriver()
+        24   -> UserButton::UserButton()
 
 
    Section sizes:
@@ -128,10 +143,6 @@ E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\main.cpp
    -----  --------------
        4  ??DataTable1
        4  ??DataTable1_1
-       4  ??DataTable1_10
-       4  ??DataTable1_11
-       4  ??DataTable1_12
-       4  ??DataTable1_13
        4  ??DataTable1_2
        4  ??DataTable1_3
        4  ??DataTable1_4
@@ -161,7 +172,13 @@ E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\main.cpp
       10  GpioPort<9UL>::Set()
       26  GpioPort<9UL>::SetMode(PortMode)
       14  GpioPort<9UL>::Toggle()
-     180  LedDriver::LedDriver()
+     140  LedsController::LedsController()
+     180  LedsDriver::LedsDriver()
+      60  LedsModeAdc::Do(tU8)
+      52  LedsModeAll::Do(tU8)
+     108  LedsModeChess::Do(tU8)
+      64  LedsModeTree::Do(tU8)
+      52  UserButton::UserButton()
       72  __low_level_init
        4  instance
        8  instance
@@ -170,18 +187,22 @@ E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\main.cpp
        8  instance
        8  instance
        8  instance
+       8  instance
+       8  instance
+       8  instance
       16  instance
-     152  main
-     876  -- Other
+      20  instance
+     144  main
+    1284  -- Other
 
  
-  76 bytes in section .bss
- 868 bytes in section .rodata
- 772 bytes in section .text
+   124 bytes in section .bss
+ 1 272 bytes in section .rodata
+ 1 224 bytes in section .text
  
- 290 bytes of CODE  memory (+ 482 bytes shared)
-   0 bytes of CONST memory (+ 868 bytes shared)
-   0 bytes of DATA  memory (+  76 bytes shared)
+ 266 bytes of CODE  memory (+   958 bytes shared)
+   0 bytes of CONST memory (+ 1 272 bytes shared)
+   0 bytes of DATA  memory (+   124 bytes shared)
 
 Errors: none
 Warnings: 1

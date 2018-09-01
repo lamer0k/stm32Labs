@@ -2405,6 +2405,12 @@
             <name>$PROJ_DIR$\Application\ledsdriver.hpp</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\Application\ledsmode.hpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Application\ledsmodes.hpp</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\Application\userbutton.hpp</name>
         </file>
     </group>
