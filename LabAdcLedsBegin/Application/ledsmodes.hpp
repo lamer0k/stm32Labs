@@ -78,6 +78,7 @@ class LedsModeInsideOutside : public LedsMode, public Singleton<LedsModeInsideOu
     LedsModeInsideOutside() = default;  
 };
 
+
 class LedsModeAdc : public LedsMode, public Singleton<LedsModeAdc>
 {
   friend class Singleton<LedsModeAdc>;
@@ -87,7 +88,7 @@ class LedsModeAdc : public LedsMode, public Singleton<LedsModeAdc>
       LedsDriver & driver = LedsDriver::GetInstance(); 
       for (tU32 i = 0U; i < driver.GetLedsCount(); i++)
       {
-        if (i <= value)
+        if (i < value)
         {
           driver.GetLed(static_cast<LedNum>(i)).SwitchOn();
         } else

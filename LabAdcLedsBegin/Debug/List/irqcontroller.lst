@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM         01/Sep/2018  23:37:20
+# IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM         02/Sep/2018  01:26:05
 # Copyright 1999-2018 IAR Systems AB.
 #
 #    Cpu mode     =  thumb
@@ -8,7 +8,7 @@
 #    Source file  =  
 #        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\AHardware\IrqController\irqcontroller.cpp
 #    Command line =  
-#        -f C:\Users\Sergey\AppData\Local\Temp\EWC6DC.tmp
+#        -f C:\Users\Sergey\AppData\Local\Temp\EW5508.tmp
 #        (E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\AHardware\IrqController\irqcontroller.cpp
 #        -D NDEBUG -lcN
 #        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Debug\List -lb
@@ -39,29 +39,90 @@ E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\AHardware\IrqController\irqcontrol
       2          // Created by Sergey on 27.08.2018.
       3          //
       4          #include "irqcontroller.hpp"
-      5          
+      5          #include "userbutton.hpp"
       6          void IrqController::HandleIrqExtiLine15_10()
       7          {
       8            EXTI->PR = EXTI_PR_PR13 ;  
-      9          }
+      9            UserButton::GetInstance().HandleInterrupt();
+     10          }
 
    Maximum stack usage in bytes:
 
    .cstack Function
    ------- --------
-       0   IrqController::HandleIrqExtiLine15_10()
+       0   Button::Button(IPort &)
+       8   Button::subobject Button(IPort &)
+         8   -> Button::Button(IPort &)
+       8   GpioPort<13UL>::Clear()
+         8   -> utils::setBitValue<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
+       8   GpioPort<13UL>::GetState() const
+         8   -> utils::checkBit<uint32_t volatile, tU32>(uint32_t const volatile &, tU32)
+      16   GpioPort<13UL>::GpioPort(GPIO_TypeDef &)
+        16   -> IPort::subobject IPort()
+       8   GpioPort<13UL>::Set()
+         8   -> utils::setBitValue<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
+       0   GpioPort<13UL>::SetMode(PortMode)
+       8   GpioPort<13UL>::Toggle()
+         8   -> utils::toggleBit<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
+       8   GpioPort<13UL>::subobject GpioPort(GPIO_TypeDef &)
+         8   -> GpioPort<13UL>::GpioPort(GPIO_TypeDef &)
+       8   GpioPortC<13UL>::GpioPortC()
+         8   -> GpioPort<13UL>::subobject GpioPort(GPIO_TypeDef &)
+       0   IPort::IPort()
+       8   IPort::subobject IPort()
+         8   -> IPort::IPort()
+       8   IrqController::HandleIrqExtiLine15_10()
+         8   -> Singleton<UserButton>::GetInstance()
+         8   -> UserButton::HandleInterrupt()
+       8   Singleton<GpioPortC<13UL>>::GetInstance()
+         8   -> GpioPortC<13UL>::GpioPortC()
+       8   Singleton<UserButton>::GetInstance()
+         8   -> UserButton::UserButton()
+       0   UserButton::HandleInterrupt()
+       8   UserButton::UserButton()
+         8   -> Button::subobject Button(IPort &)
+         8   -> Singleton<GpioPortC<13UL>>::GetInstance()
+       0   utils::checkBit<uint32_t volatile, tU32>(uint32_t const volatile &, tU32)
+       0   utils::setBitValue<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
+       0   utils::toggleBit<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
 
 
    Section sizes:
 
    Bytes  Function/Label
    -----  --------------
-      16  IrqController::HandleIrqExtiLine15_10()
+       4  Button::Button(IPort &)
+      12  Button::subobject Button(IPort &)
+      16  GpioPort<13UL>::Clear()
+      28  GpioPort<13UL>::GetState() const
+      28  GpioPort<13UL>::GpioPort(GPIO_TypeDef &)
+      16  GpioPort<13UL>::Set()
+      34  GpioPort<13UL>::SetMode(PortMode)
+      16  GpioPort<13UL>::Toggle()
+      12  GpioPort<13UL>::subobject GpioPort(GPIO_TypeDef &)
+      28  GpioPortC<13UL>::GpioPortC()
+       2  IPort::IPort()
+      12  IPort::subobject IPort()
+      24  IrqController::HandleIrqExtiLine15_10()
+      32  Singleton<GpioPortC<13UL>>::GetInstance()
+      32  Singleton<UserButton>::GetInstance()
+       2  UserButton::HandleInterrupt()
+      20  UserButton::UserButton()
+       4  instance
+       8  instance
+      10  utils::checkBit<uint32_t volatile, tU32>(uint32_t const volatile &, tU32)
+       8  utils::setBitValue<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
+      12  utils::toggleBit<uint32_t volatile, tU32>(uint32_t volatile &, tU32)
+     198  -- Other
 
  
- 16 bytes in section .text
+  14 bytes in section .bss
+ 196 bytes in section .rodata
+ 348 bytes in section .text
  
- 16 bytes of CODE memory
+ 24 bytes of CODE  memory (+ 324 bytes shared)
+  0 bytes of CONST memory (+ 196 bytes shared)
+  0 bytes of DATA  memory (+  14 bytes shared)
 
 Errors: none
 Warnings: none

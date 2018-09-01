@@ -1,13 +1,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM        02/Sep/2018  00:41:43
+// IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM        02/Sep/2018  01:26:05
 // Copyright 1999-2018 IAR Systems AB.
 //
 //    Cpu mode     =  thumb
 //    Endian       =  little
 //    Source file  =  E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\main.cpp
 //    Command line =  
-//        -f C:\Users\Sergey\AppData\Local\Temp\EWB7F1.tmp
+//        -f C:\Users\Sergey\AppData\Local\Temp\EW5529.tmp
 //        (E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\main.cpp -D NDEBUG
 //        -lcN E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Debug\List -lb
 //        E:\Projects\ARM_LAB\stm32Labs\LabAdcLedsBegin\Debug\List -o
@@ -2060,8 +2060,8 @@ _ZN11LedsModeAdc2DoEh:
         BCS.N    ??Do_2
         MOVS     R0,R5
         UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-        CMP      R0,R7
-        BCC.N    ??Do_3
+        CMP      R7,R0
+        BCS.N    ??Do_3
         MOVS     R1,R7
         MOVS     R0,R6
         BL       _ZN10LedsDriver6GetLedE6LedNum

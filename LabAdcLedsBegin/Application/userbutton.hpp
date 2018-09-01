@@ -11,8 +11,7 @@ class Button
     inline bool IsPressed()const
     {
       return port.GetState();      
-    }
-    static void HandleInterrupt();    
+    }    
   private:
     IPort &port;
 };
@@ -21,7 +20,14 @@ constexpr tU32 buttonPin = 13U;
 class UserButton: public Button, public Singleton<UserButton> 
 {
   friend class Singleton;
+  public:
+    void HandleInterrupt()
+    {
+    }; 
   private:
-     UserButton(): Button {GpioPortC<buttonPin>::GetInstance()} {};
+    UserButton(): Button {GpioPortC<buttonPin>::GetInstance()} 
+    {
+    };
+       
 };
 #endif //__BUTTON_H
