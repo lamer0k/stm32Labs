@@ -3,7 +3,7 @@
 *
 *  DESCRIPTION: 
 *
-*  Copyright (c) 2015 by South Ural State Universaty
+*  Copyright (c) 2018 by South Ural State Universaty
 ******************************************************************************/
 
 #ifndef LEDDRIVER_H
@@ -11,38 +11,43 @@
 
 #include "leds.hpp"
 #include "singleton.hpp"
-#include "iport.hpp"
 #include "gpioports.hpp"
 #include <array>
 
 constexpr tU8 ledsCount = 4U;
+
+constexpr tU32 led1Pin = 5U;
+constexpr tU32 led2Pin = 9U;
+constexpr tU32 led3Pin = 8U;
+constexpr tU32 led4Pin = 5U;
+
 enum class LedNum
 {
   led1 = 0,
   led2 = 1,
   led3 = 2,
-  led4 = ledsCount - 1,
-  ledMax = led4
+  led4 = 3,
+  ledMax = ledsCount - 1
 };
 
 class LedsDriver : public Singleton<LedsDriver> 
 { 
   public:    
-    void SwitchOnAll()
+    inline void SwitchOnAll()
     {
       for(auto it: leds)
       {
         it.SwitchOn();
       }
     };
-    void SwitchOffAll()
+    inline void SwitchOffAll()
     {
       for(auto it: leds)
       {
         it.SwitchOff();
       }
     };
-    void ToggleAll()
+    inline void ToggleAll()
     {
       for(auto it: leds)
       {
@@ -55,7 +60,7 @@ class LedsDriver : public Singleton<LedsDriver>
       return leds.size();
     };
     
-    Led & GetLed(LedNum num)
+    inline Led & GetLed(LedNum num)
     {
       return leds[static_cast<tU8>(num)];
     }

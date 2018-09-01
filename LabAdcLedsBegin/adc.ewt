@@ -2396,9 +2396,6 @@
             <name>$PROJ_DIR$\Application\leds.hpp</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\Application\ledscontroller.cpp</name>
-        </file>
-        <file>
             <name>$PROJ_DIR$\Application\ledscontroller.hpp</name>
         </file>
         <file>

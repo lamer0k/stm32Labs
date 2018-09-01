@@ -4,11 +4,6 @@
 #include "GpioPort/gpioports.hpp"
 #include "../Common/singleton.hpp"
 
-constexpr tU32 led1Pin = 5U;
-constexpr tU32 led2Pin = 9U;
-constexpr tU32 led3Pin = 8U;
-constexpr tU32 led4Pin = 5U;
-
 class Led 
 {
   public:

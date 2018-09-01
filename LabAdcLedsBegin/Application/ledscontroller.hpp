@@ -12,7 +12,7 @@ class LedsController : public Singleton<LedsController>
   public:
     inline void Update(tU8 value = 0)
     {
-      modes[currentMode].get().Do();
+      modes[currentMode].get().Do(value);
     }
     
     inline void NextMode()
@@ -28,10 +28,13 @@ class LedsController : public Singleton<LedsController>
   private:
     LedsController() = default;        
     tU8 currentMode = 0U;
-    using tModesArray = std::array<std::reference_wrapper<LedsMode>, 4U>;    
-    tModesArray modes = { LedsModeTree::GetInstance(),
+    using tModesArray = std::array<std::reference_wrapper<LedsMode>, 6U>;    
+    tModesArray modes = { 
+                          LedsModeTree::GetInstance(),
                           LedsModeChess::GetInstance(),
                           LedsModeAll::GetInstance(),
+                          LedsModeFirstPair::GetInstance(),
+                          LedsModeInsideOutside::GetInstance(),
                           LedsModeAdc::GetInstance()                                              
                         }; 
 };

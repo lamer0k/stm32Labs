@@ -50,8 +50,8 @@ namespace utils
     return sec * 1000000U;
   }
 
-  constexpr unsigned long long operator "" msec(unsigned long long msec) {
-    return msec * 3200U;
+  constexpr unsigned long operator "" msec(unsigned long long msec) {
+    return static_cast<unsigned long>(msec) * 3200UL;
   }
 };
 

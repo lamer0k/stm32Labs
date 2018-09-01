@@ -26,24 +26,14 @@ class LedsModeChess : public LedsMode, public Singleton<LedsModeChess>
 {
   friend class Singleton<LedsModeChess>;
   public:
-    virtual void Do(tU8 value) override
+    virtual void Reset() override
     {
       LedsDriver & driver = LedsDriver::GetInstance();
-      if (currentLed % 2U == 0U)
-        {
-          driver.GetLed(LedNum::led1).SwitchOn();
-          driver.GetLed(LedNum::led3).SwitchOn();
-          driver.GetLed(LedNum::led2).SwitchOff();
-          driver.GetLed(LedNum::led4).SwitchOff();          
-        } else 
-        {
-          driver.GetLed(LedNum::led1).SwitchOff();
-          driver.GetLed(LedNum::led3).SwitchOff();
-          driver.GetLed(LedNum::led2).SwitchOn();
-          driver.GetLed(LedNum::led4).SwitchOn();                    
-        }        
-        currentLed++; 
-    }   
+      driver.SwitchOffAll();
+      driver.GetLed(LedNum::led1).SwitchOn();
+      driver.GetLed(LedNum::led3).SwitchOn();
+      currentLed = 0U;
+    }
     private:
     LedsModeChess() = default;  
 };
@@ -51,14 +41,41 @@ class LedsModeChess : public LedsMode, public Singleton<LedsModeChess>
 class LedsModeAll : public LedsMode, public Singleton<LedsModeAll>
 {
   friend class Singleton<LedsModeAll>;
-  public:
-    virtual void Do(tU8 value) override
-    {
-      LedsDriver::GetInstance().ToggleAll();       
-    }
-    
-   private:
+  private:
     LedsModeAll() = default;  
+};
+
+
+class LedsModeFirstPair : public LedsMode, public Singleton<LedsModeFirstPair>
+{
+  friend class Singleton<LedsModeFirstPair>;
+  public:
+    virtual void Reset() override
+    {
+      LedsDriver & driver = LedsDriver::GetInstance();
+      driver.SwitchOffAll();
+      driver.GetLed(LedNum::led1).SwitchOn();
+      driver.GetLed(LedNum::led2).SwitchOn();
+      currentLed = 0U;
+    }
+   private:
+    LedsModeFirstPair() = default;  
+};
+
+class LedsModeInsideOutside : public LedsMode, public Singleton<LedsModeInsideOutside>
+{
+  friend class Singleton<LedsModeInsideOutside>;
+  public:
+    virtual void Reset() override
+    {
+      LedsDriver & driver = LedsDriver::GetInstance();
+      driver.SwitchOffAll();
+      driver.GetLed(LedNum::led3).SwitchOn();
+      driver.GetLed(LedNum::led2).SwitchOn();
+      currentLed = 0U;
+    }
+   private:
+    LedsModeInsideOutside() = default;  
 };
 
 class LedsModeAdc : public LedsMode, public Singleton<LedsModeAdc>

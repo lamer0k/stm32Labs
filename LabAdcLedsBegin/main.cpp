@@ -38,10 +38,11 @@ void Delay(tU32 duration)
   }
 }
 
+
 int main()
 {
   using utils::operator""msec;
-  UserButton const & btn = UserButton::GetInstance();  
+  UserButton const & btn = UserButton::GetInstance();
   LedsController & ledsCntr = LedsController::GetInstance();
   for(;;)
   {
@@ -54,3 +55,5 @@ int main()
   }
   return 0;
 }
+
+
