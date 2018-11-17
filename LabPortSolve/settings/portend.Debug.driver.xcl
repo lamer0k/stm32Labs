@@ -1,12 +1,18 @@
 "--endian=little" 
 
-"--cpu=Cortex-M3" 
+"--cpu=Cortex-M4" 
 
-"--fpu=None" 
+"--fpu=VFPv4_SP" 
+
+"-p" 
+
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CONFIG\debugger\ST\STM32F411RE.ddf" 
 
 "--drv_verify_download" 
 
 "--semihosting" 
+
+"--device=STM32F411RE" 
 
 "--drv_interface=SWD" 
 

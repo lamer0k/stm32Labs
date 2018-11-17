@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "E:\Projects\ARM_LAB\stm32Labs\Lab1PortBegin\settings\Lab1.Debug.general.xcl" --backend -f "E:\Projects\ARM_LAB\stm32Labs\Lab1PortBegin\settings\Lab1.Debug.driver.xcl" 
+& "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "E:\Projects\ARM_LAB\stm32Labs\LabPortBegin\settings\Lab1.Debug.general.xcl" --backend -f "E:\Projects\ARM_LAB\stm32Labs\LabPortBegin\settings\Lab1.Debug.driver.xcl" 
 }
 else
 {
-& "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "E:\Projects\ARM_LAB\stm32Labs\Lab1PortBegin\settings\Lab1.Debug.general.xcl" --debug_file=$debugfile --backend -f "E:\Projects\ARM_LAB\stm32Labs\Lab1PortBegin\settings\Lab1.Debug.driver.xcl" 
+& "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "E:\Projects\ARM_LAB\stm32Labs\LabPortBegin\settings\Lab1.Debug.general.xcl" --debug_file=$debugfile --backend -f "E:\Projects\ARM_LAB\stm32Labs\LabPortBegin\settings\Lab1.Debug.driver.xcl" 
 }
