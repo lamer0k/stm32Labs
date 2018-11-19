@@ -1,13 +1,13 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.20.2.14835/W32 for ARM       17/Nov/2018  18:32:18
+# IAR ANSI C/C++ Compiler V8.20.2.14835/W32 for ARM       17/Nov/2018  18:42:33
 # Copyright 1999-2017 IAR Systems AB.
 #
 #    Cpu mode     =  thumb
 #    Endian       =  little
 #    Source file  =  E:\Projects\ARM_LAB\stm32Labs\LabPortSolve\main.cpp
 #    Command line =  
-#        -f C:\Users\Sergey\AppData\Local\Temp\EW8A28.tmp
+#        -f C:\Users\Sergey\AppData\Local\Temp\EWED8F.tmp
 #        (E:\Projects\ARM_LAB\stm32Labs\LabPortSolve\main.cpp -lcN
 #        E:\Projects\ARM_LAB\stm32Labs\LabPortSolve\Debug\List -lb
 #        E:\Projects\ARM_LAB\stm32Labs\LabPortSolve\Debug\List -o
@@ -35,57 +35,57 @@
 E:\Projects\ARM_LAB\stm32Labs\LabPortSolve\main.cpp
       1          #include "CMSIS/stm32f411xe.h"
       2          #include "susudefs.hpp"
-      3          
-      4          extern "C" 
-      5          {
-      6            int __low_level_init(void) 
-      7            {
-      8              //Switch on external 16 MHz oscilator    
-      9              RCC->CR |= RCC_CR_HSEON;
-     10              while ((RCC->CR & RCC_CR_HSERDY) != RCC_CR_HSERDY) 
-     11              {
-     12              }
-     13              //Swicth system clock on extrenal oscilator
-     14              RCC->CFGR |= RCC_CFGR_SW_HSE;
-     15              while ((RCC->CFGR & RCC_CFGR_SWS) != RCC_CFGR_SWS_HSE) 
-     16              {
-     17              }
-     18              //Swicth on clock on PortA and PortC 
-     19              RCC->AHB1ENR |= (RCC_AHB1ENR_GPIOCEN | RCC_AHB1ENR_GPIOAEN);
-     20              //LED1 on PortA.5, set PortA.5 as output
-     21              GPIOA->MODER |= GPIO_MODER_MODE5_0;
-     22              //LED2 on PortC.9, LED3 on PortC.8, LED4 on PortC.5 set PortC.5,8,9 as output 
-     23              GPIOC->MODER |= (GPIO_MODER_MODE9_0 | GPIO_MODER_MODE5_0 | GPIO_MODER_MODE8_0);
-     24              
-     25              return 1;
-     26            }
-     27          }
-     28          
-     29          constexpr tU32 SystemClock =  8'000'000U ;
-     30          constexpr tU32 SecDelay = SystemClock / 8 ;
-     31          constexpr tU32 MsecDelay = SystemClock / 8000 ;
-     32          
-     33          //User liter sec to set delay in seconds
-     34          constexpr unsigned long long operator "" sec(unsigned long long sec) {
-     35            return sec * SecDelay;
-     36          }
-     37          
-     38          //User liter msec to set delay in mseconds
-     39          constexpr unsigned long long operator "" msec(unsigned long long msec) {
-     40            return msec * MsecDelay;
-     41          }
-     42          
-     43          void Delay(tU32 duration)
-     44          {
-     45            for (tU32 i = 0U; i < duration; ++i)
-     46            {    
-     47              __NOP() ;
-     48            }
-     49          }
-     50          
-     51          int main()
-     52          {
-     53             
+      3          #include "utils.hpp"
+      4          
+      5          extern "C" 
+      6          {
+      7            int __low_level_init(void) 
+      8            {
+      9              //Switch on external 16 MHz oscilator    
+     10              RCC->CR |= RCC_CR_HSEON;
+     11              while ((RCC->CR & RCC_CR_HSERDY) != RCC_CR_HSERDY) 
+     12              {
+     13              }
+     14              //Swicth system clock on extrenal oscilator
+     15              RCC->CFGR |= RCC_CFGR_SW_HSE;
+     16              while ((RCC->CFGR & RCC_CFGR_SWS) != RCC_CFGR_SWS_HSE) 
+     17              {
+     18              }
+     19              //Swicth on clock on PortA and PortC 
+     20              RCC->AHB1ENR |= (RCC_AHB1ENR_GPIOCEN | RCC_AHB1ENR_GPIOAEN);
+     21              //LED1 on PortA.5, set PortA.5 as output
+     22              GPIOA->MODER |= GPIO_MODER_MODE5_0;
+     23              //LED2 on PortC.9, LED3 on PortC.8, LED4 on PortC.5 set PortC.5,8,9 as output 
+     24              GPIOC->MODER |= (GPIO_MODER_MODE9_0 | GPIO_MODER_MODE5_0 | GPIO_MODER_MODE8_0);
+     25              
+     26              return 1;
+     27            }
+     28          }
+     29          
+     30          constexpr tU32 SystemClock =  8'000'000U ;
+     31          constexpr tU32 SecDelay = SystemClock / 8 ;
+     32          constexpr tU32 MsecDelay = SystemClock / 8000 ;
+     33          
+     34          //User liter sec to set delay in seconds
+     35          constexpr unsigned long long operator "" sec(unsigned long long sec) {
+     36            return sec * SecDelay;
+     37          }
+     38          
+     39          //User liter msec to set delay in mseconds
+     40          constexpr unsigned long long operator "" msec(unsigned long long msec) {
+     41            return msec * MsecDelay;
+     42          }
+     43          
+     44          void Delay(tU32 duration)
+     45          {
+     46            for (tU32 i = 0U; i < duration; ++i)
+     47            {    
+     48              __NOP() ;
+     49            }
+     50          }
+     51          
+     52          int main()
+     53          {
      54            for(;;)
      55            {
      56              if((GPIOC->IDR & GPIO_IDR_IDR_13) == 0)
@@ -94,12 +94,10 @@ E:\Projects\ARM_LAB\stm32Labs\LabPortSolve\main.cpp
      59                while ((GPIOC->IDR & GPIO_IDR_IDR_13) == 0) 
      60                {
      61                }
-     62              }    
-     63             
-     64            }
-     65            
-     66            return 0 ;
-     67          }
+     62              }       
+     63            }
+     64            return 0 ;
+     65          }
 
    Maximum stack usage in bytes:
 

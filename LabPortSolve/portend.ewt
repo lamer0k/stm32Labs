@@ -2373,6 +2373,9 @@
         <name>$PROJ_DIR$\main.cpp</name>
     </file>
     <file>
+        <name>$PROJ_DIR$\main.txt</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\startupF411RE.cpp</name>
     </file>
 </project>

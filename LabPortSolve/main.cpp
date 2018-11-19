@@ -1,5 +1,6 @@
 #include "CMSIS/stm32f411xe.h"
 #include "susudefs.hpp"
+#include "utils.hpp"
 
 extern "C" 
 {
@@ -26,31 +27,9 @@ extern "C"
   }
 }
 
-constexpr tU32 SystemClock =  8'000'000U ;
-constexpr tU32 SecDelay = SystemClock / 8 ;
-constexpr tU32 MsecDelay = SystemClock / 8000 ;
-
-//User liter sec to set delay in seconds
-constexpr unsigned long long operator "" sec(unsigned long long sec) {
-  return sec * SecDelay;
-}
-
-//User liter msec to set delay in mseconds
-constexpr unsigned long long operator "" msec(unsigned long long msec) {
-  return msec * MsecDelay;
-}
-
-void Delay(tU32 duration)
-{
-  for (tU32 i = 0U; i < duration; ++i)
-  {    
-    __NOP() ;
-  }
-}
 
 int main()
 {
-   
   for(;;)
   {
     if((GPIOC->IDR & GPIO_IDR_IDR_13) == 0)
@@ -59,9 +38,7 @@ int main()
       while ((GPIOC->IDR & GPIO_IDR_IDR_13) == 0) 
       {
       }
-    }    
-   
+    }       
   }
-  
   return 0 ;
 }

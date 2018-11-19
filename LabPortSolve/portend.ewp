@@ -765,7 +765,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$TOOLKIT_DIR$\CONFIG\generic_cortex.icf</state>
+                    <state>$TOOLKIT_DIR$\config\linker\ST\stm32f411xE.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -2045,6 +2045,9 @@
     </configuration>
     <file>
         <name>$PROJ_DIR$\main.cpp</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\main.txt</name>
     </file>
     <file>
         <name>$PROJ_DIR$\startupF411RE.cpp</name>
