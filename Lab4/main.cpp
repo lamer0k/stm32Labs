@@ -57,6 +57,10 @@ int __low_level_init(void)
 }
 }
 
+struct ITest
+{
+  virtual auto Get() = 0;
+} ;
 
 int main()
 {
