@@ -60,12 +60,15 @@ int __low_level_init(void)
    //ADC1 
    RCC::APB2ENR::ADC1EN::Enable::Set() ;
    ADC_Common::CCR::TSVREFE::Enable::Set() ;
-   ADC1::CR2::EOCS::SingleConversion::Set() ;
-   //84 cycles sample rate for channel 0
-   ADC1::SMPR2::SMP0::Cycles84::Set() ;
-   ADC1::SQR1::L::Conversions1::Set() ;
+   
+   ADC1::CR2Pack<     
+      ADC1::CR2::CONT::SingleConversion, 
+      ADC1::CR2::EOCS::SingleConversion,        
+      >::Set() ;
+   
+   ADC1::SMPR1::SMP18::Cycles84::Set() ;  
+   ADC1::SQR1::L::Conversions1::Set() ; 
    ADC1::SQR3::SQ1::Channel18::Set() ;
-  
   return 1;
 }
 }
