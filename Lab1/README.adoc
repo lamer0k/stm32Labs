@@ -1,112 +1,50 @@
-= RTOS wrapper for students
-
-This the example of RTOS wrapper for FreeRTOS for Stm32F411 microcontroller
-
-To use the wrapper, it needs to copy the next folder:
-
-– CMSIS 
-
-– Rtos
-
-also it needs to define __forceinline macros (`#define __forceinline  _Pragma(&quot;inline=forced&quot;)` for IAR) in Rtos\wrapper\FreeRtos\rtosdefs.hpp file
- See more information on https://habr.com/ru/post/420467/
-
-Example of creating a task:
-
-[source,cpp]
-----
-using namespace OsWrapper ;
-class MyTask : public Thread<static_cast<std::size_t>(StackDepth::minimal)>
-{
-
-public:
-  virtual void Execute() override
-  {
-    while(true) 
-    {
-      if (button.IsPressed())
-      {
-        event.Signal();
-      }
-      Sleep(300ms);
-  }
-
-  MyTask(OsWrapper::Event& event, UserButton& button) : event(event), button(button)
-  {
-  }
-private:
-  OsWrapper::Event& event;
-  UserButton& button ;
-} ;
-----
-
-and another task:
+= Lab1
 
 
-[source,cpp]
-----
-class Led1Task : public OsWrapper::Thread<128U>
-{
-public:
-  virtual void Execute() override
-  {
-    for(;;)
-    {
-      if (event.Wait() != 0)
-      {
-        ledsCntr.NextMode();
-      }
-      ledsCntr.Update();
-    }
-  }
-
-  Led1Task(OsWrapper::Event& event, LedsController& controller) : event(event), ledsCntr(controller)
-  {
-  }
-private:
-  OsWrapper::Event& event ;
-  LedsController& ledsCntr;
-} ;
+=== Задание 1
+. Создать проект C++ c main.cpp
+. Подключить к проекту файл cstartup.cpp
+. Создать папки AbstractHardware/Registers/FiledValues, Common
+. Создать структуру проекта в соотвествии со структурой папок
+. Настроить STACK, HEAP
+. Скопировать проект преподавателя https://github.com/lamer0k/stm32Labs/tree/master/Lab1
+. Скопировать содержимое папки из папки AHardware/Registers и Common с проекта преподавателя в свою папку
+. Написать программу в main.cpp
+[source, cpp, linenums]
 
 ----
-
-and used it
-
-[source,cpp]
-----
-
-OsWrapper::Event event{500ms, 1};
-
-MyTask myTask(event, UserButton::GetInstance());
-Led1Task led1Task(event);
+#include "gpiocregisters.hpp" //for GPIOC
+#include "rccregisters.hpp"   //for RCC
 
 int main()
 {
- using namespace OsWrapper;
- Rtos::CreateThread(myTask, "myTask", ThreadPriority::lowest);
- Rtos::CreateThread(led1Task, "Led1Task");
- Rtos::Start();
-
-return 0;
+  RCC::AHB1ENR::GPIOCEN::Enable::Set() ;
+  GPIOC::MODER::MODER5::Output::Set() ;
+  GPIOC::ODR::ODR5::Enable::Set() ;
+  GPIOC::ODR::ODR5::Disable::Set() ;
+  return 0 ;
 }
 ----
+. Посмотреть видео: https://youtu.be/uC0jJGfDxtM
 
-== How to run the example
+=== Задание 2
+. Откомпилировать и отлинковать программу
+. Загрузить программу в симуляторе
+. Сделать пошаговую отладку
+. Настроить Debugger на отладку через StLink
+. Подключить плату к компьютеру
+. Загрузить программу в плату
+. Выполнить пошаговую отладку
+. Описать полученный результат
+. Посмотреть видео: https://youtu.be/c7CasTJKw7o
 
-It needs to copy CortexLib (https://github.com/lamer0k/CortexLib) to have the next folder structure:
-
-```
- - CortexLib
-   -- AbstractHardware
-   -- Common
- - RtosWrapper
-   -- AHardware
-   -- Application
-   -- CMSIS
-   -- Common
-   -- MyTasks
-   -- Rtos
-```
-
-Then it is possible to just open the RtosWrapper directory in the JetBrains Clion.
-Or if you use IAR 8.40.2 open the test.eww workspace or iarproject.ewp project.
+=== Задание 3
+. Запустить анализатор стека. Узнать рекомендуемый размер стека.
+. Изменить в проекте размер стека на рекомендуемый
+. Создать map файл
+. Описать что написано в map файле
+. Поставить размер кучи HEAP в 0. Объяснить почему так можно сделать. И почему STACK нельзя
+. Добавить проект в Git и сделать синхронизацию с GitHub
+. Сделать отчет по каждому пункту каждого задания в файле .adoc. Выложить файл в GitHub
+. Прислать ссылку на GitHub преподавателю для проверки
+. Посмотреть видео: https://youtu.be/TajLTcjBgIg
