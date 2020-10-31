@@ -1,15 +1,101 @@
 #include "rccregisters.hpp"
 #include "gpiocregisters.hpp"
+#include "gpioaregisters.hpp"
 #include <iostream>
 
-int Test(int value, int value1, int value2, int value3, int value4, int value5)
+template<typename T>
+struct Port
 {
-  std::cout << value << " "  << std::endl;
-  return value ;
-}
+  static void Set(std::uint32_t value)
+  {
+    T::BSRR::Write(value);
+  }
+  
+  static void Reset(std::uint32_t value)
+  {
+    T::BSRR::Write(value << 16U);
+  }
+  
+  static void Toggle(std::uint32_t value)
+  {
+    T::ODR::Toggle(value);
+  }
+  
+  static auto Get()
+  {
+    return T::IDR::Get();
+  }
+  
+} ;
+
+
+
+template<typename Port, uint8_t pinNum>
+struct Pin
+{
+  static void Set()
+  {
+    Port::Set(1U << pinNum);
+  }
+  
+  static void Reset()
+  {
+    Port::Reset(1U << pinNum);
+  }
+  
+  void static Toggle()
+  {    
+    Port::Toggle(1U << pinNum);
+  }
+  
+  static auto IsSet()
+  {
+    return (Port::Get() & (1U << pinNum) != 0);
+  }
+  
+};
+
+template <typename ...Pins>
+struct PinsList
+{
+  static void Set()
+  {
+    (Pins::Set(),...);
+  }
+  
+  static void Reset()
+  {
+    (Pins::Reset(),...);
+  }
+  
+  static void Toggle()
+  {
+    (Pins::Toggle(),...);
+  }
+  
+};
+
+template<typename Pin> 
+struct Button
+{
+  auto static IsPressed()
+  {
+    return !Pin::IsSet();
+  }
+};
+
+using UserButtonPin = Pin<Port<GPIOC>, 13U>;
+using UserButton = Button<UserButtonPin>;
+using Led1 = Pin<Port<GPIOC>, 5U>;
+using Led2 = Pin<Port<GPIOC>, 8U>;
+using Led3 = Pin<Port<GPIOC>, 9U>;
+using Led4 = Pin<Port<GPIOA>, 5U>;
+using Leds = PinsList<Led1, Led2, Led3, Led4> ;
+
 
 int main()
 {  
+  
   RCC::CR::HSEON::On::Set();
   while(!RCC::CR::HSERDY::Ready::IsSet())
   {
@@ -21,33 +107,22 @@ int main()
   {
   }
   
-  RCC::CR::HSION::Off::Set();
-  
-  //Подать тактирование на порт С
-  //*reinterpret_cast<std::uint32_t*>(0x40023830) = 1U << 2U ; 
-  volatile int t = 0;   
-  RCC::AHB1ENR::GPIOCEN::Enable::Set();
-  //Настроить PortC.5 на выход. Регистр PortC.MODER5, Адрес см. https://www.st.com/resource/en/datasheet/stm32f411re.pdf  стр 54
-  // Описание регистра см https://www.st.com/resource/en/reference_manual/dm00119316-stm32f411xce-advanced-armbased-32bit-mcus-stmicroelectronics.pdf стр. 157
- // *reinterpret_cast<std::uint32_t* >(0x40020800) |= 1U << 10U;
-  
-  GPIOC::MODER::MODER5::Input::Set();
-  
-  //Вывести 1 в PortC.5. Регистр ODR м https://www.st.com/resource/en/reference_manual/dm00119316-stm32f411xce-advanced-armbased-32bit-mcus-stmicroelectronics.pdf стр. 159
-  //*reinterpret_cast<std::uint32_t* >(0x40020814) |= 1U << 5U; 
   
   for(;;)
   {
-    for (int i= 0; i < 1000000 ; i ++)
-    {
-    }
-    
-    GPIOC::ODR::ODR5::High::Set() ;
-  
-    for (int i= 0; i < 1000000 ; i ++)
-    {
-    }
-    GPIOC::ODR::ODR5::Low::Set() ;
+   if (UserButton::IsPressed())
+   {
+     while (UserButton::IsPressed())
+     {
+     }
+     Leds::Toggle();
+   }
+   
   }
+ // кнопка находится на порту PORTC.13
+ // светодиоды на порту PC.9, PC.8, PC.5, PA.5
+ // Задание По нажатию кнопки переключать все 
+ // 4 светодиода в противоположное состояние 
+  
   return 1 ;
 }

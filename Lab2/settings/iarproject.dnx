@@ -16,7 +16,7 @@
         <ShowSource>1</ShowSource>
     </Trace1>
     <DebugChecksum>
-        <Checksum>4120052401</Checksum>
+        <Checksum>2393574513</Checksum>
     </DebugChecksum>
     <Disassembly>
         <InstrCount>0</InstrCount>
@@ -131,10 +131,8 @@
     </DisassembleMode>
     <Breakpoints2>
         <Bp0>_ 0 "STD_CODE2" "{$PROJ_DIR$\..\RtosWrapper\main.cpp}.164.1" 0 0 1 "" 0 ""</Bp0>
-        <Bp1>_ 0 "STD_CODE2" "{$PROJ_DIR$\main.cpp}.0.1" 0 0 1 "" 0 ""</Bp1>
-        <Bp2>_ 0 "STD_CODE2" "{$PROJ_DIR$\main.cpp}.0.1" 0 0 1 "" 0 ""</Bp2>
-        <Bp3>_ 1 "STD_CODE2" "{$PROJ_DIR$\main.cpp}.104.5" 0 0 1 "" 0 ""</Bp3>
-        <Count>4</Count>
+        <Bp1>_ 1 "STD_CODE2" "{$PROJ_DIR$\main.cpp}.113.8" 0 0 1 "" 0 ""</Bp1>
+        <Count>2</Count>
     </Breakpoints2>
     <Interrupts>
         <Enabled>1</Enabled>
