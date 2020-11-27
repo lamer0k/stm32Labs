@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspace>
     <project>
+        <path>$WS_DIR$\..\..\ForCommonDesignReview\forReview.ewp</path>
+    </project>
+    <project>
         <path>$WS_DIR$\iarproject.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\..\..\SSTWithTimers\sst.ewp</path>
     </project>
     <batchBuild />
 </workspace>

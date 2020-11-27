@@ -36,6 +36,7 @@ struct RegisterField
     *reinterpret_cast<volatile RegType *>(Reg::Address) = newRegValue ; //И записать новое значение в регистр
   }
 
+  
   //Метод устанавливает значение битового поля, только в случае, если оно достпуно для записи
   __forceinline template<typename T = AccessMode,
     class = typename std::enable_if_t<std::is_base_of<ReadWriteMode, T>::value>>
@@ -59,6 +60,8 @@ struct RegisterField
     assert(value < (1U << size)) ;
     *reinterpret_cast<volatile RegType *>(Reg::Address) = (value << offset) ;
   }
+  
+
   
   
   //Метод устанавливает проверяет установлено ли значение битового поля

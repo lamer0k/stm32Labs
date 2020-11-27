@@ -79,4 +79,9 @@ public:
 		}
 };
 
+
+
+
+
+
 #endif //REGISTERS_SUSUDEFS_HPP
