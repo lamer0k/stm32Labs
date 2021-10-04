@@ -1,10 +1,17 @@
 
 #include "interrupthandler.hpp"  //for InterruptHandler
+#include "gpiocregisters.hpp" //for Gpioc
+#include "rccregisters.hpp"   //for RCC
+#include "tim2registers.hpp"   //for SPI2
+#include "nvicregisters.hpp"  //for NVIC
+#include "flashpin.h"
 
 extern "C" void __iar_program_start(void) ;
+//extern void MyTim2InterruptHandler();
 
 using tIntFunct = void(*)();
 using tIntVectItem = union {tIntFunct __fun; void * __ptr;};
+
 #pragma segment = "CSTACK"
 #pragma location = ".intvec"
 const tIntVectItem __vector_table[] =
@@ -55,7 +62,7 @@ const tIntVectItem __vector_table[] =
   InterruptHandler::DummyHandler,             //TIM10/TIM1 Update interrupt
   InterruptHandler::DummyHandler,             //TIM11/TIM1 Trigger/Commutation interrupts
   InterruptHandler::DummyHandler,			   //TIM1 Capture Compare interrupt
-  InterruptHandler::Timer2Handler,         //TIM2  	
+  myNewYear::OnTimeout,                 //TIM2  	
   InterruptHandler::DummyHandler,         //TIM3
   InterruptHandler::DummyHandler,        ////TIM4
 };

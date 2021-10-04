@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Git\stm32Labs\Lab4\settings\lab4.Debug.general.xcl" --backend -f "D:\Git\stm32Labs\Lab4\settings\lab4.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\GitHub\stm32Labs\Lab5EmptyInterrupt\settings\lab4.Debug.general.xcl" --backend -f "C:\GitHub\stm32Labs\Lab5EmptyInterrupt\settings\lab4.Debug.driver.xcl" 
 }
 else
 {
-& "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Git\stm32Labs\Lab4\settings\lab4.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\Git\stm32Labs\Lab4\settings\lab4.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\GitHub\stm32Labs\Lab5EmptyInterrupt\settings\lab4.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\GitHub\stm32Labs\Lab5EmptyInterrupt\settings\lab4.Debug.driver.xcl" 
 }
