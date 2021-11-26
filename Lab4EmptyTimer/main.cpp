@@ -1,5 +1,5 @@
 //#include <cstdint>            //for int types such as uint32_t
-#include "gpioaregisters.hpp" //for Gpioa
+#include "gpiocregisters.hpp" //for Gpioc
 #include "rccregisters.hpp"   //for RCC
 #include "tim2registers.hpp"   //for SPI2
 #include "nvicregisters.hpp"  //for NVIC
@@ -24,6 +24,14 @@ int __low_level_init(void)
     {
 
     }
+    
+    RCC::AHB1ENR::GPIOCEN::Enable::Set(); //Подали тактирование на порт GPIOC
+    GPIOC::MODER::MODER8::Output::Set();  //Настроили порт PORTC.8 на выход
+    GPIOC::MODER::MODER5::Output::Set();  //Настроили порт PORTC.5 на выход
+    GPIOC::MODER::MODER9::Output::Set();  //Настроили порт PORTC.9 на выход
+    
+    
+    
   return 1;
 }
 }
@@ -31,7 +39,7 @@ int __low_level_init(void)
 
 int main()
 {
-
+  
   for(;;)
   {
   }

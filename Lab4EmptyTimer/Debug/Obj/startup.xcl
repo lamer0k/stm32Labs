@@ -1,48 +1,48 @@
-"D:\Git\stm32Labs\Lab4\startup.cpp"
+"C:\GitHub\stm32Labs\Lab4EmptyTimer\startup.cpp"
 -std=c++17
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-D:\Git\stm32Labs\Lab4\Debug\Obj\startup.pbi.dep
+C:\GitHub\stm32Labs\Lab4EmptyTimer\Debug\Obj\startup.pbi.dep
 -o
 startup.pbi
 -I
-D:\Git\stm32Labs\Lab4
+C:\GitHub\stm32Labs\Lab4EmptyTimer
 -I
-D:\Git\stm32Labs\Lab4\AbstractHardware
+C:\GitHub\stm32Labs\Lab4EmptyTimer\AbstractHardware
 -I
-D:\Git\stm32Labs\Lab4\AbstractHardware\Atomic
+C:\GitHub\stm32Labs\Lab4EmptyTimer\AbstractHardware\Atomic
 -I
-D:\Git\stm32Labs\Lab4\AbstractHardware\Registers
+C:\GitHub\stm32Labs\Lab4EmptyTimer\AbstractHardware\Registers
 -I
-D:\Git\stm32Labs\Lab4\AbstractHardware\Registers\STM32F411
+C:\GitHub\stm32Labs\Lab4EmptyTimer\AbstractHardware\Registers\STM32F411
 -I
-D:\Git\stm32Labs\Lab4\AbstractHardware\Registers\STM32F411\FieldValues
+C:\GitHub\stm32Labs\Lab4EmptyTimer\AbstractHardware\Registers\STM32F411\FieldValues
 -I
-D:\Git\stm32Labs\Lab4\AbstractHardware\InterruptHandler
+C:\GitHub\stm32Labs\Lab4EmptyTimer\AbstractHardware\InterruptHandler
 -I
-D:\Git\stm32Labs\Lab4\Common
+C:\GitHub\stm32Labs\Lab4EmptyTimer\Common
 -I
-D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\inc
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\inc
 -I
-D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\inc\c
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\inc\c
 -I
-D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\inc\cpp
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\inc\cpp
 -I
-D:\Git\stm32Labs\Lab4\AbstractHardware
+C:\GitHub\stm32Labs\Lab4EmptyTimer\AbstractHardware
 -I
-D:\Git\stm32Labs\Lab4\AbstractHardware\Atomic
+C:\GitHub\stm32Labs\Lab4EmptyTimer\AbstractHardware\Atomic
 -I
-D:\Git\stm32Labs\Lab4\AbstractHardware\Registers
+C:\GitHub\stm32Labs\Lab4EmptyTimer\AbstractHardware\Registers
 -I
-D:\Git\stm32Labs\Lab4\AbstractHardware\Registers\STM32F411
+C:\GitHub\stm32Labs\Lab4EmptyTimer\AbstractHardware\Registers\STM32F411
 -I
-D:\Git\stm32Labs\Lab4\AbstractHardware\Registers\STM32F411\FieldValues
+C:\GitHub\stm32Labs\Lab4EmptyTimer\AbstractHardware\Registers\STM32F411\FieldValues
 -I
-D:\Git\stm32Labs\Lab4\AbstractHardware\InterruptHandler
+C:\GitHub\stm32Labs\Lab4EmptyTimer\AbstractHardware\InterruptHandler
 -I
-D:\Git\stm32Labs\Lab4\Common
+C:\GitHub\stm32Labs\Lab4EmptyTimer\Common
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
@@ -193,8 +193,8 @@ D:\Git\stm32Labs\Lab4\Common
 -D__JMP_BUF_ELEMENT_TYPE__=unsigned long long int
 -D__JMP_BUF_NUM_ELEMENTS__=16
 -D__TID__=0xcf60
--D__VER__=8040001
--D__BUILD_NUMBER__=212
+-D__VER__=8040002
+-D__BUILD_NUMBER__=214
 -D__IAR_SYSTEMS_ICC__=9
 -D_MAX_ALIGNMENT=8
 -D__LITTLE_ENDIAN__=1
@@ -288,8 +288,8 @@ D:\Git\stm32Labs\Lab4\Common
 -D__HAS_JOINED_TYPES__=1
 -D__HAS_LOCATED_DECLARATION__=1
 -D__HAS_LOCATED_WITH_INIT__=1
--D__IAR_COMPILERBASE__=656644
--D__IAR_COMPILERBASE_STR__=10.5.4.1177
+-D__IAR_COMPILERBASE__=656646
+-D__IAR_COMPILERBASE_STR__=10.5.6.1181
 -D__UNICODE_SOURCE_SUPPORTED__=1
 -D__VTABLE_MEM__=
 -D__PRAGMA_REDEFINE_EXTNAME=1
@@ -386,9 +386,9 @@ D:\Git\stm32Labs\Lab4\Common
 -D__EDG_FLOAT80_ENABLING_POSSIBLE=0
 -D__EDG_FLOAT128_ENABLING_POSSIBLE=0
 -D__EDG_INT128_EXTENSIONS_ALLOWED=0
--D_DLIB_CONFIG_FILE_HEADER_NAME="D:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Config_Normal.h"
--D_DLIB_CONFIG_FILE_STRING="D:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Config_Normal.h"
--D__VERSION__="IAR ANSI C/C++ Compiler V8.40.1.212/W32 for ARM"
+-D_DLIB_CONFIG_FILE_HEADER_NAME="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Config_Normal.h"
+-D_DLIB_CONFIG_FILE_STRING="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\arm\\inc\\c\\DLib_Config_Normal.h"
+-D__VERSION__="IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM"
 -D_VA_DEFINED=
 -D_VA_LIST=struct __va_list
 -D__ICCARM_OLD_DEFINED_VAARGS__=1
